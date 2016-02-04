@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34607E1C61514F00B0492B /* HaikuManager.swift */; };
+		8B3460811C61584500B0492B /* Haiku.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3460801C61584500B0492B /* Haiku.csv */; };
+		8B43D3C81C5005AD00317ED8 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */; };
+		8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C91C5006B100317ED8 /* Device.swift */; };
+		8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CB1C50077D00317ED8 /* Haiku.swift */; };
+		8B43D3CE1C50083C00317ED8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CD1C50083C00317ED8 /* Constants.swift */; };
 		8B62A7B21C4EB76F00D57878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7B11C4EB76F00D57878 /* AppDelegate.swift */; };
 		8B62A7B41C4EB76F00D57878 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7B31C4EB76F00D57878 /* ViewController.swift */; };
 		8B62A7B71C4EB76F00D57878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B62A7B51C4EB76F00D57878 /* Main.storyboard */; };
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B34607E1C61514F00B0492B /* HaikuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaikuManager.swift; sourceTree = "<group>"; };
+		8B3460801C61584500B0492B /* Haiku.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haiku.csv; sourceTree = "<group>"; };
+		8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
+		8B43D3C91C5006B100317ED8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		8B43D3CB1C50077D00317ED8 /* Haiku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haiku.swift; sourceTree = "<group>"; };
+		8B43D3CD1C50083C00317ED8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8B62A7AE1C4EB76F00D57878 /* EndlessHaiku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndlessHaiku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B62A7B11C4EB76F00D57878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B62A7B31C4EB76F00D57878 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +86,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B43D3C61C50057800317ED8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8B62A7B11C4EB76F00D57878 /* AppDelegate.swift */,
+				8B62A7B81C4EB76F00D57878 /* Assets.xcassets */,
+				8B62A7BA1C4EB76F00D57878 /* LaunchScreen.storyboard */,
+				8B62A7BD1C4EB76F00D57878 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 		8B62A7A51C4EB76F00D57878 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +120,15 @@
 		8B62A7B01C4EB76F00D57878 /* EndlessHaiku */ = {
 			isa = PBXGroup;
 			children = (
-				8B62A7B11C4EB76F00D57878 /* AppDelegate.swift */,
+				8B43D3C61C50057800317ED8 /* Support */,
 				8B62A7B31C4EB76F00D57878 /* ViewController.swift */,
+				8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */,
+				8B43D3CD1C50083C00317ED8 /* Constants.swift */,
+				8B43D3C91C5006B100317ED8 /* Device.swift */,
+				8B43D3CB1C50077D00317ED8 /* Haiku.swift */,
+				8B34607E1C61514F00B0492B /* HaikuManager.swift */,
+				8B3460801C61584500B0492B /* Haiku.csv */,
 				8B62A7B51C4EB76F00D57878 /* Main.storyboard */,
-				8B62A7B81C4EB76F00D57878 /* Assets.xcassets */,
-				8B62A7BA1C4EB76F00D57878 /* LaunchScreen.storyboard */,
-				8B62A7BD1C4EB76F00D57878 /* Info.plist */,
 			);
 			path = EndlessHaiku;
 			sourceTree = "<group>";
@@ -230,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */,
+				8B3460811C61584500B0492B /* Haiku.csv in Resources */,
 				8B62A7B91C4EB76F00D57878 /* Assets.xcassets in Resources */,
 				8B62A7B71C4EB76F00D57878 /* Main.storyboard in Resources */,
 			);
@@ -256,8 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B43D3C81C5005AD00317ED8 /* ScrollingView.swift in Sources */,
+				8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */,
 				8B62A7B41C4EB76F00D57878 /* ViewController.swift in Sources */,
+				8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */,
 				8B62A7B21C4EB76F00D57878 /* AppDelegate.swift in Sources */,
+				8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */,
+				8B43D3CE1C50083C00317ED8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EndlessHaiku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tvluong.EndlessHaiku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EndlessHaiku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tvluong.EndlessHaiku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +518,7 @@
 				8B62A7D81C4EB76F00D57878 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B62A7D91C4EB76F00D57878 /* Build configuration list for PBXNativeTarget "EndlessHaikuTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +527,7 @@
 				8B62A7DB1C4EB76F00D57878 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B62A7DC1C4EB76F00D57878 /* Build configuration list for PBXNativeTarget "EndlessHaikuUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +536,7 @@
 				8B62A7DE1C4EB76F00D57878 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
