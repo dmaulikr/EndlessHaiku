@@ -12,6 +12,31 @@ import AVFoundation
 
 class ViewController: UIViewController {
   
+  // MARK: Functions
+  private func loadSpeechSynthesizerSettings() -> Bool {
+    let defaults = NSUserDefaults.standardUserDefaults()
+    if let rate = defaults.objectForKey("rate") as? Float, let pitch = defaults.objectForKey("pitch") as? Float, let volume = defaults.objectForKey("volume") as? Float {
+      self.rate = rate
+      self.pitch = pitch
+      self.volume = volume
+      
+      return true
+    } else {
+      return false
+    }
+  }
+  
+  func registerDefaultSettings() {
+    rate = AVSpeechUtteranceDefaultSpeechRate
+    pitch = 1.0
+    volume = 1.0
+    
+    let defaults: [String: AnyObject] = ["rate": rate, "pitch": pitch, "volume": volume]
+    
+    NSUserDefaults.standardUserDefaults().registerDefaults(defaults)
+    
+  }
+  
   // MARK: Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,6 +55,22 @@ class ViewController: UIViewController {
     
     speechSynthesizer = AVSpeechSynthesizer()
     speechSynthesizer.delegate = self
+    
+    if !loadSpeechSynthesizerSettings() {
+      rate = AVSpeechUtteranceDefaultSpeechRate
+      pitch = 1.0
+      volume = 1.0
+      
+      registerDefaultSettings()
+    }
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    navigationController?.navigationBarHidden = true
+  }
+  
+  override func viewWillDisappear(animated: Bool) {
+    navigationController?.navigationBarHidden = false
   }
   
   // MARK: Properties
@@ -43,15 +84,19 @@ class ViewController: UIViewController {
   var currentUtterances: Int = 0
   var totalTextLength: Int = 0
   var spokenTextLength: Int = 0
+  
+  var rate: Float = 0
+  var pitch: Float = 0
+  var volume: Float = 0
 }
 
 extension ViewController: AVSpeechSynthesizerDelegate {
   
   func getSpeechUtterance(speech: String) -> AVSpeechUtterance {
     let speechUtterance = AVSpeechUtterance(string: speech)
-    speechUtterance.rate = 0.5
-    speechUtterance.pitchMultiplier = 1
-    speechUtterance.volume = 1
+    speechUtterance.rate = rate
+    speechUtterance.pitchMultiplier = pitch
+    speechUtterance.volume = volume
     speechUtterance.postUtteranceDelay = 0.005
     
     return speechUtterance
@@ -79,7 +124,7 @@ extension ViewController: AVSpeechSynthesizerDelegate {
   func stopSpeech() {
     speechSynthesizer.stopSpeakingAtBoundary(.Immediate)
   }
-
+  
 }
 
 // MARK: - Swipe Gestures
@@ -185,6 +230,27 @@ extension ViewController: ScrollingViewDelegate {
   
   func showSettings() {
     print("showSettings")
+    
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+    if let settingsVC = mainStoryboard.instantiateViewControllerWithIdentifier("SettingsViewController") as? SettingsViewController {
+      //      presentViewController(settingsVC, animated: true, completion: nil)
+      
+      stopSpeech()
+      settingsVC.delegate = self
+      navigationController?.pushViewController(settingsVC, animated: true)
+      
+    }
+  }
+}
+
+extension ViewController: SettingsViewControllerDelegate {
+  func didSaveSettings() {
+    let defaults = NSUserDefaults.standardUserDefaults()
+    rate = defaults.floatForKey("rate")
+    pitch = defaults.floatForKey("pitch")
+    volume = defaults.floatForKey("volume")
+    
+    speakHaiku()
   }
 }
 

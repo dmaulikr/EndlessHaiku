@@ -13,6 +13,9 @@
 		8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C91C5006B100317ED8 /* Device.swift */; };
 		8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CB1C50077D00317ED8 /* Haiku.swift */; };
 		8B43D3CE1C50083C00317ED8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CD1C50083C00317ED8 /* Constants.swift */; };
+		8B5B93531C65AA5C009BABE1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */; };
+		8B5B93551C65B7DD009BABE1 /* CustomSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93541C65B7DD009BABE1 /* CustomSliderTableViewCell.swift */; };
+		8B5B93571C65BC05009BABE1 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93561C65BC05009BABE1 /* CustomSlider.swift */; };
 		8B62A7B21C4EB76F00D57878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7B11C4EB76F00D57878 /* AppDelegate.swift */; };
 		8B62A7B41C4EB76F00D57878 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7B31C4EB76F00D57878 /* ViewController.swift */; };
 		8B62A7B71C4EB76F00D57878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B62A7B51C4EB76F00D57878 /* Main.storyboard */; };
@@ -46,6 +49,9 @@
 		8B43D3C91C5006B100317ED8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		8B43D3CB1C50077D00317ED8 /* Haiku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haiku.swift; sourceTree = "<group>"; };
 		8B43D3CD1C50083C00317ED8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8B5B93541C65B7DD009BABE1 /* CustomSliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSliderTableViewCell.swift; sourceTree = "<group>"; };
+		8B5B93561C65BC05009BABE1 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		8B62A7AE1C4EB76F00D57878 /* EndlessHaiku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndlessHaiku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B62A7B11C4EB76F00D57878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B62A7B31C4EB76F00D57878 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +128,9 @@
 			children = (
 				8B43D3C61C50057800317ED8 /* Support */,
 				8B62A7B31C4EB76F00D57878 /* ViewController.swift */,
+				8B5B93541C65B7DD009BABE1 /* CustomSliderTableViewCell.swift */,
+				8B5B93561C65BC05009BABE1 /* CustomSlider.swift */,
+				8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */,
 				8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */,
 				8B43D3CD1C50083C00317ED8 /* Constants.swift */,
 				8B43D3C91C5006B100317ED8 /* Device.swift */,
@@ -284,12 +293,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B43D3C81C5005AD00317ED8 /* ScrollingView.swift in Sources */,
+				8B5B93571C65BC05009BABE1 /* CustomSlider.swift in Sources */,
 				8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */,
 				8B62A7B41C4EB76F00D57878 /* ViewController.swift in Sources */,
 				8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */,
+				8B5B93551C65B7DD009BABE1 /* CustomSliderTableViewCell.swift in Sources */,
 				8B62A7B21C4EB76F00D57878 /* AppDelegate.swift in Sources */,
 				8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */,
 				8B43D3CE1C50083C00317ED8 /* Constants.swift in Sources */,
+				8B5B93531C65AA5C009BABE1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
