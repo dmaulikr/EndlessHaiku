@@ -20,7 +20,22 @@ class SettingsViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
   // MARK: Actions
-  @IBAction func saveAction(sender: UIBarButtonItem) {
+  //  @IBAction func saveAction(sender: UIBarButtonItem) {
+  //    print("save bar button pressed")
+  //    
+  //    defaults.setFloat(rate, forKey: "rate")
+  //    defaults.setFloat(pitch, forKey: "pitch")
+  //    defaults.setFloat(volume, forKey: "volume")
+  //    
+  //    defaults.synchronize()
+  //    
+  //    delegate?.didSaveSettings()
+  //    navigationController?.popToRootViewControllerAnimated(true)
+  //  }
+  
+  // MARK: Functions
+  
+  func saveAction() {
     print("save bar button pressed")
     
     defaults.setFloat(rate, forKey: "rate")
@@ -33,7 +48,6 @@ class SettingsViewController: UIViewController {
     navigationController?.popToRootViewControllerAnimated(true)
   }
   
-  // MARK: Functions
   func handleSliderValueChanged(sender: CustomSlider) {
     switch sender.identifier {
     case 0:
@@ -55,6 +69,10 @@ class SettingsViewController: UIViewController {
     rate = defaults.floatForKey("rate")
     pitch = defaults.floatForKey("pitch")
     volume = defaults.floatForKey("volume")
+    
+    title = "Settings"
+    let barButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveAction")
+    navigationItem.rightBarButtonItem = barButton
   }
   
   // MARK: Properties

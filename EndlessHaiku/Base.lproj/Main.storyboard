@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bqS-th-JL2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bqS-th-JL2">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="1156" y="-353"/>
         </scene>
-        <!--Settings-->
+        <!--Settings View Controller-->
         <scene sceneID="6FD-D8-E8H">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="HXu-zD-fNb" customClass="SettingsViewController" customModule="EndlessHaiku" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,13 +105,6 @@
                             <constraint firstItem="bgk-Fb-YPX" firstAttribute="top" secondItem="jjv-0I-Wgd" secondAttribute="top" id="wJe-kp-aEb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="Lrc-UG-En2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="OXg-AR-FXd">
-                            <connections>
-                                <action selector="saveAction:" destination="HXu-zD-fNb" id="tfn-ac-iFB"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bgk-Fb-YPX" id="2N1-lM-TXq"/>
                     </connections>

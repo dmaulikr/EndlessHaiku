@@ -44,12 +44,16 @@ class ViewController: UIViewController {
     haikuManager = HaikuManager()
     
     scrollingView = ScrollingView(frame: view.frame)
-    scrollingView.delegate = self
+    //    scrollingView.delegate = self
     
     currentHaiku = haikuManager.getRandomHaiku()
     scrollingView.haiku = currentHaiku
     
     view.addSubview(scrollingView)
+    
+    floatingMenuView = FloatingMenuView(frame: view.frame)
+    floatingMenuView.delegate = self
+    view.addSubview(floatingMenuView)
     
     loadSwipeGestureRecognizers()
     
@@ -77,6 +81,7 @@ class ViewController: UIViewController {
   var speechSynthesizer: AVSpeechSynthesizer!
   var haikuManager: HaikuManager!
   var scrollingView: ScrollingView!
+  var floatingMenuView: FloatingMenuView!
   var soundEnabled: Bool = false
   var currentHaiku: Haiku!
   
@@ -148,21 +153,25 @@ extension ViewController {
     view.addGestureRecognizer(swipeDown)
   }
   
-  func swipeLeft() {
+  func hideCreditStopSpeechGetRandomHaiku() {
+    floatingMenuView.creditsButton.selected = false
     stopSpeech()
     
     currentHaiku = haikuManager.getRandomHaiku()
     scrollingView.haiku = currentHaiku
+  }
+  
+  func swipeLeft() {
+    hideCreditStopSpeechGetRandomHaiku()
+    
     scrollingView.swipe(.Left) { _ in
       self.speakHaiku()
     }
   }
   
   func swipeRight() {
-    stopSpeech()
+    hideCreditStopSpeechGetRandomHaiku()
     
-    currentHaiku = haikuManager.getRandomHaiku()
-    scrollingView.haiku = currentHaiku
     scrollingView.swipe(.Right) { _ in
       self.speakHaiku()
     }
@@ -170,10 +179,8 @@ extension ViewController {
   }
   
   func swipeUp() {
-    stopSpeech()
+    hideCreditStopSpeechGetRandomHaiku()
     
-    currentHaiku = haikuManager.getRandomHaiku()
-    scrollingView.haiku = currentHaiku
     scrollingView.swipe(.Up) { _ in
       self.speakHaiku()
     }
@@ -181,10 +188,8 @@ extension ViewController {
   }
   
   func swipeDown() {
-    stopSpeech()
+    hideCreditStopSpeechGetRandomHaiku()
     
-    currentHaiku = haikuManager.getRandomHaiku()
-    scrollingView.haiku = currentHaiku
     scrollingView.swipe(.Down) { _ in
       self.speakHaiku()
     }
@@ -192,43 +197,54 @@ extension ViewController {
   }
 }
 
-// MARK: - ScrollingViewDelegate
-extension ViewController: ScrollingViewDelegate {
-  func showAds() -> Bool {
+extension ViewController: FloatingMenuViewDelegate {
+  
+  func creditsButtonPressed(state: Bool) {
+    if state {
+      print("showCredits")
+      scrollingView.showCredits()
+    } else {
+      print("hideCredits")
+      scrollingView.hideCredits()
+    }
+  }
+  
+  var adsButtonsEnabled: Bool {
     return true
   }
   
-  var soundSelected: Bool {
+  var soundButtonSelected: Bool {
     get {
       return soundEnabled
     }
     
     set {
-      soundEnabled = soundSelected
+      self.soundEnabled = soundButtonSelected
     }
   }
   
-  func showFacebook() {
+  func facebookButtonPressed() {
     print("showFacebook")
   }
   
-  func showTwitter() {
+  func twitterButtonPressed() {
     print("showTwitter")
   }
   
-  func removeAds() {
+  func removeAdsButtonPressed() {
     print("removeAds")
   }
   
-  func restorePurchases() {
+  func restorePurchaseButtonPressed() {
     print("restorePurchases")
   }
   
-  func rateApp() {
+  func rateButtonPressed() {
     print("rateApps")
   }
   
-  func showSettings() {
+  
+  func settingsButtonPressed() {
     print("showSettings")
     
     let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())

@@ -23,6 +23,8 @@
 		8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B62A7BA1C4EB76F00D57878 /* LaunchScreen.storyboard */; };
 		8B62A7C71C4EB76F00D57878 /* EndlessHaikuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7C61C4EB76F00D57878 /* EndlessHaikuTests.swift */; };
 		8B62A7D21C4EB76F00D57878 /* EndlessHaikuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7D11C4EB76F00D57878 /* EndlessHaikuUITests.swift */; };
+		8BEC81541C6976DB00AEDEF3 /* FloatingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */; };
+		8BEC81561C69788700AEDEF3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC81551C69788700AEDEF3 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		8B62A7CD1C4EB76F00D57878 /* EndlessHaikuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EndlessHaikuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B62A7D11C4EB76F00D57878 /* EndlessHaikuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessHaikuUITests.swift; sourceTree = "<group>"; };
 		8B62A7D31C4EB76F00D57878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingMenuView.swift; sourceTree = "<group>"; };
+		8BEC81551C69788700AEDEF3 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +136,9 @@
 				8B5B93561C65BC05009BABE1 /* CustomSlider.swift */,
 				8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */,
 				8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */,
+				8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */,
 				8B43D3CD1C50083C00317ED8 /* Constants.swift */,
+				8BEC81551C69788700AEDEF3 /* Helpers.swift */,
 				8B43D3C91C5006B100317ED8 /* Device.swift */,
 				8B43D3CB1C50077D00317ED8 /* Haiku.swift */,
 				8B34607E1C61514F00B0492B /* HaikuManager.swift */,
@@ -299,8 +305,10 @@
 				8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */,
 				8B5B93551C65B7DD009BABE1 /* CustomSliderTableViewCell.swift in Sources */,
 				8B62A7B21C4EB76F00D57878 /* AppDelegate.swift in Sources */,
+				8BEC81561C69788700AEDEF3 /* Helpers.swift in Sources */,
 				8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */,
 				8B43D3CE1C50083C00317ED8 /* Constants.swift in Sources */,
+				8BEC81541C6976DB00AEDEF3 /* FloatingMenuView.swift in Sources */,
 				8B5B93531C65AA5C009BABE1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
