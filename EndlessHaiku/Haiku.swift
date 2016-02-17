@@ -9,6 +9,11 @@
 struct Haiku {
   
   // MARK: Functions
+  /**
+  Get lines as one string with newline characters.
+  
+  - returns: formatted lines
+  */
   func getHaikuLines() -> String {
     let newline = "\n"
     let formattedLines = lines[0] + newline + lines[1] + newline + lines[2]

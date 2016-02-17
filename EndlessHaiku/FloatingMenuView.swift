@@ -64,7 +64,12 @@ class FloatingMenuView: UIView {
   
 }
 
+// MARK: - Loading Helpers
 extension FloatingMenuView {
+  
+  /**
+   Load menuButton
+   */
   private func loadMenuButton() {
     if let menuShow = getScaledImage("UIButtons_MenuShow", scale: CGPoint(x: 0.8, y: 0.8)), let menuHide = getScaledImage("UIButtons_MenuHide", scale: CGPoint(x: 0.8, y: 0.8)) {
       
@@ -84,6 +89,9 @@ extension FloatingMenuView {
     }
   }
   
+  /**
+   Load facebookButton
+   */
   private func loadFacebookButton() {
     if let image = getScaledImage("UIButtons_Facebook", scale: CGPoint(x: 0.8, y: 0.8)) {
       
@@ -105,6 +113,9 @@ extension FloatingMenuView {
     }
   }
   
+  /**
+   Load twitterButton
+   */
   private func loadTwitterButton() {
     if let image = getScaledImage("UIButtons_Twitter", scale: CGPoint(x: 0.8, y: 0.8)) {
       
@@ -126,6 +137,9 @@ extension FloatingMenuView {
     }
   }
   
+  /**
+   Load creditsButton
+   */
   private func loadCreditsButton() {
     if let image = getScaledImage("UIButtons_Credits", scale: CGPoint(x: 0.8, y: 0.8)) {
       
@@ -147,6 +161,9 @@ extension FloatingMenuView {
     }
   }
   
+  /**
+   Load rateButton
+   */
   private func loadRateButton() {
     if let image = getScaledImage("UIButtons_Rate", scale: CGPoint(x: 0.8, y: 0.8)) {
       
@@ -168,6 +185,9 @@ extension FloatingMenuView {
     }
   }
   
+  /**
+   Load removeAdsButton
+   */
   private func loadRemoveAdsButton() {
     if let image = getScaledImage("UIButtons_RemoveAds", scale: CGPoint(x: 0.8, y: 0.8)) {
       
@@ -189,6 +209,9 @@ extension FloatingMenuView {
     }
   }
   
+  /**
+   Load restorePurchaseButton
+   */
   private func loadRestorePurchaseButton() {
     if let image = getScaledImage("UIButtons_RestorePurchase", scale: CGPoint(x: 0.8, y: 0.8)) {
       
@@ -210,6 +233,9 @@ extension FloatingMenuView {
     }
   }
   
+  /**
+   Load soundButton
+   */
   private func loadSoundButton() {
     
     if let soundOn = getScaledImage("UIButtons_SoundOn", scale: CGPoint(x: 0.8, y: 0.8)), let soundOff = getScaledImage("UIButtons_SoundOff", scale: CGPoint(x: 0.8, y: 0.8)) {
@@ -234,6 +260,9 @@ extension FloatingMenuView {
     }
   }
   
+  /**
+   Load settingsButton
+   */
   private func loadSettingsButton() {
     
     if let image = getScaledImage("UIButtons_Settings", scale: CGPoint(x: 0.8, y: 0.8)){
@@ -260,6 +289,7 @@ extension FloatingMenuView {
 
 // MARK: Button Selectors
 extension FloatingMenuView {
+  
   func creditsButtonPress() {
     creditsButton.transform = CGAffineTransformMakeScale(1.1, 1.1)
   }
@@ -360,10 +390,13 @@ extension FloatingMenuView {
   
 }
 
-
+// MARK: - Animations
 extension FloatingMenuView {
   
-  private func fadeOutButtonLayer() {
+  /**
+   Fade out buttonLayer
+   */
+  func fadeOutButtonLayer() {
     let duration: NSTimeInterval = 0.4
     let options = UIViewAnimationOptions.CurveEaseInOut
     let delay: NSTimeInterval = 0
@@ -378,7 +411,10 @@ extension FloatingMenuView {
     })
   }
   
-  private func fadeInButtonLayer() {
+  /**
+   Fade in buttonLayer
+   */
+  func fadeInButtonLayer() {
     let duration: NSTimeInterval = 0.4
     let options = UIViewAnimationOptions.CurveEaseInOut
     let delay: NSTimeInterval = 0
@@ -393,6 +429,9 @@ extension FloatingMenuView {
     })
   }
   
+  /**
+   Animate slide in buttons
+   */
   private func showButtons() {
     let duration: NSTimeInterval = 0.8
     let options = UIViewAnimationOptions.CurveEaseInOut
@@ -440,6 +479,9 @@ extension FloatingMenuView {
     })
   }
   
+  /**
+   Animate slide out of buttons
+   */
   private func hideButtons() {
     let duration: NSTimeInterval = 0.8
     let options = UIViewAnimationOptions.CurveEaseInOut

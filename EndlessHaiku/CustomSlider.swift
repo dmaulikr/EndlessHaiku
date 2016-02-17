@@ -8,8 +8,9 @@
 
 import UIKit
 
+/// UISlider with an identifier tag
 class CustomSlider: UISlider {
   
+  // MARK: Properties
   var identifier: Int = 0
-  
 }

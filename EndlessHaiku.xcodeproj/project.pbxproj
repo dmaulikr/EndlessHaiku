@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B19F5041C6EB255001944BC /* Haiku.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B19F5031C6EB255001944BC /* Haiku.csv */; };
 		8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34607E1C61514F00B0492B /* HaikuManager.swift */; };
-		8B3460811C61584500B0492B /* Haiku.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3460801C61584500B0492B /* Haiku.csv */; };
+		8B3460811C61584500B0492B /* HaikuV1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3460801C61584500B0492B /* HaikuV1.csv */; };
+		8B379C591C6A6ADD008140C1 /* CustomPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */; };
 		8B43D3C81C5005AD00317ED8 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */; };
 		8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C91C5006B100317ED8 /* Device.swift */; };
 		8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CB1C50077D00317ED8 /* Haiku.swift */; };
@@ -45,8 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B19F5031C6EB255001944BC /* Haiku.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haiku.csv; sourceTree = "<group>"; };
 		8B34607E1C61514F00B0492B /* HaikuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaikuManager.swift; sourceTree = "<group>"; };
-		8B3460801C61584500B0492B /* Haiku.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haiku.csv; sourceTree = "<group>"; };
+		8B3460801C61584500B0492B /* HaikuV1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HaikuV1.csv; sourceTree = "<group>"; };
+		8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerTableViewCell.swift; sourceTree = "<group>"; };
 		8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
 		8B43D3C91C5006B100317ED8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		8B43D3CB1C50077D00317ED8 /* Haiku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haiku.swift; sourceTree = "<group>"; };
@@ -96,6 +100,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B379C5A1C6A89D5008140C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B43D3CB1C50077D00317ED8 /* Haiku.swift */,
+				8B3460801C61584500B0492B /* HaikuV1.csv */,
+				8B19F5031C6EB255001944BC /* Haiku.csv */,
+				8B34607E1C61514F00B0492B /* HaikuManager.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8B379C5B1C6A89EF008140C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B5B93541C65B7DD009BABE1 /* CustomSliderTableViewCell.swift */,
+				8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */,
+				8B5B93561C65BC05009BABE1 /* CustomSlider.swift */,
+				8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */,
+				8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8B379C5C1C6A89F8008140C1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B62A7B31C4EB76F00D57878 /* ViewController.swift */,
+				8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		8B43D3C61C50057800317ED8 /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,18 +167,12 @@
 			isa = PBXGroup;
 			children = (
 				8B43D3C61C50057800317ED8 /* Support */,
-				8B62A7B31C4EB76F00D57878 /* ViewController.swift */,
-				8B5B93541C65B7DD009BABE1 /* CustomSliderTableViewCell.swift */,
-				8B5B93561C65BC05009BABE1 /* CustomSlider.swift */,
-				8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */,
-				8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */,
-				8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */,
-				8B43D3CD1C50083C00317ED8 /* Constants.swift */,
+				8B379C5C1C6A89F8008140C1 /* Controllers */,
+				8B379C5B1C6A89EF008140C1 /* Views */,
+				8B379C5A1C6A89D5008140C1 /* Models */,
 				8BEC81551C69788700AEDEF3 /* Helpers.swift */,
+				8B43D3CD1C50083C00317ED8 /* Constants.swift */,
 				8B43D3C91C5006B100317ED8 /* Device.swift */,
-				8B43D3CB1C50077D00317ED8 /* Haiku.swift */,
-				8B34607E1C61514F00B0492B /* HaikuManager.swift */,
-				8B3460801C61584500B0492B /* Haiku.csv */,
 				8B62A7B51C4EB76F00D57878 /* Main.storyboard */,
 			);
 			path = EndlessHaiku;
@@ -234,6 +264,7 @@
 				TargetAttributes = {
 					8B62A7AD1C4EB76F00D57878 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 38CJ7RTF4Q;
 					};
 					8B62A7C11C4EB76F00D57878 = {
 						CreatedOnToolsVersion = 7.2;
@@ -271,7 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */,
-				8B3460811C61584500B0492B /* Haiku.csv in Resources */,
+				8B3460811C61584500B0492B /* HaikuV1.csv in Resources */,
+				8B19F5041C6EB255001944BC /* Haiku.csv in Resources */,
 				8B62A7B91C4EB76F00D57878 /* Assets.xcassets in Resources */,
 				8B62A7B71C4EB76F00D57878 /* Main.storyboard in Resources */,
 			);
@@ -303,6 +335,7 @@
 				8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */,
 				8B62A7B41C4EB76F00D57878 /* ViewController.swift in Sources */,
 				8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */,
+				8B379C591C6A6ADD008140C1 /* CustomPickerTableViewCell.swift in Sources */,
 				8B5B93551C65B7DD009BABE1 /* CustomSliderTableViewCell.swift in Sources */,
 				8B62A7B21C4EB76F00D57878 /* AppDelegate.swift in Sources */,
 				8BEC81561C69788700AEDEF3 /* Helpers.swift in Sources */,
@@ -451,11 +484,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EndlessHaiku/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tvluong.EndlessHaiku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -463,11 +499,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EndlessHaiku/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tvluong.EndlessHaiku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

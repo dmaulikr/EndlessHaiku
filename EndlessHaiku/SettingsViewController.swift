@@ -19,28 +19,52 @@ class SettingsViewController: UIViewController {
   // MARK: Outlets
   @IBOutlet weak var tableView: UITableView!
   
-  // MARK: Actions
-  //  @IBAction func saveAction(sender: UIBarButtonItem) {
-  //    print("save bar button pressed")
-  //    
-  //    defaults.setFloat(rate, forKey: "rate")
-  //    defaults.setFloat(pitch, forKey: "pitch")
-  //    defaults.setFloat(volume, forKey: "volume")
-  //    
-  //    defaults.synchronize()
-  //    
-  //    delegate?.didSaveSettings()
-  //    navigationController?.popToRootViewControllerAnimated(true)
-  //  }
+  // MARK: Lifecycle
+  override func viewDidLoad() {
+    print("SettingsVC")
+    
+    rate = defaults.floatForKey(UserDefaultsKey.rate)
+    pitch = defaults.floatForKey(UserDefaultsKey.pitch)
+    volume = defaults.floatForKey(UserDefaultsKey.volume)
+    selectedVoiceLanguageIndex = defaults.integerForKey(UserDefaultsKey.languageCodeIndex)
+    
+    print("rate \(rate), pitch \(pitch)")
+    
+    
+    title = "Settings"
+    let barButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveAction")
+    navigationItem.rightBarButtonItem = barButton
+    
+    prepareVoiceList()
+  }
+  
+  // MARK: Properties
+  var rate: Float = 0
+  var pitch: Float = 1.0
+  var volume: Float = 1.0
+  let defaults = NSUserDefaults.standardUserDefaults()
+  
+  var voiceLanguages = [[String:String]]()
+  var selectedVoiceLanguageIndex: Int = 8
+  
+  weak var delegate: SettingsViewControllerDelegate?
+  
+  
+}
+
+extension SettingsViewController {
   
   // MARK: Functions
   
   func saveAction() {
     print("save bar button pressed")
     
-    defaults.setFloat(rate, forKey: "rate")
-    defaults.setFloat(pitch, forKey: "pitch")
-    defaults.setFloat(volume, forKey: "volume")
+    defaults.setFloat(rate, forKey: UserDefaultsKey.rate)
+    defaults.setFloat(pitch, forKey: UserDefaultsKey.pitch)
+    defaults.setFloat(volume, forKey: UserDefaultsKey.volume)
+    
+    defaults.setObject(voiceLanguages[selectedVoiceLanguageIndex][UserDefaultsKey.languageCode], forKey: UserDefaultsKey.languageCode)
+    defaults.setInteger(selectedVoiceLanguageIndex, forKey: UserDefaultsKey.languageCodeIndex)
     
     defaults.synchronize()
     
@@ -61,29 +85,6 @@ class SettingsViewController: UIViewController {
     
     tableView.reloadData()
   }
-  
-  // MARK: Lifecycle
-  override func viewDidLoad() {
-    print("SettingsVC")
-    
-    rate = defaults.floatForKey("rate")
-    pitch = defaults.floatForKey("pitch")
-    volume = defaults.floatForKey("volume")
-    
-    title = "Settings"
-    let barButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveAction")
-    navigationItem.rightBarButtonItem = barButton
-  }
-  
-  // MARK: Properties
-  var rate: Float = 0
-  var pitch: Float = 1.0
-  var volume: Float = 1.0
-  let defaults = NSUserDefaults.standardUserDefaults()
-  
-  weak var delegate: SettingsViewControllerDelegate?
-  
-  
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -93,69 +94,114 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return 4
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    var cell: CustomSliderTableViewCell!
-    var currentSliderValue: Float = 0
     
-    if indexPath.row < 3 {
-      cell = tableView.dequeueReusableCellWithIdentifier("SliderCell", forIndexPath: indexPath) as! CustomSliderTableViewCell
+    if indexPath.row == 0 {
+      
+      let pickerCell = tableView.dequeueReusableCellWithIdentifier("PickerCell", forIndexPath: indexPath) as! CustomPickerTableViewCell
+      
+      pickerCell.pickerView.delegate = self
+      pickerCell.pickerView.dataSource = self
+      
+      pickerCell.pickerView.showsSelectionIndicator = true
+      pickerCell.pickerView.selectRow(selectedVoiceLanguageIndex, inComponent: 0, animated: true)
+      
+      return pickerCell
+      
+    } else {
+      
+      let sliderCell = tableView.dequeueReusableCellWithIdentifier("SliderCell", forIndexPath: indexPath) as! CustomSliderTableViewCell
+      
+      var currentSliderValue: Float = 0
       
       switch indexPath.row {
-      case 0:
+      case 1:
         currentSliderValue = rate
         
-        cell.nameLabel.text = "Rate"
-        cell.valueLabel.text = String(format: "%.2f", arguments: [rate])
-        cell.slider.minimumValue = AVSpeechUtteranceMinimumSpeechRate
-        cell.slider.maximumValue = AVSpeechUtteranceMaximumSpeechRate
-        cell.slider.identifier = 0
-        
-      case 1:
-        currentSliderValue = pitch
-        
-        cell.nameLabel.text = "Pitch"
-        cell.valueLabel.text = String(format: "%.2f", arguments: [pitch])
-        cell.slider.minimumValue = 0.5
-        cell.slider.maximumValue = 2.0
-        cell.slider.identifier = 1
+        sliderCell.nameLabel.text = "Rate"
+        sliderCell.valueLabel.text = String(format: "%.2f", arguments: [rate])
+        sliderCell.slider.minimumValue = AVSpeechUtteranceMinimumSpeechRate
+        sliderCell.slider.maximumValue = AVSpeechUtteranceMaximumSpeechRate
+        sliderCell.slider.identifier = 0
         
       case 2:
+        currentSliderValue = pitch
+        
+        sliderCell.nameLabel.text = "Pitch"
+        sliderCell.valueLabel.text = String(format: "%.2f", arguments: [pitch])
+        sliderCell.slider.minimumValue = 0.5
+        sliderCell.slider.maximumValue = 2.0
+        sliderCell.slider.identifier = 1
+        
+      case 3:
         currentSliderValue = volume
         
-        cell.nameLabel.text = "Volume"
-        cell.valueLabel.text = String(format: "%.2f", arguments: [volume])
-        cell.slider.minimumValue = 0
-        cell.slider.maximumValue = 1
-        cell.slider.identifier = 2
+        sliderCell.nameLabel.text = "Volume"
+        sliderCell.valueLabel.text = String(format: "%.2f", arguments: [volume])
+        sliderCell.slider.minimumValue = 0
+        sliderCell.slider.maximumValue = 1
+        sliderCell.slider.identifier = 2
         
       default: break
       }
       
-      cell.slider.addTarget(self, action: "handleSliderValueChanged:", forControlEvents: .ValueChanged)
+      sliderCell.slider.addTarget(self, action: "handleSliderValueChanged:", forControlEvents: .ValueChanged)
       
-      if cell.slider.value != currentSliderValue {
-        cell.slider.value = currentSliderValue
+      if sliderCell.slider.value != currentSliderValue {
+        sliderCell.slider.value = currentSliderValue
       }
+      
+      return sliderCell
+      
     }
-    
-    return cell
     
   }
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    if indexPath.row < 3 {
-      return 60
+    if indexPath.row == 0 {
+      return 140
     }
     else{
-      return 170.0
+      return 50.0
     }
   }
 }
 
-
+extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+  func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    return 1
+  }
+  
+  func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    return voiceLanguages.count
+  }
+  
+  func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    let voiceLanguagesDictionary = voiceLanguages[row] as [String: String]
+    
+    return voiceLanguagesDictionary["languageName"]
+  }
+  
+  func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    selectedVoiceLanguageIndex = row
+  }
+  
+  func prepareVoiceList() {
+    for voice in AVSpeechSynthesisVoice.speechVoices() {
+      let voiceLanguageCode = voice.language
+      
+      if let voiceLanguageName = NSLocale.currentLocale().displayNameForKey(NSLocaleIdentifier, value: voiceLanguageCode) {
+        
+        let dictionary = ["languageName": voiceLanguageName, "languageCode": voiceLanguageCode]
+        
+        voiceLanguages.append(dictionary)
+      }
+    }
+  }
+}
 
 
 

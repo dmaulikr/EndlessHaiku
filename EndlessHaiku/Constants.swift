@@ -8,6 +8,23 @@
 
 import Foundation
 
+/**
+ *  Important App information
+ */
+struct App {
+  static let id = "1071420301"
+  static let name = "Food Check - Search for Recall"
+}
+
 struct Font {
   static let Verdana = "Verdana"
+}
+
+struct UserDefaultsKey {
+  static let rate = "rate"
+  static let pitch = "pitch"
+  static let volume = "volume"
+  static let languageCode = "languageCode"
+  static let languageCodeIndex = "languageCodeIndex"
+  
 }

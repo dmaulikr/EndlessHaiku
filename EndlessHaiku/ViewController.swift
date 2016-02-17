@@ -9,33 +9,9 @@
 import UIKit
 import QuartzCore
 import AVFoundation
+import Social
 
 class ViewController: UIViewController {
-  
-  // MARK: Functions
-  private func loadSpeechSynthesizerSettings() -> Bool {
-    let defaults = NSUserDefaults.standardUserDefaults()
-    if let rate = defaults.objectForKey("rate") as? Float, let pitch = defaults.objectForKey("pitch") as? Float, let volume = defaults.objectForKey("volume") as? Float {
-      self.rate = rate
-      self.pitch = pitch
-      self.volume = volume
-      
-      return true
-    } else {
-      return false
-    }
-  }
-  
-  func registerDefaultSettings() {
-    rate = AVSpeechUtteranceDefaultSpeechRate
-    pitch = 1.0
-    volume = 1.0
-    
-    let defaults: [String: AnyObject] = ["rate": rate, "pitch": pitch, "volume": volume]
-    
-    NSUserDefaults.standardUserDefaults().registerDefaults(defaults)
-    
-  }
   
   // MARK: Lifecycle
   override func viewDidLoad() {
@@ -44,7 +20,6 @@ class ViewController: UIViewController {
     haikuManager = HaikuManager()
     
     scrollingView = ScrollingView(frame: view.frame)
-    //    scrollingView.delegate = self
     
     currentHaiku = haikuManager.getRandomHaiku()
     scrollingView.haiku = currentHaiku
@@ -67,6 +42,7 @@ class ViewController: UIViewController {
       
       registerDefaultSettings()
     }
+    
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -78,6 +54,8 @@ class ViewController: UIViewController {
   }
   
   // MARK: Properties
+  let defaults = NSUserDefaults.standardUserDefaults()
+  
   var speechSynthesizer: AVSpeechSynthesizer!
   var haikuManager: HaikuManager!
   var scrollingView: ScrollingView!
@@ -85,18 +63,29 @@ class ViewController: UIViewController {
   var soundEnabled: Bool = false
   var currentHaiku: Haiku!
   
-  var totalUtterances: Int = 0
-  var currentUtterances: Int = 0
-  var totalTextLength: Int = 0
-  var spokenTextLength: Int = 0
+  var preferredVoiceLanguageCode: String!
+  var preferredVoiceLanguageCodeIndex: Int!
+  
+  //  var totalUtterances: Int = 0
+  //  var currentUtterances: Int = 0
+  //  var totalTextLength: Int = 0
+  //  var spokenTextLength: Int = 0
   
   var rate: Float = 0
   var pitch: Float = 0
   var volume: Float = 0
 }
 
+// MARK: - AVSpeechSynthesizerDelegate
 extension ViewController: AVSpeechSynthesizerDelegate {
   
+  /**
+   Get AVSpeechUtterance from input message
+   
+   - parameter speech: message
+   
+   - returns: speech utterance
+   */
   func getSpeechUtterance(speech: String) -> AVSpeechUtterance {
     let speechUtterance = AVSpeechUtterance(string: speech)
     speechUtterance.rate = rate
@@ -104,37 +93,98 @@ extension ViewController: AVSpeechSynthesizerDelegate {
     speechUtterance.volume = volume
     speechUtterance.postUtteranceDelay = 0.005
     
+    if let voiceLanguageCode = preferredVoiceLanguageCode {
+      let voice = AVSpeechSynthesisVoice(language: voiceLanguageCode)
+      speechUtterance.voice = voice
+    }
+    
     return speechUtterance
   }
   
+  /**
+   Read current haiku using speechSynthesizer
+   */
   func speakHaiku() {
     if !speechSynthesizer.speaking {
       for line in currentHaiku.lines {
         let speechUtterance = getSpeechUtterance(line)
         speechSynthesizer.speakUtterance(speechUtterance)
+        
       }
       
-      let authorSpeechUtterance = getSpeechUtterance(currentHaiku.author)
-      speechSynthesizer.speakUtterance(authorSpeechUtterance)
+      //      let authorSpeechUtterance = getSpeechUtterance(currentHaiku.author)
+      //      speechSynthesizer.speakUtterance(authorSpeechUtterance)
       
     } else {
       speechSynthesizer.continueSpeaking()
     }
   }
   
+  /**
+   Pause speechSynthesizer
+   */
   func pauseSpeech() {
     speechSynthesizer.pauseSpeakingAtBoundary(.Word)
   }
   
+  /**
+   Stop speechSynthesizer
+   */
   func stopSpeech() {
-    speechSynthesizer.stopSpeakingAtBoundary(.Immediate)
+    speechSynthesizer.stopSpeakingAtBoundary(.Word)
+  }
+  
+  /**
+   Load speechSynthesizer settings from NSUserDefaults
+   
+   - returns: success or failure in loading settings
+   */
+  func loadSpeechSynthesizerSettings() -> Bool {
+    if let rate = defaults.objectForKey(UserDefaultsKey.rate) as? Float,
+      let pitch = defaults.objectForKey(UserDefaultsKey.pitch) as? Float,
+      let volume = defaults.objectForKey(UserDefaultsKey.volume) as? Float,
+      let preferredVoiceLanguageCode = defaults.valueForKey(UserDefaultsKey.languageCode) as? String,
+      let preferredVoiceLanguageCodeIndex = defaults.objectForKey(UserDefaultsKey.languageCodeIndex) as? Int {
+        
+        self.rate = rate
+        self.pitch = pitch
+        self.volume = volume
+        
+        self.preferredVoiceLanguageCode = preferredVoiceLanguageCode
+        self.preferredVoiceLanguageCodeIndex = preferredVoiceLanguageCodeIndex
+        
+        return true
+    } else {
+      return false
+    }
+  }
+  
+  /**
+   Set speechSynthesizer default settings
+   */
+  func registerDefaultSettings() {
+    rate = AVSpeechUtteranceDefaultSpeechRate
+    pitch = 1.0
+    volume = 1.0
+    preferredVoiceLanguageCode = "en-US"
+    preferredVoiceLanguageCodeIndex = 8
+    
+    defaults.setFloat(rate, forKey: UserDefaultsKey.rate)
+    defaults.setFloat(pitch, forKey: UserDefaultsKey.pitch)
+    defaults.setFloat(volume, forKey: UserDefaultsKey.volume)
+    
+    defaults.synchronize()
+    
   }
   
 }
 
 // MARK: - Swipe Gestures
 extension ViewController {
-  private func loadSwipeGestureRecognizers() {
+  /**
+   Load swipe gestures
+   */
+  func loadSwipeGestureRecognizers() {
     let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft"))
     swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
     
@@ -153,6 +203,9 @@ extension ViewController {
     view.addGestureRecognizer(swipeDown)
   }
   
+  /**
+   Reset animations, speechSynthesizer, and haiku.
+   */
   func hideCreditStopSpeechGetRandomHaiku() {
     floatingMenuView.creditsButton.selected = false
     stopSpeech()
@@ -162,6 +215,11 @@ extension ViewController {
   }
   
   func swipeLeft() {
+    
+    guard !speechSynthesizer.speaking else {
+      return
+    }
+    
     hideCreditStopSpeechGetRandomHaiku()
     
     scrollingView.swipe(.Left) { _ in
@@ -170,6 +228,11 @@ extension ViewController {
   }
   
   func swipeRight() {
+    
+    guard !speechSynthesizer.speaking else {
+      return
+    }
+    
     hideCreditStopSpeechGetRandomHaiku()
     
     scrollingView.swipe(.Right) { _ in
@@ -179,6 +242,11 @@ extension ViewController {
   }
   
   func swipeUp() {
+    
+    guard !speechSynthesizer.speaking else {
+      return
+    }
+    
     hideCreditStopSpeechGetRandomHaiku()
     
     scrollingView.swipe(.Up) { _ in
@@ -188,11 +256,102 @@ extension ViewController {
   }
   
   func swipeDown() {
+    
+    guard !speechSynthesizer.speaking else {
+      return
+    }
+    
     hideCreditStopSpeechGetRandomHaiku()
     
     scrollingView.swipe(.Down) { _ in
       self.speakHaiku()
     }
+    
+  }
+}
+
+
+extension ViewController {
+  /**
+   Show Facebook compost view.
+   */
+  func showFacebook() {
+    
+    // Check if Facebook is available
+    if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+      
+      // Create the post
+      let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+      
+      post.completionHandler = {
+        _ in
+        self.floatingMenuView.fadeInButtonLayer()
+      }
+      
+      floatingMenuView.fadeOutButtonLayer()
+      
+      let seconds: Double = 0.5
+      let delay = seconds * Double(NSEC_PER_SEC)
+      let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+      
+      dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+        let image = self.scrollingView.getScreenShot()
+        post.addImage(image)
+        self.presentViewController(post, animated: true, completion: nil)
+      })
+      
+    } else {
+      
+      // Facebook is not available. Show a warning.
+      let alert = UIAlertController(title: "Facebook Unavailable", message: "User is not signed in", preferredStyle: .Alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+      presentViewController(alert, animated: true, completion: nil)
+    }
+  }
+  
+  /**
+   Show Twitter compost view.
+   */
+  func showTwitter() {
+    
+    // Check if Twitter is available
+    if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+      
+      // Create the tweet
+      let tweet = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+      tweet.setInitialText("Use this app to get up to date food recalls: \(App.name)")
+      tweet.addURL(NSURL(string: "https://itunes.apple.com/app/id\(App.id)"))
+      //      tweet.addImage(UIImage(named: Image.shareApp))
+      
+      presentViewController(tweet, animated: true, completion: nil)
+      
+    } else {
+      
+      // Twitter not available. Show a warning.
+      let alert = UIAlertController(title: "Twitter Unavailable", message: "User is not signed in", preferredStyle: .Alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+      presentViewController(alert, animated: true, completion: nil)
+    }
+  }
+  
+  /**
+   Open link to app on App Store for rating and review.
+   */
+  func showAppStore() {
+    
+    let alert = UIAlertController(title: "Rate App", message: nil, preferredStyle: .Alert)
+    
+    alert.addAction(UIAlertAction(title: "Rate", style: .Default){
+      _ in
+      // Open App in AppStore
+      let link = "https://itunes.apple.com/app/id\(App.id)"
+      
+      UIApplication.sharedApplication().openURL(NSURL(string: link)!)
+      })
+    
+    alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+    
+    presentViewController(alert, animated: true, completion: nil)
     
   }
 }
@@ -225,10 +384,12 @@ extension ViewController: FloatingMenuViewDelegate {
   
   func facebookButtonPressed() {
     print("showFacebook")
+    showFacebook()
   }
   
   func twitterButtonPressed() {
     print("showTwitter")
+    showTwitter()
   }
   
   func removeAdsButtonPressed() {
@@ -241,32 +402,40 @@ extension ViewController: FloatingMenuViewDelegate {
   
   func rateButtonPressed() {
     print("rateApps")
+    showAppStore()
   }
-  
   
   func settingsButtonPressed() {
     print("showSettings")
     
     let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
     if let settingsVC = mainStoryboard.instantiateViewControllerWithIdentifier("SettingsViewController") as? SettingsViewController {
-      //      presentViewController(settingsVC, animated: true, completion: nil)
       
       stopSpeech()
-      settingsVC.delegate = self
-      navigationController?.pushViewController(settingsVC, animated: true)
       
+      settingsVC.delegate = self
+      
+      let seconds = 0.5
+      let delay = seconds * Double(NSEC_PER_SEC)
+      let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+      
+      dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+        self.navigationController?.pushViewController(settingsVC, animated: true)
+        
+      })
     }
   }
 }
 
+// MARK: - <#SettingsViewControllerDelegate#>
 extension ViewController: SettingsViewControllerDelegate {
   func didSaveSettings() {
-    let defaults = NSUserDefaults.standardUserDefaults()
-    rate = defaults.floatForKey("rate")
-    pitch = defaults.floatForKey("pitch")
-    volume = defaults.floatForKey("volume")
+    rate = defaults.floatForKey(UserDefaultsKey.rate)
+    pitch = defaults.floatForKey(UserDefaultsKey.pitch)
+    volume = defaults.floatForKey(UserDefaultsKey.volume)
     
-    speakHaiku()
+    preferredVoiceLanguageCode = defaults.valueForKey(UserDefaultsKey.languageCode) as? String
+    preferredVoiceLanguageCodeIndex = defaults.integerForKey(UserDefaultsKey.languageCodeIndex)
   }
 }
 

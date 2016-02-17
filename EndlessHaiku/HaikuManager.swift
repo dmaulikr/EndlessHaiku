@@ -10,6 +10,11 @@ import Foundation
 
 class HaikuManager {
   // MARK: Functions
+  /**
+  Get a random haiku
+  
+  - returns: haiku
+  */
   func getRandomHaiku() -> Haiku {
     var randomIndex: Int
     
@@ -20,6 +25,14 @@ class HaikuManager {
     return haikus[randomIndex]
   }
   
+  /**
+   Parse CSV file and generate an array of haiku objects
+   
+   - parameter contentsOfURL: location of csv file
+   - parameter encoding:      string encoding
+   
+   - returns: array of haiku
+   */
   private func parseCSV(contentsOfURL: NSURL, encoding: NSStringEncoding) -> [Haiku] {
     let delimiter = "#"
     

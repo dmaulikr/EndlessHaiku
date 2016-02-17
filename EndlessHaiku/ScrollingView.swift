@@ -8,8 +8,8 @@
 
 import UIKit
 
+/// UIView with a scrolling background
 class ScrollingView: UIView {
-  
   
   // MARK: Lifecycle
   override init(frame: CGRect) {
@@ -32,6 +32,14 @@ class ScrollingView: UIView {
   var scrollDirection = Direction.Right
   let scrollSpeed: CGFloat = 0.1
   
+  /**
+   Enum for background scrolling direction.
+   
+   - Left:  scroll left
+   - Right: scroll right
+   - Up:    scroll up
+   - Down:  scroll down
+   */
   enum Direction: CGFloat {
     case Left = -1, Right = 1, Up, Down
   }
@@ -140,6 +148,9 @@ class ScrollingView: UIView {
 // MARK: Loading
 extension ScrollingView {
   
+  /**
+   Load the default background to the view
+   */
   private func loadBackground() {
     
     if let image = mountFuji {
@@ -154,6 +165,9 @@ extension ScrollingView {
     }
   }
   
+  /**
+   Load the labels to the view
+   */
   private func loadLabels() {
     
     haikuLabel = UILabel(frame: CGRect(x: bounds.size.width * 0.02, y: bounds.size.height * 0.05, width: bounds.size.width * 0.96, height: bounds.size.height * 0.75))
@@ -192,6 +206,10 @@ extension ScrollingView {
 
 // MARK: Scrolling
 extension ScrollingView {
+  
+  /**
+   Target action for scrolling the scrollLayer
+   */
   func scrollLayerScroll() {
     
     if displayLink.paused == false {
@@ -263,10 +281,16 @@ extension ScrollingView {
     }
   }
   
+  /**
+   Pause the scrolling background
+   */
   private func pauseDisplayLink() {
     displayLink.paused = true
   }
   
+  /**
+   Resume scrolling the background
+   */
   private func resumeDisplayLink() {
     displayLink.paused = false
   }
@@ -276,6 +300,12 @@ extension ScrollingView {
 // MARK: Animation
 extension ScrollingView {
   
+  /**
+   Slide the labels in and out of the view according to the direction of the user's swipe.
+   
+   - parameter direction:  direction of the user's swipe
+   - parameter completion: completion handler
+   */
   func swipe(direction: Direction, completion: (Bool)->Void) {
     
     let slideOutPosition: CGPoint
@@ -331,6 +361,9 @@ extension ScrollingView {
     })
   }
   
+  /**
+   Hide credit labels
+   */
   func hideCredits() {
     let duration: NSTimeInterval = 0.8
     let options = UIViewAnimationOptions.CurveEaseInOut
@@ -356,6 +389,9 @@ extension ScrollingView {
     })
   }
   
+  /**
+   Show credit labels
+   */
   func showCredits() {
     let duration: NSTimeInterval = 0.8
     let options = UIViewAnimationOptions.CurveEaseInOut
@@ -383,7 +419,25 @@ extension ScrollingView {
   
 }
 
-
+// MARK: - Screenshot Helper
+extension ScrollingView {
+  
+  /**
+   Get a screenshot UIImage of the view.
+   
+   - returns: screenshot of the view
+   */
+  func getScreenShot() -> UIImage {
+    UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
+    
+    drawViewHierarchyInRect(frame, afterScreenUpdates: true
+    )
+    
+    let screenShot = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return screenShot
+  }
+}
 
 
 

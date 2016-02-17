@@ -8,9 +8,10 @@
 
 import UIKit
 
+/// UITableViewCell with UILabel and UISlider
 class CustomSliderTableViewCell: UITableViewCell {
   
-  
+  // MARK: Outlets
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var valueLabel: UILabel!
   @IBOutlet weak var slider: CustomSlider!
