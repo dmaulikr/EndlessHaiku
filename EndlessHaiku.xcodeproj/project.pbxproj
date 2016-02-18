@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0AA6271C75641D003F66DF /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0AA6251C75641D003F66DF /* MoPub.framework */; };
+		8B0AA6281C75641D003F66DF /* MoPub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AA6261C75641D003F66DF /* MoPub.bundle */; };
 		8B19F5041C6EB255001944BC /* Haiku.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B19F5031C6EB255001944BC /* Haiku.csv */; };
 		8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34607E1C61514F00B0492B /* HaikuManager.swift */; };
 		8B3460811C61584500B0492B /* HaikuV1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3460801C61584500B0492B /* HaikuV1.csv */; };
@@ -15,6 +17,8 @@
 		8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C91C5006B100317ED8 /* Device.swift */; };
 		8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CB1C50077D00317ED8 /* Haiku.swift */; };
 		8B43D3CE1C50083C00317ED8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CD1C50083C00317ED8 /* Constants.swift */; };
+		8B4A75841C7549630065A6B9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4A75821C7549630065A6B9 /* Fabric.framework */; };
+		8B4A75851C7549630065A6B9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4A75831C7549630065A6B9 /* Crashlytics.framework */; };
 		8B5B93531C65AA5C009BABE1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */; };
 		8B5B93551C65B7DD009BABE1 /* CustomSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93541C65B7DD009BABE1 /* CustomSliderTableViewCell.swift */; };
 		8B5B93571C65BC05009BABE1 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93561C65BC05009BABE1 /* CustomSlider.swift */; };
@@ -47,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B0AA6251C75641D003F66DF /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = "<group>"; };
+		8B0AA6261C75641D003F66DF /* MoPub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MoPub.bundle; path = MoPub.framework/Versions/A/Resources/MoPub.bundle; sourceTree = "<group>"; };
 		8B19F5031C6EB255001944BC /* Haiku.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haiku.csv; sourceTree = "<group>"; };
 		8B34607E1C61514F00B0492B /* HaikuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaikuManager.swift; sourceTree = "<group>"; };
 		8B3460801C61584500B0492B /* HaikuV1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HaikuV1.csv; sourceTree = "<group>"; };
@@ -55,6 +61,8 @@
 		8B43D3C91C5006B100317ED8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		8B43D3CB1C50077D00317ED8 /* Haiku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haiku.swift; sourceTree = "<group>"; };
 		8B43D3CD1C50083C00317ED8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8B4A75821C7549630065A6B9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		8B4A75831C7549630065A6B9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8B5B93541C65B7DD009BABE1 /* CustomSliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSliderTableViewCell.swift; sourceTree = "<group>"; };
 		8B5B93561C65BC05009BABE1 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
@@ -80,6 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4A75851C7549630065A6B9 /* Crashlytics.framework in Frameworks */,
+				8B0AA6271C75641D003F66DF /* MoPub.framework in Frameworks */,
+				8B4A75841C7549630065A6B9 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +161,10 @@
 				8B62A7C51C4EB76F00D57878 /* EndlessHaikuTests */,
 				8B62A7D01C4EB76F00D57878 /* EndlessHaikuUITests */,
 				8B62A7AF1C4EB76F00D57878 /* Products */,
+				8B0AA6251C75641D003F66DF /* MoPub.framework */,
+				8B0AA6261C75641D003F66DF /* MoPub.bundle */,
+				8B4A75821C7549630065A6B9 /* Fabric.framework */,
+				8B4A75831C7549630065A6B9 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +221,7 @@
 				8B62A7AA1C4EB76F00D57878 /* Sources */,
 				8B62A7AB1C4EB76F00D57878 /* Frameworks */,
 				8B62A7AC1C4EB76F00D57878 /* Resources */,
+				8B4A75811C75492A0065A6B9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -304,6 +320,7 @@
 				8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */,
 				8B3460811C61584500B0492B /* HaikuV1.csv in Resources */,
 				8B19F5041C6EB255001944BC /* Haiku.csv in Resources */,
+				8B0AA6281C75641D003F66DF /* MoPub.bundle in Resources */,
 				8B62A7B91C4EB76F00D57878 /* Assets.xcassets in Resources */,
 				8B62A7B71C4EB76F00D57878 /* Main.storyboard in Resources */,
 			);
@@ -324,6 +341,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B4A75811C75492A0065A6B9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 8cb3dd65e013b1fa9b83134f0c5dac2cf6eaf270 fe537cfe99b966325cb570f59106232656f314e508584876f0c96f21ceab7b1e";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B62A7AA1C4EB76F00D57878 /* Sources */ = {
@@ -486,6 +519,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EndlessHaiku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -501,6 +539,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EndlessHaiku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -10,6 +10,8 @@ import UIKit
 import QuartzCore
 import AVFoundation
 import Social
+import Crashlytics
+import MoPub
 
 class ViewController: UIViewController {
   
@@ -43,6 +45,9 @@ class ViewController: UIViewController {
       registerDefaultSettings()
     }
     
+    loadCrashlyticsButton()
+    
+    loadAdView()
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -74,6 +79,8 @@ class ViewController: UIViewController {
   var rate: Float = 0
   var pitch: Float = 0
   var volume: Float = 0
+  
+  var adView = MPAdView()
 }
 
 // MARK: - AVSpeechSynthesizerDelegate
@@ -175,6 +182,45 @@ extension ViewController: AVSpeechSynthesizerDelegate {
     
     defaults.synchronize()
     
+  }
+  
+}
+
+
+extension ViewController: MPAdViewDelegate {
+  private func loadAdView() {
+    
+    adView = MPAdView(adUnitId: "1111", size: CGSize.zero)
+    
+    adView.delegate = self
+    
+    // Positions the ad at the bottom, with the correct size
+    adView.frame = CGRect(x: 0, y: view.bounds.size.height - MOPUB_BANNER_SIZE.height, width: MOPUB_BANNER_SIZE.width, height: MOPUB_BANNER_SIZE.height)
+    view.addSubview(adView)
+    
+    // Loads the ad over the network
+    adView.loadAd()
+    
+  }
+  
+  func viewControllerForPresentingModalView() -> UIViewController! {
+    return self
+  }
+}
+
+
+// MARK: - Crashlytics
+extension ViewController {
+  private func loadCrashlyticsButton() {
+    let button = UIButton(type: UIButtonType.RoundedRect)
+    button.frame = CGRectMake(20, 50, 100, 30)
+    button.setTitle("Crash", forState: UIControlState.Normal)
+    button.addTarget(self, action: "crashButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+    view.addSubview(button)
+  }
+  
+  @IBAction func crashButtonTapped(sender: AnyObject) {
+    Crashlytics.sharedInstance().crash()
   }
   
 }
