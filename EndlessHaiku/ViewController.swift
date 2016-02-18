@@ -45,8 +45,6 @@ class ViewController: UIViewController {
       registerDefaultSettings()
     }
     
-    loadCrashlyticsButton()
-    
     loadAdView()
   }
   
@@ -189,13 +187,19 @@ extension ViewController: AVSpeechSynthesizerDelegate {
 
 extension ViewController: MPAdViewDelegate {
   private func loadAdView() {
-    
-    adView = MPAdView(adUnitId: "1111", size: CGSize.zero)
+    let adUnitId = "b1be0fb3c7d84654bad790f005a50af7"
+    adView = MPAdView(adUnitId: adUnitId, size: CGSize.zero)
     
     adView.delegate = self
     
+    let bannerWidth = MOPUB_BANNER_SIZE.width
+    let bannerHeight = MOPUB_BANNER_SIZE.height
+    let xPosition = (view.bounds.size.width - bannerWidth) / 2
+    let yPosition = view.bounds.size.height - bannerHeight
+    
+    
     // Positions the ad at the bottom, with the correct size
-    adView.frame = CGRect(x: 0, y: view.bounds.size.height - MOPUB_BANNER_SIZE.height, width: MOPUB_BANNER_SIZE.width, height: MOPUB_BANNER_SIZE.height)
+    adView.frame = CGRect(x: xPosition, y: yPosition, width: bannerWidth, height: bannerHeight)
     view.addSubview(adView)
     
     // Loads the ad over the network

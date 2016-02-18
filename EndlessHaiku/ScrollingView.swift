@@ -185,7 +185,7 @@ extension ScrollingView {
     
     addSubview(haikuLabel)
     
-    authorLabel = UILabel(frame: CGRect(x: bounds.size.width * 0.5, y: bounds.size.height * 0.8, width: bounds.size.width * 0.5, height: bounds.size.height * 0.1))
+    authorLabel = UILabel(frame: CGRect(x: bounds.size.width * 0.5, y: bounds.size.height * 0.7, width: bounds.size.width * 0.5, height: bounds.size.height * 0.1))
     authorLabel.lineBreakMode = .ByWordWrapping
     authorLabel.numberOfLines = 0
     authorLabel.textAlignment = NSTextAlignment.Center
