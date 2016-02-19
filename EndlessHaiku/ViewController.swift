@@ -45,14 +45,31 @@ class ViewController: UIViewController {
       registerDefaultSettings()
     }
     
-    loadAdView()
   }
   
   override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    
     navigationController?.navigationBarHidden = true
+    
+    adView = getAppDelegate().adView
+    if let adView = adView {
+      adView.delegate = self
+      let xPosition = (view.bounds.size.width - adView.bounds.size.width) / 2
+      let yPosition = view.bounds.size.height - adView.bounds.size.height
+      
+      // Positions the ad at the bottom, with the correct size
+      adView.frame.origin = CGPoint(x: xPosition, y: yPosition)
+      view.addSubview(adView)
+      
+      // Loads the ad over the network
+      adView.loadAd()
+    }
   }
   
   override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    
     navigationController?.navigationBarHidden = false
   }
   
@@ -78,7 +95,8 @@ class ViewController: UIViewController {
   var pitch: Float = 0
   var volume: Float = 0
   
-  var adView = MPAdView()
+  var adView: MPAdView?
+  
 }
 
 // MARK: - AVSpeechSynthesizerDelegate
@@ -186,26 +204,6 @@ extension ViewController: AVSpeechSynthesizerDelegate {
 
 
 extension ViewController: MPAdViewDelegate {
-  private func loadAdView() {
-    let adUnitId = "b1be0fb3c7d84654bad790f005a50af7"
-    adView = MPAdView(adUnitId: adUnitId, size: CGSize.zero)
-    
-    adView.delegate = self
-    
-    let bannerWidth = MOPUB_BANNER_SIZE.width
-    let bannerHeight = MOPUB_BANNER_SIZE.height
-    let xPosition = (view.bounds.size.width - bannerWidth) / 2
-    let yPosition = view.bounds.size.height - bannerHeight
-    
-    
-    // Positions the ad at the bottom, with the correct size
-    adView.frame = CGRect(x: xPosition, y: yPosition, width: bannerWidth, height: bannerHeight)
-    view.addSubview(adView)
-    
-    // Loads the ad over the network
-    adView.loadAd()
-    
-  }
   
   func viewControllerForPresentingModalView() -> UIViewController! {
     return self

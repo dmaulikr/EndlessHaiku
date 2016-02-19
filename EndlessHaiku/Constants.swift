@@ -28,3 +28,8 @@ struct UserDefaultsKey {
   static let languageCodeIndex = "languageCodeIndex"
   
 }
+
+struct MoPubAdUnitId {
+  static let banner = "b1be0fb3c7d84654bad790f005a50af7"
+  static let leaderboard = "97ca1b1df4924b08950369c5d46a1c3c"
+}

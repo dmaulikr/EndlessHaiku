@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import QuartzCore
+import MoPub
 
 protocol SettingsViewControllerDelegate: class {
   func didSaveSettings()
@@ -38,6 +39,24 @@ class SettingsViewController: UIViewController {
     prepareVoiceList()
   }
   
+  override func viewDidAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    adView = getAppDelegate().adView
+    if let adView = adView {
+      adView.delegate = self
+      let xPosition = (view.bounds.size.width - adView.bounds.size.width) / 2
+      let yPosition = view.bounds.size.height - adView.bounds.size.height
+      
+      // Positions the ad at the bottom, with the correct size
+      adView.frame.origin = CGPoint(x: xPosition, y: yPosition)
+      view.addSubview(adView)
+      
+      // Loads the ad over the network
+      adView.loadAd()
+    }
+  }
+  
   // MARK: Properties
   var rate: Float = 0
   var pitch: Float = 1.0
@@ -49,6 +68,7 @@ class SettingsViewController: UIViewController {
   
   weak var delegate: SettingsViewControllerDelegate?
   
+  var adView: MPAdView?
   
 }
 
@@ -203,7 +223,11 @@ extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
   }
 }
 
-
+extension SettingsViewController: MPAdViewDelegate {
+  func viewControllerForPresentingModalView() -> UIViewController! {
+    return self
+  }
+}
 
 
 

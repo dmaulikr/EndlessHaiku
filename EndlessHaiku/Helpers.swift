@@ -7,6 +7,31 @@
 //
 
 import UIKit
+import MoPub
+
+func getAppDelegate() -> AppDelegate {
+  return UIApplication.sharedApplication().delegate as! AppDelegate
+}
+
+func getAdView() -> MPAdView? {
+  let adUnitId: String?
+  var adSize = CGSize.zero
+  
+  switch UIDevice.currentDevice().userInterfaceIdiom {
+  case .Pad:
+    adUnitId = MoPubAdUnitId.leaderboard
+    adSize = MOPUB_LEADERBOARD_SIZE
+  case .Phone:
+    adUnitId = MoPubAdUnitId.banner
+    adSize = MOPUB_BANNER_SIZE
+  default: return nil
+  }
+  
+  let adView = MPAdView(adUnitId: adUnitId, size: adSize)
+  adView.frame = CGRect(x: 0, y: 0, width: adSize.width, height: adSize.height)
+  
+  return adView
+}
 
 func getScaledImage(named: String, scale: CGPoint) -> UIImage? {
   if let image = UIImage(named: named) {
