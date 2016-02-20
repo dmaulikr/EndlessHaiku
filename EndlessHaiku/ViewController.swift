@@ -12,8 +12,14 @@ import AVFoundation
 import Social
 import Crashlytics
 import MoPub
+import SCLAlertView
 
 class ViewController: UIViewController {
+  
+  // MARK: Option
+  override func prefersStatusBarHidden() -> Bool {
+    return true
+  }
   
   // MARK: Lifecycle
   override func viewDidLoad() {
@@ -52,6 +58,10 @@ class ViewController: UIViewController {
     
     navigationController?.navigationBarHidden = true
     
+    guard Product.store.isProductPurchased(Product.RemoveAds) else {
+      return
+    }
+    
     adView = getAppDelegate().adView
     if let adView = adView {
       adView.delegate = self
@@ -85,11 +95,6 @@ class ViewController: UIViewController {
   
   var preferredVoiceLanguageCode: String!
   var preferredVoiceLanguageCodeIndex: Int!
-  
-  //  var totalUtterances: Int = 0
-  //  var currentUtterances: Int = 0
-  //  var totalTextLength: Int = 0
-  //  var spokenTextLength: Int = 0
   
   var rate: Float = 0
   var pitch: Float = 0
@@ -202,7 +207,7 @@ extension ViewController: AVSpeechSynthesizerDelegate {
   
 }
 
-
+// MARK: - MPAdViewDelegate
 extension ViewController: MPAdViewDelegate {
   
   func viewControllerForPresentingModalView() -> UIViewController! {
@@ -350,10 +355,8 @@ extension ViewController {
       
     } else {
       
-      // Facebook is not available. Show a warning.
-      let alert = UIAlertController(title: "Facebook Unavailable", message: "User is not signed in", preferredStyle: .Alert)
-      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-      presentViewController(alert, animated: true, completion: nil)
+      SCLAlertView().showWarning("Facebook Unavailable", subTitle: "User is not signed in")
+      
     }
   }
   
@@ -367,18 +370,36 @@ extension ViewController {
       
       // Create the tweet
       let tweet = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-      tweet.setInitialText("Use this app to get up to date food recalls: \(App.name)")
-      tweet.addURL(NSURL(string: "https://itunes.apple.com/app/id\(App.id)"))
-      //      tweet.addImage(UIImage(named: Image.shareApp))
       
-      presentViewController(tweet, animated: true, completion: nil)
+      tweet.completionHandler = {
+        _ in
+        self.floatingMenuView.fadeInButtonLayer()
+      }
+      
+      floatingMenuView.fadeOutButtonLayer()
+      
+      let seconds: Double = 0.5
+      let delay = seconds * Double(NSEC_PER_SEC)
+      let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+      
+      dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+        let image = self.scrollingView.getScreenShot()
+        tweet.setInitialText(App.name)
+        tweet.addImage(image)
+        self.presentViewController(tweet, animated: true, completion: nil)
+      })
+      
+      //      
+      //      tweet.setInitialText("Use this app to get up to date food recalls: \(App.name)")
+      //      //      tweet.addURL(NSURL(string: "https://itunes.apple.com/app/id\(App.id)"))
+      //      tweet.addImage(UIImage(named: Image.shareApp))
+      //      
+      //      presentViewController(tweet, animated: true, completion: nil)
       
     } else {
       
-      // Twitter not available. Show a warning.
-      let alert = UIAlertController(title: "Twitter Unavailable", message: "User is not signed in", preferredStyle: .Alert)
-      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-      presentViewController(alert, animated: true, completion: nil)
+      SCLAlertView().showWarning("Twitter Unavailable", subTitle: "User is not signed in")
+      
     }
   }
   
@@ -387,21 +408,19 @@ extension ViewController {
    */
   func showAppStore() {
     
-    let alert = UIAlertController(title: "Rate App", message: nil, preferredStyle: .Alert)
+    let alert = SCLAlertView()
     
-    alert.addAction(UIAlertAction(title: "Rate", style: .Default){
-      _ in
+    alert.addButton("Rate") {
       // Open App in AppStore
       let link = "https://itunes.apple.com/app/id\(App.id)"
       
       UIApplication.sharedApplication().openURL(NSURL(string: link)!)
-      })
+    }
     
-    alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
-    
-    presentViewController(alert, animated: true, completion: nil)
+    alert.showSuccess("Rate App", subTitle: "Switch to App Store to rate us?")
     
   }
+  
 }
 
 extension ViewController: FloatingMenuViewDelegate {
@@ -417,7 +436,9 @@ extension ViewController: FloatingMenuViewDelegate {
   }
   
   var adsButtonsEnabled: Bool {
-    return true
+    let isPaid = Product.store.isProductPurchased(Product.RemoveAds)
+    
+    return !isPaid
   }
   
   var soundButtonSelected: Bool {
@@ -475,7 +496,7 @@ extension ViewController: FloatingMenuViewDelegate {
   }
 }
 
-// MARK: - <#SettingsViewControllerDelegate#>
+// MARK: - SettingsViewControllerDelegate
 extension ViewController: SettingsViewControllerDelegate {
   func didSaveSettings() {
     rate = defaults.floatForKey(UserDefaultsKey.rate)

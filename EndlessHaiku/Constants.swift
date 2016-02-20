@@ -13,7 +13,7 @@ import Foundation
  */
 struct App {
   static let id = "1071420301"
-  static let name = "Food Check - Search for Recall"
+  static let name = "Endless Haiku"
 }
 
 struct Font {

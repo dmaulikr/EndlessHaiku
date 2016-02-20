@@ -41,99 +41,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SliderCell" rowHeight="124" id="tdJ-mo-gBR" customClass="CustomSliderTableViewCell" customModule="EndlessHaiku" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="124"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tdJ-mo-gBR" id="5G9-ka-sjY">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="123.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAl-pY-dhP">
-                                                    <rect key="frame" x="8" y="8" width="70" height="107.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="j7e-6T-TVJ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AJ5-p7-f8F" customClass="CustomSlider" customModule="EndlessHaiku" customModuleProvider="target">
-                                                    <rect key="frame" x="142" y="47" width="452" height="31"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="400" id="q7O-wO-q9I"/>
-                                                    </constraints>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="q7O-wO-q9I"/>
-                                                        </mask>
-                                                    </variation>
-                                                </slider>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJJ-mV-2lN">
-                                                    <rect key="frame" x="86" y="51.5" width="50" height="20.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="2FU-i7-3Oc"/>
-                                                        <constraint firstAttribute="width" constant="50" id="t9O-yF-tPF"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="2FU-i7-3Oc"/>
-                                                        </mask>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="AJ5-p7-f8F" firstAttribute="centerY" secondItem="KAl-pY-dhP" secondAttribute="centerY" id="0hc-RJ-OjJ"/>
-                                                <constraint firstItem="KAl-pY-dhP" firstAttribute="leading" secondItem="5G9-ka-sjY" secondAttribute="leadingMargin" id="0ip-Fe-N8s"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="zJJ-mV-2lN" secondAttribute="bottom" id="6WB-bz-LJY"/>
-                                                <constraint firstItem="zJJ-mV-2lN" firstAttribute="leading" secondItem="KAl-pY-dhP" secondAttribute="trailing" constant="8" symbolic="YES" id="HRM-lC-uN7"/>
-                                                <constraint firstItem="zJJ-mV-2lN" firstAttribute="centerY" secondItem="KAl-pY-dhP" secondAttribute="centerY" id="I9o-l0-XJd"/>
-                                                <constraint firstItem="zJJ-mV-2lN" firstAttribute="baseline" secondItem="KAl-pY-dhP" secondAttribute="baseline" id="KcT-hJ-mHI"/>
-                                                <constraint firstItem="zJJ-mV-2lN" firstAttribute="baseline" secondItem="KAl-pY-dhP" secondAttribute="baseline" id="KmB-Vc-Ijm"/>
-                                                <constraint firstItem="AJ5-p7-f8F" firstAttribute="leading" secondItem="zJJ-mV-2lN" secondAttribute="trailing" constant="8" symbolic="YES" id="VAQ-Me-uuo"/>
-                                                <constraint firstItem="zJJ-mV-2lN" firstAttribute="top" secondItem="5G9-ka-sjY" secondAttribute="topMargin" id="Wef-sX-phA"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="zJJ-mV-2lN" secondAttribute="trailing" id="YJc-i1-6vS"/>
-                                                <constraint firstItem="zJJ-mV-2lN" firstAttribute="leading" secondItem="AJ5-p7-f8F" secondAttribute="trailing" constant="8" symbolic="YES" id="ZF6-5s-Vm3"/>
-                                                <constraint firstItem="AJ5-p7-f8F" firstAttribute="centerY" secondItem="zJJ-mV-2lN" secondAttribute="centerY" id="cUf-Er-j8N"/>
-                                                <constraint firstItem="KAl-pY-dhP" firstAttribute="top" secondItem="5G9-ka-sjY" secondAttribute="topMargin" id="dJG-vG-3Io"/>
-                                                <constraint firstItem="AJ5-p7-f8F" firstAttribute="leading" secondItem="KAl-pY-dhP" secondAttribute="trailing" constant="8" symbolic="YES" id="gC1-em-Hlh"/>
-                                                <constraint firstItem="zJJ-mV-2lN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AJ5-p7-f8F" secondAttribute="trailing" constant="8" symbolic="YES" id="k2y-dL-Fdq"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="AJ5-p7-f8F" secondAttribute="trailing" id="mGS-Lg-hpl"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="KAl-pY-dhP" secondAttribute="trailing" constant="504" id="tSU-V0-dVS"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="KAl-pY-dhP" secondAttribute="bottom" id="yc9-L1-TWW"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="tSU-V0-dVS"/>
-                                                    <exclude reference="6WB-bz-LJY"/>
-                                                    <exclude reference="KcT-hJ-mHI"/>
-                                                    <exclude reference="KmB-Vc-Ijm"/>
-                                                    <exclude reference="Wef-sX-phA"/>
-                                                    <exclude reference="YJc-i1-6vS"/>
-                                                    <exclude reference="ZF6-5s-Vm3"/>
-                                                    <exclude reference="k2y-dL-Fdq"/>
-                                                    <exclude reference="0hc-RJ-OjJ"/>
-                                                    <exclude reference="gC1-em-Hlh"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nameLabel" destination="KAl-pY-dhP" id="9Tx-a9-4qz"/>
-                                            <outlet property="slider" destination="AJ5-p7-f8F" id="H8v-9u-OcD"/>
-                                            <outlet property="valueLabel" destination="zJJ-mV-2lN" id="269-4Q-F9e"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PickerCell" rowHeight="124" id="Cb5-5m-k1V" customClass="CustomPickerTableViewCell" customModule="EndlessHaiku" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="152" width="600" height="124"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PickerCell" rowHeight="160" id="Cb5-5m-k1V" customClass="CustomPickerTableViewCell" customModule="EndlessHaiku" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cb5-5m-k1V" id="5IW-AD-C1P">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="123.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="159.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0s-Rw-Ylg">
-                                                    <rect key="frame" x="8" y="8" width="584" height="107.5"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="143.5"/>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -145,6 +61,57 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="pickerView" destination="q0s-Rw-Ylg" id="9yW-E8-S55"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SliderCell" rowHeight="100" id="tdJ-mo-gBR" customClass="CustomSliderTableViewCell" customModule="EndlessHaiku" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="188" width="600" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tdJ-mo-gBR" id="5G9-ka-sjY">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAl-pY-dhP">
+                                                    <rect key="frame" x="8" y="8" width="120" height="83.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="j7e-6T-TVJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AJ5-p7-f8F" customClass="CustomSlider" customModule="EndlessHaiku" customModuleProvider="target">
+                                                    <rect key="frame" x="142" y="35" width="436" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="400" id="q7O-wO-q9I"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="q7O-wO-q9I"/>
+                                                        </mask>
+                                                    </variation>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AJ5-p7-f8F" firstAttribute="centerY" secondItem="KAl-pY-dhP" secondAttribute="centerY" id="0hc-RJ-OjJ"/>
+                                                <constraint firstItem="KAl-pY-dhP" firstAttribute="leading" secondItem="5G9-ka-sjY" secondAttribute="leadingMargin" id="0ip-Fe-N8s"/>
+                                                <constraint firstItem="AJ5-p7-f8F" firstAttribute="leading" secondItem="KAl-pY-dhP" secondAttribute="trailing" constant="16" id="Wj3-gF-L7H"/>
+                                                <constraint firstItem="AJ5-p7-f8F" firstAttribute="centerY" secondItem="KAl-pY-dhP" secondAttribute="centerY" id="ag0-Au-leR"/>
+                                                <constraint firstItem="KAl-pY-dhP" firstAttribute="top" secondItem="5G9-ka-sjY" secondAttribute="topMargin" id="dJG-vG-3Io"/>
+                                                <constraint firstItem="AJ5-p7-f8F" firstAttribute="leading" secondItem="KAl-pY-dhP" secondAttribute="trailing" constant="8" symbolic="YES" id="gC1-em-Hlh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AJ5-p7-f8F" secondAttribute="trailing" constant="16" id="mGS-Lg-hpl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KAl-pY-dhP" secondAttribute="trailing" constant="504" id="tSU-V0-dVS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KAl-pY-dhP" secondAttribute="bottom" id="yc9-L1-TWW"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="tSU-V0-dVS"/>
+                                                    <exclude reference="0hc-RJ-OjJ"/>
+                                                    <exclude reference="gC1-em-Hlh"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="KAl-pY-dhP" id="9Tx-a9-4qz"/>
+                                            <outlet property="slider" destination="AJ5-p7-f8F" id="H8v-9u-OcD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

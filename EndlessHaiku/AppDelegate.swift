@@ -17,40 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   var adView: MPAdView?
   
-  //  private func loadAdView() {
-  //    let adUnitId: String?
-  //    var adSize = CGSize.zero
-  //    
-  //    switch UIDevice.currentDevice().userInterfaceIdiom {
-  //    case .Pad:
-  //      adUnitId = MoPubAdUnitId.leaderboard
-  //      adSize = MOPUB_LEADERBOARD_SIZE
-  //    case .Phone:
-  //      adUnitId = MoPubAdUnitId.banner
-  //      adSize = MOPUB_BANNER_SIZE
-  //    default: return
-  //    }
-  //    
-  //    adView = MPAdView(adUnitId: adUnitId, size: adSize)
-  //    
-  //    let xPosition = (view.bounds.size.width - adSize.width) / 2
-  //    let yPosition = view.bounds.size.height - adSize.height
-  //    
-  //    
-  //    // Positions the ad at the bottom, with the correct size
-  //    adView.frame = CGRect(x: xPosition, y: yPosition, width: adSize.width, height: adSize.height)
-  //    view.addSubview(adView)
-  //    
-  //    // Loads the ad over the network
-  //    adView.loadAd()
-  //    
-  //  }
-  
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     Fabric.with([Crashlytics.self, MoPub.self])
     
     adView = getAdView()
+    
+    configNavBarAppearance()
     
     return true
   }

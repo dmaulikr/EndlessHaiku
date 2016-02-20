@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import ASValueTrackingSlider
 
 /// UISlider with an identifier tag
-class CustomSlider: UISlider {
+class CustomSlider: ASValueTrackingSlider {
   
   // MARK: Properties
   var identifier: Int = 0

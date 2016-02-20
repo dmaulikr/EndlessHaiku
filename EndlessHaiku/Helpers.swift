@@ -8,6 +8,19 @@
 
 import UIKit
 import MoPub
+import ChameleonFramework
+
+let barTintColor = FlatLimeDark()
+let tintColor = FlatWhite()
+let fontName = "Helvetica Neue"
+
+func configNavBarAppearance() {
+  UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+  
+  UINavigationBar.appearance().barTintColor = barTintColor
+  UINavigationBar.appearance().tintColor = tintColor
+  UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor(contrastingBlackOrWhiteColorOn: barTintColor, isFlat: true)]
+}
 
 func getAppDelegate() -> AppDelegate {
   return UIApplication.sharedApplication().delegate as! AppDelegate

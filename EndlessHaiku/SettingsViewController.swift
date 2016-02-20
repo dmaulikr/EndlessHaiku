@@ -10,6 +10,9 @@ import UIKit
 import AVFoundation
 import QuartzCore
 import MoPub
+import ASValueTrackingSlider
+import ChameleonFramework
+
 
 protocol SettingsViewControllerDelegate: class {
   func didSaveSettings()
@@ -19,6 +22,11 @@ class SettingsViewController: UIViewController {
   
   // MARK: Outlets
   @IBOutlet weak var tableView: UITableView!
+  
+  // MARK: Option
+  override func prefersStatusBarHidden() -> Bool {
+    return true
+  }
   
   // MARK: Lifecycle
   override func viewDidLoad() {
@@ -37,24 +45,6 @@ class SettingsViewController: UIViewController {
     navigationItem.rightBarButtonItem = barButton
     
     prepareVoiceList()
-  }
-  
-  override func viewDidAppear(animated: Bool) {
-    super.viewWillAppear(animated)
-    
-    adView = getAppDelegate().adView
-    if let adView = adView {
-      adView.delegate = self
-      let xPosition = (view.bounds.size.width - adView.bounds.size.width) / 2
-      let yPosition = view.bounds.size.height - adView.bounds.size.height
-      
-      // Positions the ad at the bottom, with the correct size
-      adView.frame.origin = CGPoint(x: xPosition, y: yPosition)
-      view.addSubview(adView)
-      
-      // Loads the ad over the network
-      adView.loadAd()
-    }
   }
   
   // MARK: Properties
@@ -142,7 +132,6 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         currentSliderValue = rate
         
         sliderCell.nameLabel.text = "Rate"
-        sliderCell.valueLabel.text = String(format: "%.2f", arguments: [rate])
         sliderCell.slider.minimumValue = AVSpeechUtteranceMinimumSpeechRate
         sliderCell.slider.maximumValue = AVSpeechUtteranceMaximumSpeechRate
         sliderCell.slider.identifier = 0
@@ -151,7 +140,6 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         currentSliderValue = pitch
         
         sliderCell.nameLabel.text = "Pitch"
-        sliderCell.valueLabel.text = String(format: "%.2f", arguments: [pitch])
         sliderCell.slider.minimumValue = 0.5
         sliderCell.slider.maximumValue = 2.0
         sliderCell.slider.identifier = 1
@@ -160,7 +148,6 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         currentSliderValue = volume
         
         sliderCell.nameLabel.text = "Volume"
-        sliderCell.valueLabel.text = String(format: "%.2f", arguments: [volume])
         sliderCell.slider.minimumValue = 0
         sliderCell.slider.maximumValue = 1
         sliderCell.slider.identifier = 2
@@ -168,10 +155,22 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
       default: break
       }
       
-      sliderCell.slider.addTarget(self, action: "handleSliderValueChanged:", forControlEvents: .ValueChanged)
+      let slider = sliderCell.slider
+      slider.popUpViewCornerRadius = 4.0
+      slider.setMaxFractionDigitsDisplayed(2)
+      slider.popUpViewColor = FlatSkyBlue()
+      slider.autoAdjustTrackColor = false
+      slider.textColor = FlatWhite()
+      slider.minimumTrackTintColor = FlatSkyBlue()
+      slider.thumbTintColor = FlatTeal()
+      slider.popUpViewArrowLength = 4
+      slider.popUpViewHeightPaddingFactor = 1.0
+      slider.popUpViewWidthPaddingFactor = 1.1
       
-      if sliderCell.slider.value != currentSliderValue {
-        sliderCell.slider.value = currentSliderValue
+      slider.addTarget(self, action: "handleSliderValueChanged:", forControlEvents: .ValueChanged)
+      
+      if slider.value != currentSliderValue {
+        slider.value = currentSliderValue
       }
       
       return sliderCell
@@ -182,10 +181,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     if indexPath.row == 0 {
-      return 140
+      return 160.0
     }
     else{
-      return 50.0
+      return 100.0
     }
   }
 }

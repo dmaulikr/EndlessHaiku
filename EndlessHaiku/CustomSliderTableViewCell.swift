@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import ASValueTrackingSlider
 
 /// UITableViewCell with UILabel and UISlider
 class CustomSliderTableViewCell: UITableViewCell {
   
   // MARK: Outlets
   @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var valueLabel: UILabel!
   @IBOutlet weak var slider: CustomSlider!
+  
+  // MARK: Lifecycle
+  override func awakeFromNib() {
+    slider.delegate = self
+  }
+}
+
+extension CustomSliderTableViewCell: ASValueTrackingSliderDelegate {
+  func sliderWillDisplayPopUpView(slider: ASValueTrackingSlider!) {
+    self.superview!.bringSubviewToFront(slider)
+  }
 }
