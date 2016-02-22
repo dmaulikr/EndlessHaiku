@@ -10,27 +10,35 @@ import XCTest
 @testable import EndlessHaiku
 
 class EndlessHaikuTests: XCTestCase {
+  // MARK: Tests
+  func testGetRandomHaiku() {
+    let haiku = haikuManager.getRandomHaiku()
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    XCTAssert(!haiku.author.isEmpty)
+    XCTAssert(!haiku.lines.isEmpty)
+    XCTAssert(!haiku.getHaikuLines().isEmpty)
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+  }
+  
+  func testHaikuGetHaikuLines() {
+    let linesFormatted = testHaiku.getHaikuLines()
+    let expectedLinesFormatted = "Line1\nLine2\nLine3"
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    XCTAssert(linesFormatted == expectedLinesFormatted)
+  }
+  
+  // MARK: Lifecycle
+  override func setUp() {
+    super.setUp()
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+    haikuManager = HaikuManager()
+  }
+  
+  override func tearDown() {
+    super.tearDown()
+  }
+  
+  // MARK: Properties
+  var haikuManager: HaikuManager!
+  let testHaiku = Haiku(author: "Author", lines: ["Line1", "Line2", "Line3"])
 }

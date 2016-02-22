@@ -61,7 +61,10 @@ class ViewController: UIViewController {
     
     navigationController?.navigationBarHidden = true
     
-    guard Product.store.isProductPurchased(Product.RemoveAds) else {
+    let isPaid = Product.store.isProductPurchased(Product.RemoveAds)
+    print(isPaid)
+    
+    guard !isPaid else {
       return
     }
     
@@ -82,6 +85,8 @@ class ViewController: UIViewController {
   
   override func viewWillDisappear(animated: Bool) {
     super.viewWillDisappear(animated)
+    
+    adView?.removeFromSuperview()
     
     navigationController?.navigationBarHidden = false
   }
