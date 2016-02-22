@@ -58,14 +58,14 @@ class SettingsViewController: UIViewController {
   
   weak var delegate: SettingsViewControllerDelegate?
   
-  var adView: MPAdView?
-  
 }
 
+// MARK: - Helpers
 extension SettingsViewController {
   
-  // MARK: Functions
-  
+  /**
+   Save the updated AVSpeechSynthesis settings to NSUserDefaults and pop back to root VC.
+   */
   func saveAction() {
     print("save bar button pressed")
     
@@ -82,6 +82,11 @@ extension SettingsViewController {
     navigationController?.popToRootViewControllerAnimated(true)
   }
   
+  /**
+   Update the variables to the sliders value.
+   
+   - parameter sender: slider
+   */
   func handleSliderValueChanged(sender: CustomSlider) {
     switch sender.identifier {
     case 0:
@@ -181,14 +186,20 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     if indexPath.row == 0 {
-      return 160.0
+      switch UIDevice.currentDevice().userInterfaceIdiom {
+      case .Pad:
+        return 320.0
+      default:
+        return 160.0
+      }
     }
-    else{
+    else {
       return 100.0
     }
   }
 }
 
+// MARK: - UIPickerViewDataSource, UIPickerViewDelegate
 extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
   func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
     return 1
@@ -208,6 +219,9 @@ extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     selectedVoiceLanguageIndex = row
   }
   
+  /**
+   Retrieve an array of the AVSpeechSynthesis voice available on the current device.
+   */
   func prepareVoiceList() {
     for voice in AVSpeechSynthesisVoice.speechVoices() {
       let voiceLanguageCode = voice.language
@@ -221,13 +235,6 @@ extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
   }
 }
-
-extension SettingsViewController: MPAdViewDelegate {
-  func viewControllerForPresentingModalView() -> UIViewController! {
-    return self
-  }
-}
-
 
 
 

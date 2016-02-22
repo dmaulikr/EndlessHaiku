@@ -14,6 +14,9 @@ let barTintColor = FlatLimeDark()
 let tintColor = FlatWhite()
 let fontName = "Helvetica Neue"
 
+/**
+ Configure the default appearance for UINavigationBar.
+ */
 func configNavBarAppearance() {
   UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
   
@@ -22,10 +25,20 @@ func configNavBarAppearance() {
   UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor(contrastingBlackOrWhiteColorOn: barTintColor, isFlat: true)]
 }
 
+/**
+ Retrieve the AppDelegate.
+ 
+ - returns: appDelegate
+ */
 func getAppDelegate() -> AppDelegate {
   return UIApplication.sharedApplication().delegate as! AppDelegate
 }
 
+/**
+ Create a MoPub adView.
+ 
+ - returns: an initialized adView
+ */
 func getAdView() -> MPAdView? {
   let adUnitId: String?
   var adSize = CGSize.zero
@@ -46,6 +59,14 @@ func getAdView() -> MPAdView? {
   return adView
 }
 
+/**
+ Create an UIImage with a user defined scaling factor.
+ 
+ - parameter named: name of image file
+ - parameter scale: scaling factor
+ 
+ - returns: scaled image
+ */
 func getScaledImage(named: String, scale: CGPoint) -> UIImage? {
   if let image = UIImage(named: named) {
     let size = CGSizeApplyAffineTransform(image.size, CGAffineTransformMakeScale(scale.x, scale.y))
@@ -63,20 +84,49 @@ func getScaledImage(named: String, scale: CGPoint) -> UIImage? {
   }
 }
 
+/**
+ Create an UIImage specifically scaled for iPhone 6.
+ 
+ - parameter named: name of image file
+ 
+ - returns: scaled image
+ */
 func getScaledImageForiPhone6(named: String) -> UIImage? {
-  if let image = UIImage(named: named) {
-    let scaleFactor = ScaleFactor.iPhone6.scale.height
-    let size = CGSizeApplyAffineTransform(image.size, CGAffineTransformMakeScale(scaleFactor, scaleFactor))
-    let hasAlpha = true
-    let scale: CGFloat = 0 // Automatically use scale factor of main screen
-    UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
-    image.drawInRect(CGRect(origin: CGPointZero, size: size))
-    
-    let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
-    
-    return scaledImage
-  } else {
-    return nil
-  }
+  let factor = ScaleFactor.iPhone6.scale.height
+  let scale = CGPoint(x: factor, y: factor)
+  
+  return getScaledImage(named, scale: scale)
+  
 }
+
+/**
+ Create an UIImage specifically scaled for iPad Pro.
+ 
+ - parameter named: name of image file
+ 
+ - returns: scaled image
+ */
+func getScaledImageForiPadPro(named: String) -> UIImage? {
+  let factor = ScaleFactor.iPadPro.scale.height
+  print(factor)
+  let scale = CGPoint(x: factor, y: factor)
+  
+  return getScaledImage(named, scale: scale)
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

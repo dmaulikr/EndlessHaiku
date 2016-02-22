@@ -103,30 +103,28 @@ class ScrollingView: UIView {
     return displayLink
     }()
   
-  
-  var quoteTextFont: CGFloat {
+  /// Set the font size according to the fontScale and character count of the second haiku line.
+  var haikuTextFont: CGFloat {
     get {
       
-      //      var baseSize: CGFloat
-      //      switch currentQuote.quote.characters.count {
-      //      case 0...50:
-      //        baseSize = 30
-      //      case 51...100:
-      //        baseSize = 24
-      //      case 101...200:
-      //        baseSize = 20
-      //      case 201...1000:
-      //        baseSize = 18
-      //      default:
-      //        baseSize = 30
-      //      }
-      //      
-      //      return baseSize * fontScale
+      var baseSize: CGFloat
+      switch haiku.lines[1].characters.count {
+      case 0...30:
+        baseSize = 30
+      case 31...50:
+        baseSize = 26
+      case 51...200:
+        baseSize = 24
+      default:
+        baseSize = 30
+      }
       
-      return 30
+      return baseSize * fontScale
+      
     }
   }
   
+  /// Scale the font size according to the current device.
   var fontScale: CGFloat {
     get {
       switch currentDevice {
@@ -137,9 +135,11 @@ class ScrollingView: UIView {
       case .iPhone6:
         return 1.3
       case .iPhone6Plus:
-        return 1.5
+        return 1.4
       case .iPad:
-        return 2
+        return 1.9
+      case .iPadPro:
+        return 2.5
       }
     }
   }
@@ -152,6 +152,22 @@ extension ScrollingView {
    Load the default background to the view
    */
   private func loadBackground() {
+    
+    switch currentDevice {
+    case .iPhone6:
+      mountFuji = getScaledImageForiPhone6("OfflineMotivation_MountFuji")
+      farm = getScaledImageForiPhone6("OfflineMotivation_Farm")
+      egypt = getScaledImageForiPhone6("OfflineMotivation_Egypt")
+      america = getScaledImageForiPhone6("OfflineMotivation_America")
+      india = getScaledImageForiPhone6("OfflineMotivation_India")
+    case .iPadPro:
+      mountFuji = getScaledImageForiPadPro("OfflineMotivation_MountFuji")
+      farm = getScaledImageForiPadPro("OfflineMotivation_Farm")
+      egypt = getScaledImageForiPadPro("OfflineMotivation_Egypt")
+      america = getScaledImageForiPadPro("OfflineMotivation_America")
+      india = getScaledImageForiPadPro("OfflineMotivation_India")
+    default: break
+    }
     
     if let image = mountFuji {
       let layer = CALayer()
@@ -346,7 +362,7 @@ extension ScrollingView {
         
         self.haikuLabel.text = self.haiku.getHaikuLines()
         self.haikuLabel.frame.origin = transitionPosition
-        self.haikuLabel.font = UIFont(name: Font.Verdana, size: self.quoteTextFont)
+        self.haikuLabel.font = UIFont(name: Font.Verdana, size: self.haikuTextFont)
         
         self.authorLabel.text = self.haiku.author
         
@@ -376,7 +392,7 @@ extension ScrollingView {
       }, completion: {
         _ in
         self.haikuLabel.text = self.haiku.getHaikuLines()
-        self.haikuLabel.font = UIFont(name: Font.Verdana, size: self.quoteTextFont)
+        self.haikuLabel.font = UIFont(name: Font.Verdana, size: self.haikuTextFont)
         
         self.authorLabel.text = self.haiku.author
         

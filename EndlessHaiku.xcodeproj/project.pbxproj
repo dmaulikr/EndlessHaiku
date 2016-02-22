@@ -14,7 +14,6 @@
 		8B0AA6281C75641D003F66DF /* MoPub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AA6261C75641D003F66DF /* MoPub.bundle */; };
 		8B19F5041C6EB255001944BC /* Haiku.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B19F5031C6EB255001944BC /* Haiku.csv */; };
 		8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34607E1C61514F00B0492B /* HaikuManager.swift */; };
-		8B3460811C61584500B0492B /* HaikuV1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3460801C61584500B0492B /* HaikuV1.csv */; };
 		8B379C591C6A6ADD008140C1 /* CustomPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */; };
 		8B43D3C81C5005AD00317ED8 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */; };
 		8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C91C5006B100317ED8 /* Device.swift */; };
@@ -62,7 +61,6 @@
 		8B0AA6261C75641D003F66DF /* MoPub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MoPub.bundle; path = MoPub.framework/Versions/A/Resources/MoPub.bundle; sourceTree = "<group>"; };
 		8B19F5031C6EB255001944BC /* Haiku.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haiku.csv; sourceTree = "<group>"; };
 		8B34607E1C61514F00B0492B /* HaikuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaikuManager.swift; sourceTree = "<group>"; };
-		8B3460801C61584500B0492B /* HaikuV1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HaikuV1.csv; sourceTree = "<group>"; };
 		8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerTableViewCell.swift; sourceTree = "<group>"; };
 		8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
 		8B43D3C91C5006B100317ED8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				8B43D3CB1C50077D00317ED8 /* Haiku.swift */,
-				8B3460801C61584500B0492B /* HaikuV1.csv */,
 				8B19F5031C6EB255001944BC /* Haiku.csv */,
 				8B34607E1C61514F00B0492B /* HaikuManager.swift */,
 			);
@@ -360,7 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */,
-				8B3460811C61584500B0492B /* HaikuV1.csv in Resources */,
 				8B19F5041C6EB255001944BC /* Haiku.csv in Resources */,
 				8B0AA6281C75641D003F66DF /* MoPub.bundle in Resources */,
 				8B62A7B91C4EB76F00D57878 /* Assets.xcassets in Resources */,

@@ -25,6 +25,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    loadProductStore()
+    loadNotifications()
+    
     haikuManager = HaikuManager()
     
     scrollingView = ScrollingView(frame: view.frame)
@@ -90,7 +93,7 @@ class ViewController: UIViewController {
   var haikuManager: HaikuManager!
   var scrollingView: ScrollingView!
   var floatingMenuView: FloatingMenuView!
-  var soundEnabled: Bool = false
+  var soundEnabled: Bool = true
   var currentHaiku: Haiku!
   
   var preferredVoiceLanguageCode: String!
@@ -101,6 +104,9 @@ class ViewController: UIViewController {
   var volume: Float = 0
   
   var adView: MPAdView?
+  
+  var products = [SKProduct]()
+  
   
 }
 
@@ -133,6 +139,11 @@ extension ViewController: AVSpeechSynthesizerDelegate {
    Read current haiku using speechSynthesizer
    */
   func speakHaiku() {
+    
+    guard soundEnabled else {
+      return
+    }
+    
     if !speechSynthesizer.speaking {
       for line in currentHaiku.lines {
         let speechUtterance = getSpeechUtterance(line)
@@ -323,6 +334,50 @@ extension ViewController {
   }
 }
 
+// MARK: - IAP and Notifications
+extension ViewController {
+  
+  /**
+   Initialize the Product store to handle IAP.
+   */
+  private func loadProductStore() {
+    
+    Product.store.requestProductsWithCompletionHandler {
+      success, products in
+      
+      if success {
+        self.products = products
+        print("Success, products: \(self.products)")
+      } else {
+        print("failed")
+      }
+    }
+  }
+  
+  /**
+   Initialize notifications: Facebook, Twitter, App Store, Restore Purchases, Remove Ads.
+   */
+  private func loadNotifications() {
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "productPurchased:", name: IAPHelperProductPurchasedNotification, object: nil)
+  }
+  
+  /**
+   Update and process IAP purchases.
+   
+   - parameter notification: notification with productIdentifier
+   */
+  func productPurchased(notification: NSNotification) {
+    if let productIdentifier = notification.object as? String {
+      for product in products {
+        if product.productIdentifier == productIdentifier {
+          floatingMenuView.removeAdsButton?.removeFromSuperview()
+          floatingMenuView.restorePurchaseButton?.removeFromSuperview()
+        }
+      }
+    }
+  }
+}
+
 
 extension ViewController {
   /**
@@ -436,9 +491,12 @@ extension ViewController: FloatingMenuViewDelegate {
   }
   
   var adsButtonsEnabled: Bool {
-    let isPaid = Product.store.isProductPurchased(Product.RemoveAds)
+    get {
+      let isPaid = Product.store.isProductPurchased(Product.RemoveAds)
+      
+      return !isPaid
+    }
     
-    return !isPaid
   }
   
   var soundButtonSelected: Bool {
@@ -447,7 +505,13 @@ extension ViewController: FloatingMenuViewDelegate {
     }
     
     set {
-      self.soundEnabled = soundButtonSelected
+      soundEnabled = !newValue
+      
+      if soundEnabled {
+        speakHaiku()
+      } else {
+        stopSpeech()
+      }
     }
   }
   
@@ -463,10 +527,14 @@ extension ViewController: FloatingMenuViewDelegate {
   
   func removeAdsButtonPressed() {
     print("removeAds")
+    if let product = products.first {
+      Product.store.purchaseProduct(product)
+    }
   }
   
   func restorePurchaseButtonPressed() {
     print("restorePurchases")
+    Product.store.restoreCompletedTransactions()
   }
   
   func rateButtonPressed() {
@@ -484,7 +552,7 @@ extension ViewController: FloatingMenuViewDelegate {
       
       settingsVC.delegate = self
       
-      let seconds = 0.5
+      let seconds = 0.2
       let delay = seconds * Double(NSEC_PER_SEC)
       let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
       

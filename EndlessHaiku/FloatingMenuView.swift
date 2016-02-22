@@ -246,6 +246,10 @@ extension FloatingMenuView {
       soundButton.setImage(soundOn, forState: UIControlState.Normal)
       soundButton.setImage(soundOff, forState: UIControlState.Selected)
       
+      if let delegate = delegate {
+        soundButton.selected = delegate.soundButtonSelected
+      }
+      
       soundButton.layer.opacity = 0
       soundButton.userInteractionEnabled = false
       
