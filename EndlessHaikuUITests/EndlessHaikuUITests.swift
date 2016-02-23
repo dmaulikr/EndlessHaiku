@@ -11,6 +11,22 @@ import XCTest
 class EndlessHaikuUITests: XCTestCase {
   
   // MARK: Tests
+  func testSwipeLeft() {
+    app.staticTexts["Swipe"].swipeLeft()
+  }
+  
+  func testSwipeRight() {
+    app.staticTexts["Swipe"].swipeRight()
+  }
+  
+  func testSwipeUp() {
+    app.staticTexts["Swipe"].swipeUp()
+  }
+  
+  func testSwipeDown() {
+    app.staticTexts["Swipe"].swipeDown()
+  }
+  
   func testSwipeTextExists() {
     XCTAssert(app.staticTexts["Swipe"].exists)
   }
