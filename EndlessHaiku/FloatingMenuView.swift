@@ -79,6 +79,8 @@ extension FloatingMenuView {
       menuButton.setImage(menuShow, forState: UIControlState.Normal)
       menuButton.setImage(menuHide, forState: UIControlState.Selected)
       
+      menuButton.accessibilityIdentifier = "MenuButton"
+      
       buttonLayer.addSubview(menuButton)
       
       menuButton.addTarget(self, action: "menuButtonPress", forControlEvents: UIControlEvents.TouchDown)
@@ -102,6 +104,8 @@ extension FloatingMenuView {
       
       facebookButton.layer.opacity = 0
       facebookButton.userInteractionEnabled = false
+      
+      facebookButton.accessibilityIdentifier = "FacebookButton"
       
       buttonLayer.addSubview(facebookButton)
       
@@ -127,6 +131,8 @@ extension FloatingMenuView {
       twitterButton.layer.opacity = 0
       twitterButton.userInteractionEnabled = false
       
+      twitterButton.accessibilityIdentifier = "TwitterButton"
+      
       buttonLayer.addSubview(twitterButton)
       
       twitterButton.addTarget(self, action: "twitterButtonPress", forControlEvents: UIControlEvents.TouchDown)
@@ -150,6 +156,8 @@ extension FloatingMenuView {
       
       creditsButton.layer.opacity = 0
       creditsButton.userInteractionEnabled = false
+      
+      creditsButton.accessibilityIdentifier = "CreditsButton"
       
       buttonLayer.addSubview(creditsButton)
       
@@ -175,6 +183,8 @@ extension FloatingMenuView {
       rateButton.layer.opacity = 0
       rateButton.userInteractionEnabled = false
       
+      rateButton.accessibilityIdentifier = "RateButton"
+      
       buttonLayer.addSubview(rateButton)
       
       rateButton.addTarget(self, action: "rateButtonPress", forControlEvents: UIControlEvents.TouchDown)
@@ -199,6 +209,8 @@ extension FloatingMenuView {
       removeAdsButton?.layer.opacity = 0
       removeAdsButton?.userInteractionEnabled = false
       
+      removeAdsButton?.accessibilityIdentifier = "RemoveAdsButton"
+      
       buttonLayer.addSubview(removeAdsButton!)
       
       removeAdsButton?.addTarget(self, action: "removeAdsButtonPress", forControlEvents: UIControlEvents.TouchDown)
@@ -222,6 +234,8 @@ extension FloatingMenuView {
       
       restorePurchaseButton?.layer.opacity = 0
       restorePurchaseButton?.userInteractionEnabled = false
+      
+      restorePurchaseButton?.accessibilityIdentifier = "RestorePurchaseButton"
       
       buttonLayer.addSubview(restorePurchaseButton!)
       
@@ -253,6 +267,8 @@ extension FloatingMenuView {
       soundButton.layer.opacity = 0
       soundButton.userInteractionEnabled = false
       
+      soundButton.accessibilityIdentifier = "SoundButton"
+      
       buttonLayer.addSubview(soundButton)
       
       soundButton.addTarget(self, action: "soundButtonPress", forControlEvents: UIControlEvents.TouchDown)
@@ -278,6 +294,8 @@ extension FloatingMenuView {
       
       settingsButton.layer.opacity = 0
       settingsButton.userInteractionEnabled = false
+      
+      settingsButton.accessibilityIdentifier = "SettingsButton"
       
       buttonLayer.addSubview(settingsButton)
       

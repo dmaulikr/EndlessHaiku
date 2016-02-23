@@ -111,10 +111,10 @@ class ScrollingView: UIView {
       switch haiku.lines[1].characters.count {
       case 0...30:
         baseSize = 30
-      case 31...50:
-        baseSize = 26
-      case 51...200:
+      case 31...35:
         baseSize = 24
+      case 36...200:
+        baseSize = 22
       default:
         baseSize = 30
       }
@@ -300,14 +300,14 @@ extension ScrollingView {
   /**
    Pause the scrolling background
    */
-  private func pauseDisplayLink() {
+  func pauseDisplayLink() {
     displayLink.paused = true
   }
   
   /**
    Resume scrolling the background
    */
-  private func resumeDisplayLink() {
+  func resumeDisplayLink() {
     displayLink.paused = false
   }
 }

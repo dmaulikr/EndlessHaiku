@@ -9,28 +9,155 @@
 import XCTest
 
 class EndlessHaikuUITests: XCTestCase {
-        
-    override func setUp() {
-        super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
+  
+  // MARK: Tests
+  func testSwipeTextExists() {
+    XCTAssert(app.staticTexts["Swipe"].exists)
+  }
+  
+  func testMenuButton() {
+    menuButton.tap()
+    menuButton.tap()
+  }
+  
+  func testFacebookButton() {
+    menuButton.tap()
+    facebookButton.tap()
+    app.buttons["Done"].tap()
+  }
+  
+  func testTwitterButton() {
+    menuButton.tap()
+    twitterButton.tap()
+    app.buttons["Done"].tap()
+  }
+  
+  func testRateButton() {
+    menuButton.tap()
+    rateButton.tap()
+    app.buttons["Done"].tap()
+  }
+  
+  func testCreditsButton() {
+    menuButton.tap()
+    creditsButton.tap()
+    creditsButton.tap()
+  }
+  
+  func testSoundButton() {
+    menuButton.tap()
+    soundButton.tap()
+    soundButton.tap()
+  }
+  
+  func testSettingsButton() {
+    goToSettingsVC()
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+    let backButton = app.navigationBars["Settings"].childrenMatchingType(.Button).matchingIdentifier("Back").elementBoundByIndex(0)
+    backButton.tap()
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+  }
+  
+  func testVoicePicker() {
+    goToSettingsVC()
     
+    let settingstableTable = app.tables["SettingsTable"]
+    settingstableTable.pickerWheels["English (United States)"].tap()
+    
+  }
+  
+  func testRateSlider() {
+    goToSettingsVC()
+    
+    let settingstableTable = app.tables["SettingsTable"]
+    let slider = settingstableTable.otherElements["RateSlider"]
+    slider.tap()
+  }
+  
+  func testPitchSlider() {
+    goToSettingsVC()
+    
+    let settingstableTable = app.tables["SettingsTable"]
+    let slider = settingstableTable.otherElements["PitchSlider"]
+    slider.tap()
+  }
+  
+  func testVolumeSlider() {
+    goToSettingsVC()
+    
+    let settingstableTable = app.tables["SettingsTable"]
+    let slider = settingstableTable.otherElements["VolumeSlider"]
+    slider.tap()
+  }
+  
+  func testSettingsSaveButton() {
+    goToSettingsVC()
+    
+    let saveButton = app.navigationBars["Settings"].childrenMatchingType(.Button).matchingIdentifier("Save").elementBoundByIndex(0)
+    saveButton.tap()
+  }
+  
+  // MARK: Helpers
+  func goToSettingsVC() {
+    menuButton.tap()
+    settingsButton.tap()
+  }
+  
+  // MARK: Lifecycle
+  override func setUp() {
+    super.setUp()
+    
+    continueAfterFailure = false
+    app.launch()
+    
+  }
+  
+  override func tearDown() {
+    super.tearDown()
+  }
+  
+  // MARK: Properties
+  let app = XCUIApplication()
+  
+  var menuButton: XCUIElement {
+    get {
+      return app.buttons["MenuButton"]
+    }
+  }
+  
+  var facebookButton: XCUIElement {
+    get {
+      return app.buttons["FacebookButton"]
+    }
+  }
+  
+  var twitterButton: XCUIElement {
+    get {
+      return app.buttons["TwitterButton"]
+    }
+  }
+  
+  var rateButton: XCUIElement {
+    get {
+      return app.buttons["RateButton"]
+    }
+  }
+  
+  var creditsButton: XCUIElement {
+    get {
+      return app.buttons["CreditsButton"]
+    }
+  }
+  
+  var soundButton: XCUIElement {
+    get {
+      return app.buttons["SoundButton"]
+    }
+  }
+  
+  var settingsButton: XCUIElement {
+    get {
+      return app.buttons["SettingsButton"]
+    }
+  }
 }

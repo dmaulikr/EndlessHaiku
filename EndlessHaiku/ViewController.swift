@@ -35,6 +35,10 @@ class ViewController: UIViewController {
     currentHaiku = haikuManager.getRandomHaiku()
     scrollingView.haiku = currentHaiku
     
+    // Need to pauseDisplayLink to allow UI Test to run.
+    // Comment this line out before shipping.
+    scrollingView.pauseDisplayLink()
+    
     view.addSubview(scrollingView)
     
     floatingMenuView = FloatingMenuView(frame: view.frame)
@@ -512,11 +516,13 @@ extension ViewController: FloatingMenuViewDelegate {
     set {
       soundEnabled = !newValue
       
-      if soundEnabled {
-        speakHaiku()
-      } else {
-        stopSpeech()
-      }
+      speakHaiku()
+      
+      //      if soundEnabled {
+      //        speakHaiku()
+      //      } else {
+      //        stopSpeech()
+      //      }
     }
   }
   
@@ -557,7 +563,7 @@ extension ViewController: FloatingMenuViewDelegate {
       
       settingsVC.delegate = self
       
-      let seconds = 0.2
+      let seconds = 0.1
       let delay = seconds * Double(NSEC_PER_SEC)
       let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
       

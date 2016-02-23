@@ -45,6 +45,8 @@ class SettingsViewController: UIViewController {
     navigationItem.rightBarButtonItem = barButton
     
     prepareVoiceList()
+    
+    tableView.accessibilityIdentifier = "SettingsTable"
   }
   
   // MARK: Properties
@@ -118,11 +120,15 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
       
       let pickerCell = tableView.dequeueReusableCellWithIdentifier("PickerCell", forIndexPath: indexPath) as! CustomPickerTableViewCell
       
+      pickerCell.accessibilityIdentifier = "PickerCell"
+      
       pickerCell.pickerView.delegate = self
       pickerCell.pickerView.dataSource = self
       
       pickerCell.pickerView.showsSelectionIndicator = true
       pickerCell.pickerView.selectRow(selectedVoiceLanguageIndex, inComponent: 0, animated: true)
+      
+      pickerCell.pickerView.accessibilityIdentifier = "VoiceLanguage"
       
       return pickerCell
       
@@ -136,26 +142,35 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
       case 1:
         currentSliderValue = rate
         
+        sliderCell.accessibilityIdentifier = "RateSliderCell"
+        
         sliderCell.nameLabel.text = "Rate"
         sliderCell.slider.minimumValue = AVSpeechUtteranceMinimumSpeechRate
         sliderCell.slider.maximumValue = AVSpeechUtteranceMaximumSpeechRate
         sliderCell.slider.identifier = 0
+        sliderCell.slider.accessibilityIdentifier = "RateSlider"
         
       case 2:
         currentSliderValue = pitch
+        
+        sliderCell.accessibilityIdentifier = "PitchSliderCell"
         
         sliderCell.nameLabel.text = "Pitch"
         sliderCell.slider.minimumValue = 0.5
         sliderCell.slider.maximumValue = 2.0
         sliderCell.slider.identifier = 1
+        sliderCell.slider.accessibilityIdentifier = "PitchSlider"
         
       case 3:
         currentSliderValue = volume
+        
+        sliderCell.accessibilityIdentifier = "VolumeSliderCell"
         
         sliderCell.nameLabel.text = "Volume"
         sliderCell.slider.minimumValue = 0
         sliderCell.slider.maximumValue = 1
         sliderCell.slider.identifier = 2
+        sliderCell.slider.accessibilityIdentifier = "VolumeSlider"
         
       default: break
       }
