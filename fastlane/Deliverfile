@@ -8,3 +8,6 @@
 
 app_identifier "tvluong.EndlessHaiku" # The bundle identifier of your app
 username "guitarslacker@gmail.com" # your Apple ID user
+
+skip_metadata true
+submit_for_review false

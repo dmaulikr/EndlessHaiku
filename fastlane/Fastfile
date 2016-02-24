@@ -39,7 +39,7 @@ end
 
 lane :screenshot do
 snapshot
-#frameit
+frameit
 end
 
 lane :deliver do

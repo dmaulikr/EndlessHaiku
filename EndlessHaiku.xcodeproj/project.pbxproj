@@ -54,6 +54,22 @@
 		8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B62A7BA1C4EB76F00D57878 /* LaunchScreen.storyboard */; };
 		8B62A7C71C4EB76F00D57878 /* EndlessHaikuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7C61C4EB76F00D57878 /* EndlessHaikuTests.swift */; };
 		8B62A7D21C4EB76F00D57878 /* EndlessHaikuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7D11C4EB76F00D57878 /* EndlessHaikuUITests.swift */; };
+		8BB0D5ED1C7E260E00D098C8 /* keyword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5EB1C7E260E00D098C8 /* keyword.strings */; };
+		8BB0D5EE1C7E260E00D098C8 /* title.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5EC1C7E260E00D098C8 /* title.strings */; };
+		8BB0D6011C7E262200D098C8 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5EF1C7E262200D098C8 /* background.jpg */; };
+		8BB0D6021C7E262200D098C8 /* ChalkboardSE-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5F21C7E262200D098C8 /* ChalkboardSE-Bold.ttf */; };
+		8BB0D6031C7E262200D098C8 /* ChalkboardSE-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5F31C7E262200D098C8 /* ChalkboardSE-Light.ttf */; };
+		8BB0D6041C7E262200D098C8 /* ChalkboardSE-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5F41C7E262200D098C8 /* ChalkboardSE-Regular.ttf */; };
+		8BB0D6051C7E262200D098C8 /* fonts.dir in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5F51C7E262200D098C8 /* fonts.dir */; };
+		8BB0D6061C7E262200D098C8 /* fonts.scale in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5F61C7E262200D098C8 /* fonts.scale */; };
+		8BB0D6071C7E262200D098C8 /* ChalkboardSE.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5F81C7E262200D098C8 /* ChalkboardSE.ttc */; };
+		8BB0D6081C7E262200D098C8 /* fonts.dir in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5FA1C7E262200D098C8 /* fonts.dir */; };
+		8BB0D6091C7E262200D098C8 /* fonts.scale in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5FB1C7E262200D098C8 /* fonts.scale */; };
+		8BB0D60A1C7E262200D098C8 /* Verdana Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5FC1C7E262200D098C8 /* Verdana Bold Italic.ttf */; };
+		8BB0D60B1C7E262200D098C8 /* Verdana Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5FD1C7E262200D098C8 /* Verdana Bold.ttf */; };
+		8BB0D60C1C7E262200D098C8 /* Verdana Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5FE1C7E262200D098C8 /* Verdana Italic.ttf */; };
+		8BB0D60D1C7E262200D098C8 /* Verdana.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5FF1C7E262200D098C8 /* Verdana.ttf */; };
+		8BB0D60E1C7E262200D098C8 /* Framefile.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D6001C7E262200D098C8 /* Framefile.json */; };
 		8BEC81541C6976DB00AEDEF3 /* FloatingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */; };
 		8BEC81561C69788700AEDEF3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC81551C69788700AEDEF3 /* Helpers.swift */; };
 		A45D525EC00A3E415A882118 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B068297E70910057714EAE /* Pods.framework */; };
@@ -139,6 +155,22 @@
 		8B62A7CD1C4EB76F00D57878 /* EndlessHaikuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EndlessHaikuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B62A7D11C4EB76F00D57878 /* EndlessHaikuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessHaikuUITests.swift; sourceTree = "<group>"; };
 		8B62A7D31C4EB76F00D57878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB0D5EB1C7E260E00D098C8 /* keyword.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = keyword.strings; path = "en-US/keyword.strings"; sourceTree = "<group>"; };
+		8BB0D5EC1C7E260E00D098C8 /* title.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = title.strings; path = "en-US/title.strings"; sourceTree = "<group>"; };
+		8BB0D5EF1C7E262200D098C8 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = screenshots/background.jpg; sourceTree = "<group>"; };
+		8BB0D5F21C7E262200D098C8 /* ChalkboardSE-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChalkboardSE-Bold.ttf"; sourceTree = "<group>"; };
+		8BB0D5F31C7E262200D098C8 /* ChalkboardSE-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChalkboardSE-Light.ttf"; sourceTree = "<group>"; };
+		8BB0D5F41C7E262200D098C8 /* ChalkboardSE-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChalkboardSE-Regular.ttf"; sourceTree = "<group>"; };
+		8BB0D5F51C7E262200D098C8 /* fonts.dir */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fonts.dir; sourceTree = "<group>"; };
+		8BB0D5F61C7E262200D098C8 /* fonts.scale */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fonts.scale; sourceTree = "<group>"; };
+		8BB0D5F81C7E262200D098C8 /* ChalkboardSE.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChalkboardSE.ttc; sourceTree = "<group>"; };
+		8BB0D5FA1C7E262200D098C8 /* fonts.dir */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fonts.dir; sourceTree = "<group>"; };
+		8BB0D5FB1C7E262200D098C8 /* fonts.scale */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fonts.scale; sourceTree = "<group>"; };
+		8BB0D5FC1C7E262200D098C8 /* Verdana Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Verdana Bold Italic.ttf"; sourceTree = "<group>"; };
+		8BB0D5FD1C7E262200D098C8 /* Verdana Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Verdana Bold.ttf"; sourceTree = "<group>"; };
+		8BB0D5FE1C7E262200D098C8 /* Verdana Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Verdana Italic.ttf"; sourceTree = "<group>"; };
+		8BB0D5FF1C7E262200D098C8 /* Verdana.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Verdana.ttf; sourceTree = "<group>"; };
+		8BB0D6001C7E262200D098C8 /* Framefile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Framefile.json; path = screenshots/Framefile.json; sourceTree = "<group>"; };
 		8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingMenuView.swift; sourceTree = "<group>"; };
 		8BEC81551C69788700AEDEF3 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		BAA3AD7A12B349019F08AC1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +255,9 @@
 				8B14F0391C7CF296008A6402 /* screenshots */,
 				8B14F03B1C7CF296008A6402 /* Snapfile */,
 				8B14F03C1C7CF296008A6402 /* SnapshotHelper.swift */,
+				8BB0D5EF1C7E262200D098C8 /* background.jpg */,
+				8BB0D5F01C7E262200D098C8 /* fonts */,
+				8BB0D6001C7E262200D098C8 /* Framefile.json */,
 			);
 			path = fastlane;
 			sourceTree = "<group>";
@@ -266,6 +301,8 @@
 		8B14F0391C7CF296008A6402 /* screenshots */ = {
 			isa = PBXGroup;
 			children = (
+				8BB0D5EB1C7E260E00D098C8 /* keyword.strings */,
+				8BB0D5EC1C7E260E00D098C8 /* title.strings */,
 				8B14F03A1C7CF296008A6402 /* README.txt */,
 			);
 			path = screenshots;
@@ -375,6 +412,50 @@
 				8B62A7D31C4EB76F00D57878 /* Info.plist */,
 			);
 			path = EndlessHaikuUITests;
+			sourceTree = "<group>";
+		};
+		8BB0D5F01C7E262200D098C8 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8BB0D5F11C7E262200D098C8 /* Chalkboard SE */,
+				8BB0D5F91C7E262200D098C8 /* Verdana */,
+			);
+			name = fonts;
+			path = screenshots/fonts;
+			sourceTree = "<group>";
+		};
+		8BB0D5F11C7E262200D098C8 /* Chalkboard SE */ = {
+			isa = PBXGroup;
+			children = (
+				8BB0D5F21C7E262200D098C8 /* ChalkboardSE-Bold.ttf */,
+				8BB0D5F31C7E262200D098C8 /* ChalkboardSE-Light.ttf */,
+				8BB0D5F41C7E262200D098C8 /* ChalkboardSE-Regular.ttf */,
+				8BB0D5F51C7E262200D098C8 /* fonts.dir */,
+				8BB0D5F61C7E262200D098C8 /* fonts.scale */,
+				8BB0D5F71C7E262200D098C8 /* ttc */,
+			);
+			path = "Chalkboard SE";
+			sourceTree = "<group>";
+		};
+		8BB0D5F71C7E262200D098C8 /* ttc */ = {
+			isa = PBXGroup;
+			children = (
+				8BB0D5F81C7E262200D098C8 /* ChalkboardSE.ttc */,
+			);
+			path = ttc;
+			sourceTree = "<group>";
+		};
+		8BB0D5F91C7E262200D098C8 /* Verdana */ = {
+			isa = PBXGroup;
+			children = (
+				8BB0D5FA1C7E262200D098C8 /* fonts.dir */,
+				8BB0D5FB1C7E262200D098C8 /* fonts.scale */,
+				8BB0D5FC1C7E262200D098C8 /* Verdana Bold Italic.ttf */,
+				8BB0D5FD1C7E262200D098C8 /* Verdana Bold.ttf */,
+				8BB0D5FE1C7E262200D098C8 /* Verdana Italic.ttf */,
+				8BB0D5FF1C7E262200D098C8 /* Verdana.ttf */,
+			);
+			path = Verdana;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,23 +602,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB0D60D1C7E262200D098C8 /* Verdana.ttf in Resources */,
+				8BB0D6051C7E262200D098C8 /* fonts.dir in Resources */,
 				8B14F0511C7CF296008A6402 /* Snapfile in Resources */,
+				8BB0D6041C7E262200D098C8 /* ChalkboardSE-Regular.ttf in Resources */,
 				8B14F03D1C7CF296008A6402 /* Appfile in Resources */,
+				8BB0D6031C7E262200D098C8 /* ChalkboardSE-Light.ttf in Resources */,
+				8BB0D6081C7E262200D098C8 /* fonts.dir in Resources */,
 				8B14F0491C7CF296008A6402 /* primary_first_sub_category.txt in Resources */,
+				8BB0D60A1C7E262200D098C8 /* Verdana Bold Italic.ttf in Resources */,
+				8BB0D6091C7E262200D098C8 /* fonts.scale in Resources */,
 				8B14F04C1C7CF296008A6402 /* secondary_first_sub_category.txt in Resources */,
 				8B14F0461C7CF296008A6402 /* release_notes.txt in Resources */,
+				8BB0D5EE1C7E260E00D098C8 /* title.strings in Resources */,
 				8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */,
 				8B19F5041C6EB255001944BC /* Haiku.csv in Resources */,
 				8B14F04D1C7CF296008A6402 /* secondary_second_sub_category.txt in Resources */,
+				8BB0D6011C7E262200D098C8 /* background.jpg in Resources */,
+				8BB0D6061C7E262200D098C8 /* fonts.scale in Resources */,
+				8BB0D6021C7E262200D098C8 /* ChalkboardSE-Bold.ttf in Resources */,
 				8B0AA6281C75641D003F66DF /* MoPub.bundle in Resources */,
 				8B62A7B91C4EB76F00D57878 /* Assets.xcassets in Resources */,
+				8BB0D60B1C7E262200D098C8 /* Verdana Bold.ttf in Resources */,
 				8B14F04F1C7CF296008A6402 /* report.xml in Resources */,
 				8B62A7B71C4EB76F00D57878 /* Main.storyboard in Resources */,
 				8B14F03F1C7CF296008A6402 /* Fastfile in Resources */,
 				8B14F04B1C7CF296008A6402 /* secondary_category.txt in Resources */,
 				8B14F0431C7CF296008A6402 /* marketing_url.txt in Resources */,
+				8BB0D60E1C7E262200D098C8 /* Framefile.json in Resources */,
+				8BB0D60C1C7E262200D098C8 /* Verdana Italic.ttf in Resources */,
 				8B14F0441C7CF296008A6402 /* name.txt in Resources */,
 				8B14F0451C7CF296008A6402 /* privacy_url.txt in Resources */,
+				8BB0D6071C7E262200D098C8 /* ChalkboardSE.ttc in Resources */,
 				8B14F0411C7CF296008A6402 /* description.txt in Resources */,
 				8B14F0481C7CF296008A6402 /* primary_category.txt in Resources */,
 				8B14F04A1C7CF296008A6402 /* primary_second_sub_category.txt in Resources */,
@@ -545,6 +641,7 @@
 				8B14F0401C7CF296008A6402 /* copyright.txt in Resources */,
 				8B14F0421C7CF296008A6402 /* keywords.txt in Resources */,
 				8B14F0501C7CF296008A6402 /* README.txt in Resources */,
+				8BB0D5ED1C7E260E00D098C8 /* keyword.strings in Resources */,
 				8B14F03E1C7CF296008A6402 /* Deliverfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -921,6 +1018,7 @@
 				8B14F0201C7CF02B008A6402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B62A7A91C4EB76F00D57878 /* Build configuration list for PBXProject "EndlessHaiku" */ = {
 			isa = XCConfigurationList;

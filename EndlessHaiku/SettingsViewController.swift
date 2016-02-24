@@ -187,7 +187,6 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
       slider.popUpViewArrowLength = 4
       slider.popUpViewHeightPaddingFactor = 1.0
       slider.popUpViewWidthPaddingFactor = 1.1
-      slider.font = UIFont(name: "Verdana", size: 24)
       
       switch currentDevice {
       case .iPadPro:

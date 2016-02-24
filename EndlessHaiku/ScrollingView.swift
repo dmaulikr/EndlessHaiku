@@ -419,7 +419,7 @@ extension ScrollingView {
       
       }, completion: {
         _ in
-        self.haikuLabel.text = "Arts by: Openclipart.org\n\nMusic by: Freesound.org"
+        self.haikuLabel.text = "Japanese Haiku, by Peter Beilenson, sacred-texts.com\n\nArts from: Openclipart.org"
         self.haikuLabel.font = UIFont(name: Font.Verdana, size: 30 * self.fontScale)
         
         self.authorLabel.text = ""

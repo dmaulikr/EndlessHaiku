@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     // Need to pauseDisplayLink to allow UI Test to run.
     // Comment this line out before shipping.
-    scrollingView.pauseDisplayLink()
+    //    scrollingView.pauseDisplayLink()
     
     view.addSubview(scrollingView)
     
