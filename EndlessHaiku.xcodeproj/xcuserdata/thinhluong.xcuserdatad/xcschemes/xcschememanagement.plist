@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Snapshot.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>8B14F0171C7CF02B008A6402</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8B62A7AD1C4EB76F00D57878</key>
 		<dict>
 			<key>primary</key>

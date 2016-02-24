@@ -74,9 +74,22 @@
                                                     <rect key="frame" x="8" y="8" width="120" height="83.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="j7e-6T-TVJ"/>
+                                                        <constraint firstAttribute="width" constant="160" id="zJR-Tm-ROG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="zJR-Tm-ROG"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                                        <mask key="constraints">
+                                                            <exclude reference="j7e-6T-TVJ"/>
+                                                            <include reference="zJR-Tm-ROG"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AJ5-p7-f8F" customClass="CustomSlider" customModule="EndlessHaiku" customModuleProvider="target">
                                                     <rect key="frame" x="142" y="35" width="436" height="31"/>
@@ -87,6 +100,9 @@
                                                         <mask key="constraints">
                                                             <exclude reference="q7O-wO-q9I"/>
                                                         </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                        <rect key="frame" x="142" y="35" width="636" height="31"/>
                                                     </variation>
                                                 </slider>
                                             </subviews>

@@ -176,16 +176,31 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
       }
       
       let slider = sliderCell.slider
-      slider.popUpViewCornerRadius = 4.0
       slider.setMaxFractionDigitsDisplayed(2)
       slider.popUpViewColor = FlatSkyBlue()
       slider.autoAdjustTrackColor = false
       slider.textColor = FlatWhite()
       slider.minimumTrackTintColor = FlatSkyBlue()
       slider.thumbTintColor = FlatTeal()
+      
+      slider.popUpViewCornerRadius = 4.0
       slider.popUpViewArrowLength = 4
       slider.popUpViewHeightPaddingFactor = 1.0
       slider.popUpViewWidthPaddingFactor = 1.1
+      slider.font = UIFont(name: "Verdana", size: 24)
+      
+      switch currentDevice {
+      case .iPadPro:
+        slider.popUpViewCornerRadius = 8.0
+        slider.font = UIFont(name: "Verdana", size: 46)
+        
+      case .iPad:
+        slider.popUpViewCornerRadius = 8.0
+        slider.font = UIFont(name: "Verdana", size: 36)
+        
+      default: break
+        
+      }
       
       slider.addTarget(self, action: "handleSliderValueChanged:", forControlEvents: .ValueChanged)
       
@@ -201,15 +216,26 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     if indexPath.row == 0 {
-      switch UIDevice.currentDevice().userInterfaceIdiom {
-      case .Pad:
-        return 320.0
-      default:
-        return 160.0
+      switch currentDevice {
+      case .iPadPro:
+        return 380
+      case .iPad:
+        return 320
+      case .iPhone6Plus, .iPhone6:
+        return 240
+      case .iPhone4, .iPhone5:
+        return 180
       }
     }
     else {
-      return 100.0
+      switch currentDevice {
+      case .iPadPro:
+        return 200
+      case .iPad:
+        return 150
+      case .iPhone4, .iPhone5, .iPhone6, .iPhone6Plus:
+        return 100
+      }
     }
   }
 }

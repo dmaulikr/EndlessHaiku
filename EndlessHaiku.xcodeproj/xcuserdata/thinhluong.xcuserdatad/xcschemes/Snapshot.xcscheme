@@ -32,26 +32,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8B62A7C11C4EB76F00D57878"
-               BuildableName = "EndlessHaikuTests.xctest"
-               BlueprintName = "EndlessHaikuTests"
-               ReferencedContainer = "container:EndlessHaiku.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8B62A7CC1C4EB76F00D57878"
-               BuildableName = "EndlessHaikuUITests.xctest"
-               BlueprintName = "EndlessHaikuUITests"
-               ReferencedContainer = "container:EndlessHaiku.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B14F0171C7CF02B008A6402"
                BuildableName = "EndlessHaikuUISnapshot.xctest"
                BlueprintName = "EndlessHaikuUISnapshot"

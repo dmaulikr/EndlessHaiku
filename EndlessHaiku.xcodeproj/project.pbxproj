@@ -12,6 +12,29 @@
 		8B0A622B1C77D9C70004FD6A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0A622A1C77D9C70004FD6A /* StoreKit.framework */; };
 		8B0AA6271C75641D003F66DF /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0AA6251C75641D003F66DF /* MoPub.framework */; };
 		8B0AA6281C75641D003F66DF /* MoPub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AA6261C75641D003F66DF /* MoPub.bundle */; };
+		8B14F01B1C7CF02B008A6402 /* EndlessHaikuUISnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14F01A1C7CF02B008A6402 /* EndlessHaikuUISnapshot.swift */; };
+		8B14F03D1C7CF296008A6402 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0241C7CF296008A6402 /* Appfile */; };
+		8B14F03E1C7CF296008A6402 /* Deliverfile in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0251C7CF296008A6402 /* Deliverfile */; };
+		8B14F03F1C7CF296008A6402 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0261C7CF296008A6402 /* Fastfile */; };
+		8B14F0401C7CF296008A6402 /* copyright.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0281C7CF296008A6402 /* copyright.txt */; };
+		8B14F0411C7CF296008A6402 /* description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F02A1C7CF296008A6402 /* description.txt */; };
+		8B14F0421C7CF296008A6402 /* keywords.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F02B1C7CF296008A6402 /* keywords.txt */; };
+		8B14F0431C7CF296008A6402 /* marketing_url.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F02C1C7CF296008A6402 /* marketing_url.txt */; };
+		8B14F0441C7CF296008A6402 /* name.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F02D1C7CF296008A6402 /* name.txt */; };
+		8B14F0451C7CF296008A6402 /* privacy_url.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F02E1C7CF296008A6402 /* privacy_url.txt */; };
+		8B14F0461C7CF296008A6402 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F02F1C7CF296008A6402 /* release_notes.txt */; };
+		8B14F0471C7CF296008A6402 /* support_url.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0301C7CF296008A6402 /* support_url.txt */; };
+		8B14F0481C7CF296008A6402 /* primary_category.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0311C7CF296008A6402 /* primary_category.txt */; };
+		8B14F0491C7CF296008A6402 /* primary_first_sub_category.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0321C7CF296008A6402 /* primary_first_sub_category.txt */; };
+		8B14F04A1C7CF296008A6402 /* primary_second_sub_category.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0331C7CF296008A6402 /* primary_second_sub_category.txt */; };
+		8B14F04B1C7CF296008A6402 /* secondary_category.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0341C7CF296008A6402 /* secondary_category.txt */; };
+		8B14F04C1C7CF296008A6402 /* secondary_first_sub_category.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0351C7CF296008A6402 /* secondary_first_sub_category.txt */; };
+		8B14F04D1C7CF296008A6402 /* secondary_second_sub_category.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0361C7CF296008A6402 /* secondary_second_sub_category.txt */; };
+		8B14F04E1C7CF296008A6402 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8B14F0371C7CF296008A6402 /* README.md */; };
+		8B14F04F1C7CF296008A6402 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F0381C7CF296008A6402 /* report.xml */; };
+		8B14F0501C7CF296008A6402 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F03A1C7CF296008A6402 /* README.txt */; };
+		8B14F0511C7CF296008A6402 /* Snapfile in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F03B1C7CF296008A6402 /* Snapfile */; };
+		8B14F0531C7CF2A0008A6402 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14F03C1C7CF296008A6402 /* SnapshotHelper.swift */; };
 		8B19F5041C6EB255001944BC /* Haiku.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B19F5031C6EB255001944BC /* Haiku.csv */; };
 		8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34607E1C61514F00B0492B /* HaikuManager.swift */; };
 		8B379C591C6A6ADD008140C1 /* CustomPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */; };
@@ -37,6 +60,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8B14F01D1C7CF02B008A6402 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B62A7A61C4EB76F00D57878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B62A7AD1C4EB76F00D57878;
+			remoteInfo = EndlessHaiku;
+		};
 		8B62A7C31C4EB76F00D57878 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8B62A7A61C4EB76F00D57878 /* Project object */;
@@ -59,6 +89,31 @@
 		8B0A622A1C77D9C70004FD6A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8B0AA6251C75641D003F66DF /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = "<group>"; };
 		8B0AA6261C75641D003F66DF /* MoPub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MoPub.bundle; path = MoPub.framework/Versions/A/Resources/MoPub.bundle; sourceTree = "<group>"; };
+		8B14F0181C7CF02B008A6402 /* EndlessHaikuUISnapshot.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EndlessHaikuUISnapshot.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B14F01A1C7CF02B008A6402 /* EndlessHaikuUISnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessHaikuUISnapshot.swift; sourceTree = "<group>"; };
+		8B14F01C1C7CF02B008A6402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B14F0241C7CF296008A6402 /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
+		8B14F0251C7CF296008A6402 /* Deliverfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Deliverfile; sourceTree = "<group>"; };
+		8B14F0261C7CF296008A6402 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		8B14F0281C7CF296008A6402 /* copyright.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = copyright.txt; sourceTree = "<group>"; };
+		8B14F02A1C7CF296008A6402 /* description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = description.txt; sourceTree = "<group>"; };
+		8B14F02B1C7CF296008A6402 /* keywords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
+		8B14F02C1C7CF296008A6402 /* marketing_url.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = marketing_url.txt; sourceTree = "<group>"; };
+		8B14F02D1C7CF296008A6402 /* name.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = name.txt; sourceTree = "<group>"; };
+		8B14F02E1C7CF296008A6402 /* privacy_url.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = privacy_url.txt; sourceTree = "<group>"; };
+		8B14F02F1C7CF296008A6402 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		8B14F0301C7CF296008A6402 /* support_url.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = support_url.txt; sourceTree = "<group>"; };
+		8B14F0311C7CF296008A6402 /* primary_category.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = primary_category.txt; sourceTree = "<group>"; };
+		8B14F0321C7CF296008A6402 /* primary_first_sub_category.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = primary_first_sub_category.txt; sourceTree = "<group>"; };
+		8B14F0331C7CF296008A6402 /* primary_second_sub_category.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = primary_second_sub_category.txt; sourceTree = "<group>"; };
+		8B14F0341C7CF296008A6402 /* secondary_category.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secondary_category.txt; sourceTree = "<group>"; };
+		8B14F0351C7CF296008A6402 /* secondary_first_sub_category.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secondary_first_sub_category.txt; sourceTree = "<group>"; };
+		8B14F0361C7CF296008A6402 /* secondary_second_sub_category.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secondary_second_sub_category.txt; sourceTree = "<group>"; };
+		8B14F0371C7CF296008A6402 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B14F0381C7CF296008A6402 /* report.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
+		8B14F03A1C7CF296008A6402 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		8B14F03B1C7CF296008A6402 /* Snapfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
+		8B14F03C1C7CF296008A6402 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		8B19F5031C6EB255001944BC /* Haiku.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haiku.csv; sourceTree = "<group>"; };
 		8B34607E1C61514F00B0492B /* HaikuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaikuManager.swift; sourceTree = "<group>"; };
 		8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerTableViewCell.swift; sourceTree = "<group>"; };
@@ -92,6 +147,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8B14F0151C7CF02B008A6402 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B62A7AB1C4EB76F00D57878 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +201,76 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8B14F0191C7CF02B008A6402 /* EndlessHaikuUISnapshot */ = {
+			isa = PBXGroup;
+			children = (
+				8B14F01A1C7CF02B008A6402 /* EndlessHaikuUISnapshot.swift */,
+				8B14F01C1C7CF02B008A6402 /* Info.plist */,
+			);
+			path = EndlessHaikuUISnapshot;
+			sourceTree = "<group>";
+		};
+		8B14F0221C7CF296008A6402 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				8B14F0231C7CF296008A6402 /* actions */,
+				8B14F0241C7CF296008A6402 /* Appfile */,
+				8B14F0251C7CF296008A6402 /* Deliverfile */,
+				8B14F0261C7CF296008A6402 /* Fastfile */,
+				8B14F0271C7CF296008A6402 /* metadata */,
+				8B14F0371C7CF296008A6402 /* README.md */,
+				8B14F0381C7CF296008A6402 /* report.xml */,
+				8B14F0391C7CF296008A6402 /* screenshots */,
+				8B14F03B1C7CF296008A6402 /* Snapfile */,
+				8B14F03C1C7CF296008A6402 /* SnapshotHelper.swift */,
+			);
+			path = fastlane;
+			sourceTree = "<group>";
+		};
+		8B14F0231C7CF296008A6402 /* actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = actions;
+			sourceTree = "<group>";
+		};
+		8B14F0271C7CF296008A6402 /* metadata */ = {
+			isa = PBXGroup;
+			children = (
+				8B14F0281C7CF296008A6402 /* copyright.txt */,
+				8B14F0291C7CF296008A6402 /* en-US */,
+				8B14F0311C7CF296008A6402 /* primary_category.txt */,
+				8B14F0321C7CF296008A6402 /* primary_first_sub_category.txt */,
+				8B14F0331C7CF296008A6402 /* primary_second_sub_category.txt */,
+				8B14F0341C7CF296008A6402 /* secondary_category.txt */,
+				8B14F0351C7CF296008A6402 /* secondary_first_sub_category.txt */,
+				8B14F0361C7CF296008A6402 /* secondary_second_sub_category.txt */,
+			);
+			path = metadata;
+			sourceTree = "<group>";
+		};
+		8B14F0291C7CF296008A6402 /* en-US */ = {
+			isa = PBXGroup;
+			children = (
+				8B14F02A1C7CF296008A6402 /* description.txt */,
+				8B14F02B1C7CF296008A6402 /* keywords.txt */,
+				8B14F02C1C7CF296008A6402 /* marketing_url.txt */,
+				8B14F02D1C7CF296008A6402 /* name.txt */,
+				8B14F02E1C7CF296008A6402 /* privacy_url.txt */,
+				8B14F02F1C7CF296008A6402 /* release_notes.txt */,
+				8B14F0301C7CF296008A6402 /* support_url.txt */,
+			);
+			path = "en-US";
+			sourceTree = "<group>";
+		};
+		8B14F0391C7CF296008A6402 /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				8B14F03A1C7CF296008A6402 /* README.txt */,
+			);
+			path = screenshots;
+			sourceTree = "<group>";
+		};
 		8B379C5A1C6A89D5008140C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,9 +316,11 @@
 		8B62A7A51C4EB76F00D57878 = {
 			isa = PBXGroup;
 			children = (
+				8B14F0221C7CF296008A6402 /* fastlane */,
 				8B62A7B01C4EB76F00D57878 /* EndlessHaiku */,
 				8B62A7C51C4EB76F00D57878 /* EndlessHaikuTests */,
 				8B62A7D01C4EB76F00D57878 /* EndlessHaikuUITests */,
+				8B14F0191C7CF02B008A6402 /* EndlessHaikuUISnapshot */,
 				8B62A7AF1C4EB76F00D57878 /* Products */,
 				8B0AA6251C75641D003F66DF /* MoPub.framework */,
 				8B0AA6261C75641D003F66DF /* MoPub.bundle */,
@@ -203,6 +337,7 @@
 				8B62A7AE1C4EB76F00D57878 /* EndlessHaiku.app */,
 				8B62A7C21C4EB76F00D57878 /* EndlessHaikuTests.xctest */,
 				8B62A7CD1C4EB76F00D57878 /* EndlessHaikuUITests.xctest */,
+				8B14F0181C7CF02B008A6402 /* EndlessHaikuUISnapshot.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,6 +380,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8B14F0171C7CF02B008A6402 /* EndlessHaikuUISnapshot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B14F0211C7CF02B008A6402 /* Build configuration list for PBXNativeTarget "EndlessHaikuUISnapshot" */;
+			buildPhases = (
+				8B14F0141C7CF02B008A6402 /* Sources */,
+				8B14F0151C7CF02B008A6402 /* Frameworks */,
+				8B14F0161C7CF02B008A6402 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B14F01E1C7CF02B008A6402 /* PBXTargetDependency */,
+			);
+			name = EndlessHaikuUISnapshot;
+			productName = EndlessHaikuUISnapshot;
+			productReference = 8B14F0181C7CF02B008A6402 /* EndlessHaikuUISnapshot.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		8B62A7AD1C4EB76F00D57878 /* EndlessHaiku */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B62A7D61C4EB76F00D57878 /* Build configuration list for PBXNativeTarget "EndlessHaiku" */;
@@ -312,6 +465,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Thinh Luong";
 				TargetAttributes = {
+					8B14F0171C7CF02B008A6402 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 8B62A7AD1C4EB76F00D57878;
+					};
 					8B62A7AD1C4EB76F00D57878 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 38CJ7RTF4Q;
@@ -347,20 +504,48 @@
 				8B62A7AD1C4EB76F00D57878 /* EndlessHaiku */,
 				8B62A7C11C4EB76F00D57878 /* EndlessHaikuTests */,
 				8B62A7CC1C4EB76F00D57878 /* EndlessHaikuUITests */,
+				8B14F0171C7CF02B008A6402 /* EndlessHaikuUISnapshot */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8B14F0161C7CF02B008A6402 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B62A7AC1C4EB76F00D57878 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B14F0511C7CF296008A6402 /* Snapfile in Resources */,
+				8B14F03D1C7CF296008A6402 /* Appfile in Resources */,
+				8B14F0491C7CF296008A6402 /* primary_first_sub_category.txt in Resources */,
+				8B14F04C1C7CF296008A6402 /* secondary_first_sub_category.txt in Resources */,
+				8B14F0461C7CF296008A6402 /* release_notes.txt in Resources */,
 				8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */,
 				8B19F5041C6EB255001944BC /* Haiku.csv in Resources */,
+				8B14F04D1C7CF296008A6402 /* secondary_second_sub_category.txt in Resources */,
 				8B0AA6281C75641D003F66DF /* MoPub.bundle in Resources */,
 				8B62A7B91C4EB76F00D57878 /* Assets.xcassets in Resources */,
+				8B14F04F1C7CF296008A6402 /* report.xml in Resources */,
 				8B62A7B71C4EB76F00D57878 /* Main.storyboard in Resources */,
+				8B14F03F1C7CF296008A6402 /* Fastfile in Resources */,
+				8B14F04B1C7CF296008A6402 /* secondary_category.txt in Resources */,
+				8B14F0431C7CF296008A6402 /* marketing_url.txt in Resources */,
+				8B14F0441C7CF296008A6402 /* name.txt in Resources */,
+				8B14F0451C7CF296008A6402 /* privacy_url.txt in Resources */,
+				8B14F0411C7CF296008A6402 /* description.txt in Resources */,
+				8B14F0481C7CF296008A6402 /* primary_category.txt in Resources */,
+				8B14F04A1C7CF296008A6402 /* primary_second_sub_category.txt in Resources */,
+				8B14F0471C7CF296008A6402 /* support_url.txt in Resources */,
+				8B14F0401C7CF296008A6402 /* copyright.txt in Resources */,
+				8B14F0421C7CF296008A6402 /* keywords.txt in Resources */,
+				8B14F0501C7CF296008A6402 /* README.txt in Resources */,
+				8B14F03E1C7CF296008A6402 /* Deliverfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +627,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8B14F0141C7CF02B008A6402 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B14F01B1C7CF02B008A6402 /* EndlessHaikuUISnapshot.swift in Sources */,
+				8B14F0531C7CF2A0008A6402 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B62A7AA1C4EB76F00D57878 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,6 +646,7 @@
 				8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */,
 				8B62A7B41C4EB76F00D57878 /* ViewController.swift in Sources */,
 				8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */,
+				8B14F04E1C7CF296008A6402 /* README.md in Sources */,
 				8B379C591C6A6ADD008140C1 /* CustomPickerTableViewCell.swift in Sources */,
 				8B5B93551C65B7DD009BABE1 /* CustomSliderTableViewCell.swift in Sources */,
 				8B62A7B21C4EB76F00D57878 /* AppDelegate.swift in Sources */,
@@ -483,6 +678,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8B14F01E1C7CF02B008A6402 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B62A7AD1C4EB76F00D57878 /* EndlessHaiku */;
+			targetProxy = 8B14F01D1C7CF02B008A6402 /* PBXContainerItemProxy */;
+		};
 		8B62A7C41C4EB76F00D57878 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8B62A7AD1C4EB76F00D57878 /* EndlessHaiku */;
@@ -515,6 +715,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8B14F01F1C7CF02B008A6402 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EndlessHaikuUISnapshot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tvluong.EndlessHaikuUISnapshot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EndlessHaiku;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8B14F0201C7CF02B008A6402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EndlessHaikuUISnapshot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tvluong.EndlessHaikuUISnapshot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EndlessHaiku;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		8B62A7D41C4EB76F00D57878 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -690,6 +914,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8B14F0211C7CF02B008A6402 /* Build configuration list for PBXNativeTarget "EndlessHaikuUISnapshot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B14F01F1C7CF02B008A6402 /* Debug */,
+				8B14F0201C7CF02B008A6402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		8B62A7A91C4EB76F00D57878 /* Build configuration list for PBXProject "EndlessHaiku" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
