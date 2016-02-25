@@ -12,13 +12,13 @@ import ChameleonFramework
 
 let barTintColor = FlatLimeDark()
 let tintColor = FlatWhite()
-let fontName = "Helvetica Neue"
+//let fontName = "Helvetica Neue"
 
 /**
- Configure the default appearance for UINavigationBar.
- */
+Configure the default appearance for UINavigationBar.
+*/
 func configNavBarAppearance() {
-  UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+  //  UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
   
   UINavigationBar.appearance().barTintColor = barTintColor
   UINavigationBar.appearance().tintColor = tintColor
@@ -108,7 +108,6 @@ func getScaledImageForiPhone6(named: String) -> UIImage? {
  */
 func getScaledImageForiPadPro(named: String) -> UIImage? {
   let factor = ScaleFactor.iPadPro.scale.height
-  print(factor)
   let scale = CGPoint(x: factor, y: factor)
   
   return getScaledImage(named, scale: scale)

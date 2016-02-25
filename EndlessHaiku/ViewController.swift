@@ -66,7 +66,6 @@ class ViewController: UIViewController {
     navigationController?.navigationBarHidden = true
     
     let isPaid = Product.store.isProductPurchased(Product.RemoveAds)
-    print(isPaid)
     
     guard !isPaid else {
       return

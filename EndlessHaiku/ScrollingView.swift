@@ -109,9 +109,9 @@ class ScrollingView: UIView {
       
       var baseSize: CGFloat
       switch haiku.lines[1].characters.count {
-      case 0...30:
+      case 0...28:
         baseSize = 30
-      case 31...35:
+      case 29...35:
         baseSize = 24
       case 36...200:
         baseSize = 22

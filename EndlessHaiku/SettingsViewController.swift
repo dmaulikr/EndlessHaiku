@@ -28,17 +28,17 @@ class SettingsViewController: UIViewController {
     return true
   }
   
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return .LightContent
+  }
+  
   // MARK: Lifecycle
   override func viewDidLoad() {
-    print("SettingsVC")
     
     rate = defaults.floatForKey(UserDefaultsKey.rate)
     pitch = defaults.floatForKey(UserDefaultsKey.pitch)
     volume = defaults.floatForKey(UserDefaultsKey.volume)
     selectedVoiceLanguageIndex = defaults.integerForKey(UserDefaultsKey.languageCodeIndex)
-    
-    print("rate \(rate), pitch \(pitch)")
-    
     
     title = "Settings"
     let barButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveAction")
@@ -191,11 +191,11 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
       switch currentDevice {
       case .iPadPro:
         slider.popUpViewCornerRadius = 8.0
-        slider.font = UIFont(name: "Verdana", size: 46)
+        slider.font = UIFont(name: Font.Verdana, size: 46)
         
       case .iPad:
         slider.popUpViewCornerRadius = 8.0
-        slider.font = UIFont(name: "Verdana", size: 36)
+        slider.font = UIFont(name: Font.Verdana, size: 36)
         
       default: break
         
