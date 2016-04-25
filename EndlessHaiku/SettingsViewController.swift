@@ -41,7 +41,7 @@ class SettingsViewController: UIViewController {
     selectedVoiceLanguageIndex = defaults.integerForKey(UserDefaultsKey.languageCodeIndex)
     
     title = "Settings"
-    let barButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveAction")
+    let barButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: #selector(saveAction))
     navigationItem.rightBarButtonItem = barButton
     
     prepareVoiceList()
@@ -201,7 +201,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         
       }
       
-      slider.addTarget(self, action: "handleSliderValueChanged:", forControlEvents: .ValueChanged)
+      slider.addTarget(self, action: #selector(handleSliderValueChanged(_:)), forControlEvents: .ValueChanged)
       
       if slider.value != currentSliderValue {
         slider.value = currentSliderValue

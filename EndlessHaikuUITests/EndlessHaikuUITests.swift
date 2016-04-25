@@ -36,13 +36,13 @@ class EndlessHaikuUITests: XCTestCase {
     menuButton.tap()
   }
   
-  func testFacebookButton() {
+  func testFacebookButtonWithFailedConnection() {
     menuButton.tap()
     facebookButton.tap()
     app.buttons["Done"].tap()
   }
   
-  func testTwitterButton() {
+  func testTwitterButtonWithFailedConnection() {
     menuButton.tap()
     twitterButton.tap()
     app.buttons["Done"].tap()

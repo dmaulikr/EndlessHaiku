@@ -97,7 +97,7 @@ class ScrollingView: UIView {
   lazy var displayLink: CADisplayLink = {
     [unowned self] in
     
-    let displayLink = CADisplayLink(target: self, selector: "scrollLayerScroll")
+    let displayLink = CADisplayLink(target: self, selector: #selector(scrollLayerScroll))
     displayLink.frameInterval = 1
     
     return displayLink

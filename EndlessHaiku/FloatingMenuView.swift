@@ -83,11 +83,11 @@ extension FloatingMenuView {
       
       buttonLayer.addSubview(menuButton)
       
-      menuButton.addTarget(self, action: "menuButtonPress", forControlEvents: UIControlEvents.TouchDown)
-      menuButton.addTarget(self, action: "menuButtonRelease", forControlEvents: UIControlEvents.TouchUpInside)
-      menuButton.addTarget(self, action: "menuButtonRelease", forControlEvents: UIControlEvents.TouchUpOutside)
-      menuButton.addTarget(self, action: "menuButtonRelease", forControlEvents: UIControlEvents.TouchCancel)
-      menuButton.addTarget(self, action: "menuButtonRelease", forControlEvents: UIControlEvents.TouchDragExit)
+      menuButton.addTarget(self, action: #selector(menuButtonPress), forControlEvents: UIControlEvents.TouchDown)
+      menuButton.addTarget(self, action: #selector(menuButtonRelease), forControlEvents: UIControlEvents.TouchUpInside)
+      menuButton.addTarget(self, action: #selector(menuButtonRelease), forControlEvents: UIControlEvents.TouchUpOutside)
+      menuButton.addTarget(self, action: #selector(menuButtonRelease), forControlEvents: UIControlEvents.TouchCancel)
+      menuButton.addTarget(self, action: #selector(menuButtonRelease), forControlEvents: UIControlEvents.TouchDragExit)
     }
   }
   
@@ -109,11 +109,11 @@ extension FloatingMenuView {
       
       buttonLayer.addSubview(facebookButton)
       
-      facebookButton.addTarget(self, action: "facebookButtonPress", forControlEvents: UIControlEvents.TouchDown)
-      facebookButton.addTarget(self, action: "facebookButtonRelease", forControlEvents: UIControlEvents.TouchUpInside)
-      facebookButton.addTarget(self, action: "facebookButtonRelease", forControlEvents: UIControlEvents.TouchUpOutside)
-      facebookButton.addTarget(self, action: "facebookButtonRelease", forControlEvents: UIControlEvents.TouchCancel)
-      facebookButton.addTarget(self, action: "facebookButtonRelease", forControlEvents: UIControlEvents.TouchDragExit)
+      facebookButton.addTarget(self, action: #selector(facebookButtonPress), forControlEvents: UIControlEvents.TouchDown)
+      facebookButton.addTarget(self, action: #selector(facebookButtonRelease), forControlEvents: UIControlEvents.TouchUpInside)
+      facebookButton.addTarget(self, action: #selector(facebookButtonRelease), forControlEvents: UIControlEvents.TouchUpOutside)
+      facebookButton.addTarget(self, action: #selector(facebookButtonRelease), forControlEvents: UIControlEvents.TouchCancel)
+      facebookButton.addTarget(self, action: #selector(facebookButtonRelease), forControlEvents: UIControlEvents.TouchDragExit)
     }
   }
   
@@ -135,11 +135,11 @@ extension FloatingMenuView {
       
       buttonLayer.addSubview(twitterButton)
       
-      twitterButton.addTarget(self, action: "twitterButtonPress", forControlEvents: UIControlEvents.TouchDown)
-      twitterButton.addTarget(self, action: "twitterButtonRelease", forControlEvents: UIControlEvents.TouchUpInside)
-      twitterButton.addTarget(self, action: "twitterButtonRelease", forControlEvents: UIControlEvents.TouchUpOutside)
-      twitterButton.addTarget(self, action: "twitterButtonRelease", forControlEvents: UIControlEvents.TouchCancel)
-      twitterButton.addTarget(self, action: "twitterButtonRelease", forControlEvents: UIControlEvents.TouchDragExit)
+      twitterButton.addTarget(self, action: #selector(twitterButtonPress), forControlEvents: UIControlEvents.TouchDown)
+      twitterButton.addTarget(self, action: #selector(twitterButtonRelease), forControlEvents: UIControlEvents.TouchUpInside)
+      twitterButton.addTarget(self, action: #selector(twitterButtonRelease), forControlEvents: UIControlEvents.TouchUpOutside)
+      twitterButton.addTarget(self, action: #selector(twitterButtonRelease), forControlEvents: UIControlEvents.TouchCancel)
+      twitterButton.addTarget(self, action: #selector(twitterButtonRelease), forControlEvents: UIControlEvents.TouchDragExit)
     }
   }
   
@@ -161,11 +161,11 @@ extension FloatingMenuView {
       
       buttonLayer.addSubview(creditsButton)
       
-      creditsButton.addTarget(self, action: "creditsButtonPress", forControlEvents: UIControlEvents.TouchDown)
-      creditsButton.addTarget(self, action: "creditsButtonRelease", forControlEvents: UIControlEvents.TouchUpInside)
-      creditsButton.addTarget(self, action: "creditsButtonRelease", forControlEvents: UIControlEvents.TouchUpOutside)
-      creditsButton.addTarget(self, action: "creditsButtonRelease", forControlEvents: UIControlEvents.TouchCancel)
-      creditsButton.addTarget(self, action: "creditsButtonRelease", forControlEvents: UIControlEvents.TouchDragExit)
+      creditsButton.addTarget(self, action: #selector(creditsButtonPress), forControlEvents: UIControlEvents.TouchDown)
+      creditsButton.addTarget(self, action: #selector(creditsButtonRelease), forControlEvents: UIControlEvents.TouchUpInside)
+      creditsButton.addTarget(self, action: #selector(creditsButtonRelease), forControlEvents: UIControlEvents.TouchUpOutside)
+      creditsButton.addTarget(self, action: #selector(creditsButtonRelease), forControlEvents: UIControlEvents.TouchCancel)
+      creditsButton.addTarget(self, action: #selector(creditsButtonRelease), forControlEvents: UIControlEvents.TouchDragExit)
     }
   }
   
@@ -187,11 +187,11 @@ extension FloatingMenuView {
       
       buttonLayer.addSubview(rateButton)
       
-      rateButton.addTarget(self, action: "rateButtonPress", forControlEvents: UIControlEvents.TouchDown)
-      rateButton.addTarget(self, action: "rateButtonRelease", forControlEvents: UIControlEvents.TouchUpInside)
-      rateButton.addTarget(self, action: "rateButtonRelease", forControlEvents: UIControlEvents.TouchUpOutside)
-      rateButton.addTarget(self, action: "rateButtonRelease", forControlEvents: UIControlEvents.TouchCancel)
-      rateButton.addTarget(self, action: "rateButtonRelease", forControlEvents: UIControlEvents.TouchDragExit)
+      rateButton.addTarget(self, action: #selector(rateButtonPress), forControlEvents: UIControlEvents.TouchDown)
+      rateButton.addTarget(self, action: #selector(rateButtonRelease), forControlEvents: UIControlEvents.TouchUpInside)
+      rateButton.addTarget(self, action: #selector(rateButtonRelease), forControlEvents: UIControlEvents.TouchUpOutside)
+      rateButton.addTarget(self, action: #selector(rateButtonRelease), forControlEvents: UIControlEvents.TouchCancel)
+      rateButton.addTarget(self, action: #selector(rateButtonRelease), forControlEvents: UIControlEvents.TouchDragExit)
     }
   }
   
@@ -213,11 +213,11 @@ extension FloatingMenuView {
       
       buttonLayer.addSubview(removeAdsButton!)
       
-      removeAdsButton?.addTarget(self, action: "removeAdsButtonPress", forControlEvents: UIControlEvents.TouchDown)
-      removeAdsButton?.addTarget(self, action: "removeAdsButtonRelease", forControlEvents: UIControlEvents.TouchUpInside)
-      removeAdsButton?.addTarget(self, action: "removeAdsButtonRelease", forControlEvents: UIControlEvents.TouchUpOutside)
-      removeAdsButton?.addTarget(self, action: "removeAdsButtonRelease", forControlEvents: UIControlEvents.TouchCancel)
-      removeAdsButton?.addTarget(self, action: "removeAdsButtonRelease", forControlEvents: UIControlEvents.TouchDragExit)
+      removeAdsButton?.addTarget(self, action: #selector(removeAdsButtonPress), forControlEvents: UIControlEvents.TouchDown)
+      removeAdsButton?.addTarget(self, action: #selector(removeAdsButtonRelease), forControlEvents: UIControlEvents.TouchUpInside)
+      removeAdsButton?.addTarget(self, action: #selector(removeAdsButtonRelease), forControlEvents: UIControlEvents.TouchUpOutside)
+      removeAdsButton?.addTarget(self, action: #selector(removeAdsButtonRelease), forControlEvents: UIControlEvents.TouchCancel)
+      removeAdsButton?.addTarget(self, action: #selector(removeAdsButtonRelease), forControlEvents: UIControlEvents.TouchDragExit)
     }
   }
   
@@ -239,11 +239,11 @@ extension FloatingMenuView {
       
       buttonLayer.addSubview(restorePurchaseButton!)
       
-      restorePurchaseButton?.addTarget(self, action: "restorePurchaseButtonPress", forControlEvents: UIControlEvents.TouchDown)
-      restorePurchaseButton?.addTarget(self, action: "restorePurchaseButtonRelease", forControlEvents: UIControlEvents.TouchUpInside)
-      restorePurchaseButton?.addTarget(self, action: "restorePurchaseButtonRelease", forControlEvents: UIControlEvents.TouchUpOutside)
-      restorePurchaseButton?.addTarget(self, action: "restorePurchaseButtonRelease", forControlEvents: UIControlEvents.TouchCancel)
-      restorePurchaseButton?.addTarget(self, action: "restorePurchaseButtonRelease", forControlEvents: UIControlEvents.TouchDragExit)
+      restorePurchaseButton?.addTarget(self, action: #selector(restorePurchaseButtonPress), forControlEvents: UIControlEvents.TouchDown)
+      restorePurchaseButton?.addTarget(self, action: #selector(restorePurchaseButtonRelease), forControlEvents: UIControlEvents.TouchUpInside)
+      restorePurchaseButton?.addTarget(self, action: #selector(restorePurchaseButtonRelease), forControlEvents: UIControlEvents.TouchUpOutside)
+      restorePurchaseButton?.addTarget(self, action: #selector(restorePurchaseButtonRelease), forControlEvents: UIControlEvents.TouchCancel)
+      restorePurchaseButton?.addTarget(self, action: #selector(restorePurchaseButtonRelease), forControlEvents: UIControlEvents.TouchDragExit)
     }
   }
   
@@ -271,11 +271,11 @@ extension FloatingMenuView {
       
       buttonLayer.addSubview(soundButton)
       
-      soundButton.addTarget(self, action: "soundButtonPress", forControlEvents: UIControlEvents.TouchDown)
-      soundButton.addTarget(self, action: "soundButtonRelease", forControlEvents: UIControlEvents.TouchUpInside)
-      soundButton.addTarget(self, action: "soundButtonRelease", forControlEvents: UIControlEvents.TouchUpOutside)
-      soundButton.addTarget(self, action: "soundButtonRelease", forControlEvents: UIControlEvents.TouchCancel)
-      soundButton.addTarget(self, action: "soundButtonRelease", forControlEvents: UIControlEvents.TouchDragExit)
+      soundButton.addTarget(self, action: #selector(soundButtonPress), forControlEvents: UIControlEvents.TouchDown)
+      soundButton.addTarget(self, action: #selector(soundButtonRelease), forControlEvents: UIControlEvents.TouchUpInside)
+      soundButton.addTarget(self, action: #selector(soundButtonRelease), forControlEvents: UIControlEvents.TouchUpOutside)
+      soundButton.addTarget(self, action: #selector(soundButtonRelease), forControlEvents: UIControlEvents.TouchCancel)
+      soundButton.addTarget(self, action: #selector(soundButtonRelease), forControlEvents: UIControlEvents.TouchDragExit)
       
     }
   }
@@ -299,11 +299,11 @@ extension FloatingMenuView {
       
       buttonLayer.addSubview(settingsButton)
       
-      settingsButton.addTarget(self, action: "settingsButtonPress", forControlEvents: UIControlEvents.TouchDown)
-      settingsButton.addTarget(self, action: "settingsButtonRelease", forControlEvents: UIControlEvents.TouchUpInside)
-      settingsButton.addTarget(self, action: "settingsButtonRelease", forControlEvents: UIControlEvents.TouchUpOutside)
-      settingsButton.addTarget(self, action: "settingsButtonRelease", forControlEvents: UIControlEvents.TouchCancel)
-      settingsButton.addTarget(self, action: "settingsButtonRelease", forControlEvents: UIControlEvents.TouchDragExit)
+      settingsButton.addTarget(self, action: #selector(settingsButtonPress), forControlEvents: UIControlEvents.TouchDown)
+      settingsButton.addTarget(self, action: #selector(settingsButtonRelease), forControlEvents: UIControlEvents.TouchUpInside)
+      settingsButton.addTarget(self, action: #selector(settingsButtonRelease), forControlEvents: UIControlEvents.TouchUpOutside)
+      settingsButton.addTarget(self, action: #selector(settingsButtonRelease), forControlEvents: UIControlEvents.TouchCancel)
+      settingsButton.addTarget(self, action: #selector(settingsButtonRelease), forControlEvents: UIControlEvents.TouchDragExit)
       
     }
   }

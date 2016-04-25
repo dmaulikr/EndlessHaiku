@@ -241,7 +241,7 @@ extension ViewController {
     let button = UIButton(type: UIButtonType.RoundedRect)
     button.frame = CGRectMake(20, 50, 100, 30)
     button.setTitle("Crash", forState: UIControlState.Normal)
-    button.addTarget(self, action: "crashButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+    button.addTarget(self, action: #selector(crashButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
     view.addSubview(button)
   }
   
@@ -257,16 +257,16 @@ extension ViewController {
    Load swipe gestures
    */
   func loadSwipeGestureRecognizers() {
-    let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft"))
+    let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeLeft))
     swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
     
-    let swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight"))
+    let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeRight))
     swipeRight.direction = UISwipeGestureRecognizerDirection.Right
     
-    let swipeUp = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp"))
+    let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeUp))
     swipeUp.direction = UISwipeGestureRecognizerDirection.Up
     
-    let swipeDown = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown"))
+    let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeDown))
     swipeDown.direction = UISwipeGestureRecognizerDirection.Down
     
     view.addGestureRecognizer(swipeLeft)
@@ -366,7 +366,7 @@ extension ViewController {
    Initialize notifications: Facebook, Twitter, App Store, Restore Purchases, Remove Ads.
    */
   private func loadNotifications() {
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "productPurchased:", name: IAPHelperProductPurchasedNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(productPurchased(_:)), name: IAPHelperProductPurchasedNotification, object: nil)
   }
   
   /**

@@ -72,6 +72,9 @@
 		8BB0D60E1C7E262200D098C8 /* Framefile.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D6001C7E262200D098C8 /* Framefile.json */; };
 		8BEC81541C6976DB00AEDEF3 /* FloatingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */; };
 		8BEC81561C69788700AEDEF3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC81551C69788700AEDEF3 /* Helpers.swift */; };
+		8BFD7F0C1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */; };
+		8BFD7F0D1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0B1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif */; };
+		8BFD7F0F1CCEAEBE003CD8E7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0E1CCEAEBE003CD8E7 /* README.md */; };
 		A45D525EC00A3E415A882118 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B068297E70910057714EAE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +176,9 @@
 		8BB0D6001C7E262200D098C8 /* Framefile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Framefile.json; path = screenshots/Framefile.json; sourceTree = "<group>"; };
 		8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingMenuView.swift; sourceTree = "<group>"; };
 		8BEC81551C69788700AEDEF3 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndlessHaikuTestResults.png; sourceTree = "<group>"; };
+		8BFD7F0B1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = EndlessHaikuDemo.gif; sourceTree = "<group>"; };
+		8BFD7F0E1CCEAEBE003CD8E7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BAA3AD7A12B349019F08AC1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E666D139A6BC61C526C6D77C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F6B068297E70910057714EAE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,6 +359,9 @@
 		8B62A7A51C4EB76F00D57878 = {
 			isa = PBXGroup;
 			children = (
+				8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */,
+				8BFD7F0E1CCEAEBE003CD8E7 /* README.md */,
+				8BFD7F0B1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif */,
 				8B14F0221C7CF296008A6402 /* fastlane */,
 				8B62A7B01C4EB76F00D57878 /* EndlessHaiku */,
 				8B62A7C51C4EB76F00D57878 /* EndlessHaikuTests */,
@@ -614,6 +623,7 @@
 				8BB0D6091C7E262200D098C8 /* fonts.scale in Resources */,
 				8B14F04C1C7CF296008A6402 /* secondary_first_sub_category.txt in Resources */,
 				8B14F0461C7CF296008A6402 /* release_notes.txt in Resources */,
+				8BFD7F0C1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png in Resources */,
 				8BB0D5EE1C7E260E00D098C8 /* title.strings in Resources */,
 				8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */,
 				8B19F5041C6EB255001944BC /* Haiku.csv in Resources */,
@@ -625,6 +635,7 @@
 				8B62A7B91C4EB76F00D57878 /* Assets.xcassets in Resources */,
 				8BB0D60B1C7E262200D098C8 /* Verdana Bold.ttf in Resources */,
 				8B14F04F1C7CF296008A6402 /* report.xml in Resources */,
+				8BFD7F0D1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif in Resources */,
 				8B62A7B71C4EB76F00D57878 /* Main.storyboard in Resources */,
 				8B14F03F1C7CF296008A6402 /* Fastfile in Resources */,
 				8B14F04B1C7CF296008A6402 /* secondary_category.txt in Resources */,
@@ -748,6 +759,7 @@
 				8B5B93551C65B7DD009BABE1 /* CustomSliderTableViewCell.swift in Sources */,
 				8B62A7B21C4EB76F00D57878 /* AppDelegate.swift in Sources */,
 				8BEC81561C69788700AEDEF3 /* Helpers.swift in Sources */,
+				8BFD7F0F1CCEAEBE003CD8E7 /* README.md in Sources */,
 				8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */,
 				8B43D3CE1C50083C00317ED8 /* Constants.swift in Sources */,
 				8BEC81541C6976DB00AEDEF3 /* FloatingMenuView.swift in Sources */,
@@ -927,6 +939,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -947,6 +960,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
