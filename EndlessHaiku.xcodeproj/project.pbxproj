@@ -44,6 +44,7 @@
 		8B43D3CE1C50083C00317ED8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CD1C50083C00317ED8 /* Constants.swift */; };
 		8B4A75841C7549630065A6B9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4A75821C7549630065A6B9 /* Fabric.framework */; };
 		8B4A75851C7549630065A6B9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4A75831C7549630065A6B9 /* Crashlytics.framework */; };
+		8B4AC5941D221BA7005EC7A1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8B4AC5931D221BA7005EC7A1 /* .travis.yml */; };
 		8B5B93531C65AA5C009BABE1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */; };
 		8B5B93551C65B7DD009BABE1 /* CustomSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93541C65B7DD009BABE1 /* CustomSliderTableViewCell.swift */; };
 		8B5B93571C65BC05009BABE1 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93561C65BC05009BABE1 /* CustomSlider.swift */; };
@@ -142,6 +143,7 @@
 		8B43D3CD1C50083C00317ED8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8B4A75821C7549630065A6B9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		8B4A75831C7549630065A6B9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		8B4AC5931D221BA7005EC7A1 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8B5B93541C65B7DD009BABE1 /* CustomSliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSliderTableViewCell.swift; sourceTree = "<group>"; };
 		8B5B93561C65BC05009BABE1 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 		8B62A7A51C4EB76F00D57878 = {
 			isa = PBXGroup;
 			children = (
+				8B4AC5931D221BA7005EC7A1 /* .travis.yml */,
 				8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */,
 				8BFD7F0E1CCEAEBE003CD8E7 /* README.md */,
 				8BFD7F0B1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif */,
@@ -649,6 +652,7 @@
 				8B14F0481C7CF296008A6402 /* primary_category.txt in Resources */,
 				8B14F04A1C7CF296008A6402 /* primary_second_sub_category.txt in Resources */,
 				8B14F0471C7CF296008A6402 /* support_url.txt in Resources */,
+				8B4AC5941D221BA7005EC7A1 /* .travis.yml in Resources */,
 				8B14F0401C7CF296008A6402 /* copyright.txt in Resources */,
 				8B14F0421C7CF296008A6402 /* keywords.txt in Resources */,
 				8B14F0501C7CF296008A6402 /* README.txt in Resources */,

@@ -1,0 +1,18 @@
+PODS:
+  - ASValueTrackingSlider (0.11.2)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - SCLAlertView (0.5.1)
+
+DEPENDENCIES:
+  - ASValueTrackingSlider
+  - ChameleonFramework/Swift
+  - SCLAlertView
+
+SPEC CHECKSUMS:
+  ASValueTrackingSlider: 45c9f78252da60de01d8f2afe869aaf90dd978d9
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  SCLAlertView: 3ac39a863d3e10fc165662b1228b03402297aea9
+
+COCOAPODS: 0.39.0

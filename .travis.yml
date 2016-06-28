@@ -1,0 +1,11 @@
+#Even though your project is in Swift, Travis only uses the objective-c value to know to build with Xcode command line tools. Since Xcode knows how to tell what’s in Swift and what’s in Objective-C, your Swift project will be just fine.
+language: objective-c
+
+osx_image: xcode7.3
+
+#Use the specified Xcode project file. Note that if you have a project you want to build using an .xcworkspace (for example, a project using CocoaPods), you can replace the xcode_project parameter with xcode_workspace and use your .xcworkspace file as the value instead of your .xcodeproj
+xcode_workspace: EndlessHaiku.xcworkspace
+
+xcode_scheme: EndlessHaiku
+
+xcode_sdk: iphonesimulator9.1

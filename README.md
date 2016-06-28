@@ -1,3 +1,6 @@
+####Master branch build status: 
+![](https://travis-ci.org/tvluong1988/EndlessHaiku.svg?branch=master)
+
 Endless Haiku
 ===============
 
