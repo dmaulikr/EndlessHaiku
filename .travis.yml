@@ -8,4 +8,4 @@ xcode_workspace: EndlessHaiku.xcworkspace
 
 xcode_scheme: EndlessHaiku
 
-xcode_sdk: iphonesimulator9.1
+xcode_sdk: iphonesimulator9.3
