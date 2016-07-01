@@ -42,6 +42,8 @@
 		8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C91C5006B100317ED8 /* Device.swift */; };
 		8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CB1C50077D00317ED8 /* Haiku.swift */; };
 		8B43D3CE1C50083C00317ED8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CD1C50083C00317ED8 /* Constants.swift */; };
+		8B4611361D260347000880A7 /* script.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8B4611351D260347000880A7 /* script.sh */; };
+		8B4611381D26035C000880A7 /* after_success_script.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8B4611371D26035C000880A7 /* after_success_script.sh */; };
 		8B4A75841C7549630065A6B9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4A75821C7549630065A6B9 /* Fabric.framework */; };
 		8B4A75851C7549630065A6B9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4A75831C7549630065A6B9 /* Crashlytics.framework */; };
 		8B4AC5941D221BA7005EC7A1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8B4AC5931D221BA7005EC7A1 /* .travis.yml */; };
@@ -141,6 +143,8 @@
 		8B43D3C91C5006B100317ED8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		8B43D3CB1C50077D00317ED8 /* Haiku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haiku.swift; sourceTree = "<group>"; };
 		8B43D3CD1C50083C00317ED8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8B4611351D260347000880A7 /* script.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = script.sh; path = travis/script.sh; sourceTree = "<group>"; };
+		8B4611371D26035C000880A7 /* after_success_script.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = after_success_script.sh; path = travis/after_success_script.sh; sourceTree = "<group>"; };
 		8B4A75821C7549630065A6B9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		8B4A75831C7549630065A6B9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8B4AC5931D221BA7005EC7A1 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
@@ -358,9 +362,19 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
+		8B4611391D26036A000880A7 /* travis */ = {
+			isa = PBXGroup;
+			children = (
+				8B4611351D260347000880A7 /* script.sh */,
+				8B4611371D26035C000880A7 /* after_success_script.sh */,
+			);
+			name = travis;
+			sourceTree = "<group>";
+		};
 		8B62A7A51C4EB76F00D57878 = {
 			isa = PBXGroup;
 			children = (
+				8B4611391D26036A000880A7 /* travis */,
 				8B4AC5931D221BA7005EC7A1 /* .travis.yml */,
 				8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */,
 				8BFD7F0E1CCEAEBE003CD8E7 /* README.md */,
@@ -615,6 +629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB0D60D1C7E262200D098C8 /* Verdana.ttf in Resources */,
+				8B4611361D260347000880A7 /* script.sh in Resources */,
 				8BB0D6051C7E262200D098C8 /* fonts.dir in Resources */,
 				8B14F0511C7CF296008A6402 /* Snapfile in Resources */,
 				8BB0D6041C7E262200D098C8 /* ChalkboardSE-Regular.ttf in Resources */,
@@ -657,6 +672,7 @@
 				8B14F0421C7CF296008A6402 /* keywords.txt in Resources */,
 				8B14F0501C7CF296008A6402 /* README.txt in Resources */,
 				8BB0D5ED1C7E260E00D098C8 /* keyword.strings in Resources */,
+				8B4611381D26035C000880A7 /* after_success_script.sh in Resources */,
 				8B14F03E1C7CF296008A6402 /* Deliverfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
