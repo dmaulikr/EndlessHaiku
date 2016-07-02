@@ -38,6 +38,7 @@
 		8B19F5041C6EB255001944BC /* Haiku.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B19F5031C6EB255001944BC /* Haiku.csv */; };
 		8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34607E1C61514F00B0492B /* HaikuManager.swift */; };
 		8B379C591C6A6ADD008140C1 /* CustomPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */; };
+		8B3D2BD31D2787AA00A48A48 /* iosDistribution.p12.enc in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D2BD21D2787AA00A48A48 /* iosDistribution.p12.enc */; };
 		8B43D3C81C5005AD00317ED8 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */; };
 		8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C91C5006B100317ED8 /* Device.swift */; };
 		8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CB1C50077D00317ED8 /* Haiku.swift */; };
@@ -139,6 +140,7 @@
 		8B19F5031C6EB255001944BC /* Haiku.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haiku.csv; sourceTree = "<group>"; };
 		8B34607E1C61514F00B0492B /* HaikuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaikuManager.swift; sourceTree = "<group>"; };
 		8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerTableViewCell.swift; sourceTree = "<group>"; };
+		8B3D2BD21D2787AA00A48A48 /* iosDistribution.p12.enc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iosDistribution.p12.enc; sourceTree = "<group>"; };
 		8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
 		8B43D3C91C5006B100317ED8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		8B43D3CB1C50077D00317ED8 /* Haiku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haiku.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		8B14F0221C7CF296008A6402 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
+				8B3D2BD11D2787AA00A48A48 /* cert */,
 				8B14F0231C7CF296008A6402 /* actions */,
 				8B14F0241C7CF296008A6402 /* Appfile */,
 				8B14F0251C7CF296008A6402 /* Deliverfile */,
@@ -349,6 +352,14 @@
 				8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8B3D2BD11D2787AA00A48A48 /* cert */ = {
+			isa = PBXGroup;
+			children = (
+				8B3D2BD21D2787AA00A48A48 /* iosDistribution.p12.enc */,
+			);
+			path = cert;
 			sourceTree = "<group>";
 		};
 		8B43D3C61C50057800317ED8 /* Support */ = {
@@ -668,6 +679,7 @@
 				8B14F04A1C7CF296008A6402 /* primary_second_sub_category.txt in Resources */,
 				8B14F0471C7CF296008A6402 /* support_url.txt in Resources */,
 				8B4AC5941D221BA7005EC7A1 /* .travis.yml in Resources */,
+				8B3D2BD31D2787AA00A48A48 /* iosDistribution.p12.enc in Resources */,
 				8B14F0401C7CF296008A6402 /* copyright.txt in Resources */,
 				8B14F0421C7CF296008A6402 /* keywords.txt in Resources */,
 				8B14F0501C7CF296008A6402 /* README.txt in Resources */,
