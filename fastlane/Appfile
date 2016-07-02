@@ -1,6 +1,17 @@
 app_identifier "tvluong.EndlessHaiku" # The bundle identifier of your app
 apple_id "guitarslacker@gmail.com" # Your Apple email address
 
+
+for_platform :ios do
+for_lane :test do
+app_identifier "tvluong.EndlessHaiku.development"
+end
+
+for_lane :beta do
+app_identifier "tvluong.EndlessHaiku"
+end
+end
+
 # You can uncomment any of the lines below and add your own
 # team selection in case you're in multiple teams
 # team_name "Felix Krause"
