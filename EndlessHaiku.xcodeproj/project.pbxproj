@@ -38,7 +38,6 @@
 		8B19F5041C6EB255001944BC /* Haiku.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B19F5031C6EB255001944BC /* Haiku.csv */; };
 		8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34607E1C61514F00B0492B /* HaikuManager.swift */; };
 		8B379C591C6A6ADD008140C1 /* CustomPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */; };
-		8B3D2BD31D2787AA00A48A48 /* iosDistribution.p12.enc in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D2BD21D2787AA00A48A48 /* iosDistribution.p12.enc */; };
 		8B43D3C81C5005AD00317ED8 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */; };
 		8B43D3CA1C5006B100317ED8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C91C5006B100317ED8 /* Device.swift */; };
 		8B43D3CC1C50077D00317ED8 /* Haiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3CB1C50077D00317ED8 /* Haiku.swift */; };
@@ -58,6 +57,8 @@
 		8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B62A7BA1C4EB76F00D57878 /* LaunchScreen.storyboard */; };
 		8B62A7C71C4EB76F00D57878 /* EndlessHaikuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7C61C4EB76F00D57878 /* EndlessHaikuTests.swift */; };
 		8B62A7D21C4EB76F00D57878 /* EndlessHaikuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7D11C4EB76F00D57878 /* EndlessHaikuUITests.swift */; };
+		8BA57AE61D32CB45001BA9C4 /* iosDeveloper.p12.enc in Resources */ = {isa = PBXBuildFile; fileRef = 8BA57AE41D32CB45001BA9C4 /* iosDeveloper.p12.enc */; };
+		8BA57AE71D32CB45001BA9C4 /* iosDistribution.p12.enc in Resources */ = {isa = PBXBuildFile; fileRef = 8BA57AE51D32CB45001BA9C4 /* iosDistribution.p12.enc */; };
 		8BB0D5ED1C7E260E00D098C8 /* keyword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5EB1C7E260E00D098C8 /* keyword.strings */; };
 		8BB0D5EE1C7E260E00D098C8 /* title.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5EC1C7E260E00D098C8 /* title.strings */; };
 		8BB0D6011C7E262200D098C8 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5EF1C7E262200D098C8 /* background.jpg */; };
@@ -140,7 +141,6 @@
 		8B19F5031C6EB255001944BC /* Haiku.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haiku.csv; sourceTree = "<group>"; };
 		8B34607E1C61514F00B0492B /* HaikuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaikuManager.swift; sourceTree = "<group>"; };
 		8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerTableViewCell.swift; sourceTree = "<group>"; };
-		8B3D2BD21D2787AA00A48A48 /* iosDistribution.p12.enc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iosDistribution.p12.enc; sourceTree = "<group>"; };
 		8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
 		8B43D3C91C5006B100317ED8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		8B43D3CB1C50077D00317ED8 /* Haiku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haiku.swift; sourceTree = "<group>"; };
@@ -166,6 +166,8 @@
 		8B62A7CD1C4EB76F00D57878 /* EndlessHaikuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EndlessHaikuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B62A7D11C4EB76F00D57878 /* EndlessHaikuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessHaikuUITests.swift; sourceTree = "<group>"; };
 		8B62A7D31C4EB76F00D57878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BA57AE41D32CB45001BA9C4 /* iosDeveloper.p12.enc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iosDeveloper.p12.enc; sourceTree = "<group>"; };
+		8BA57AE51D32CB45001BA9C4 /* iosDistribution.p12.enc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iosDistribution.p12.enc; sourceTree = "<group>"; };
 		8BB0D5EB1C7E260E00D098C8 /* keyword.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = keyword.strings; path = "en-US/keyword.strings"; sourceTree = "<group>"; };
 		8BB0D5EC1C7E260E00D098C8 /* title.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = title.strings; path = "en-US/title.strings"; sourceTree = "<group>"; };
 		8BB0D5EF1C7E262200D098C8 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = screenshots/background.jpg; sourceTree = "<group>"; };
@@ -259,7 +261,7 @@
 		8B14F0221C7CF296008A6402 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
-				8B3D2BD11D2787AA00A48A48 /* cert */,
+				8BA57AE31D32CB45001BA9C4 /* cert */,
 				8B14F0231C7CF296008A6402 /* actions */,
 				8B14F0241C7CF296008A6402 /* Appfile */,
 				8B14F0251C7CF296008A6402 /* Deliverfile */,
@@ -354,14 +356,6 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		8B3D2BD11D2787AA00A48A48 /* cert */ = {
-			isa = PBXGroup;
-			children = (
-				8B3D2BD21D2787AA00A48A48 /* iosDistribution.p12.enc */,
-			);
-			path = cert;
-			sourceTree = "<group>";
-		};
 		8B43D3C61C50057800317ED8 /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +443,15 @@
 				8B62A7D31C4EB76F00D57878 /* Info.plist */,
 			);
 			path = EndlessHaikuUITests;
+			sourceTree = "<group>";
+		};
+		8BA57AE31D32CB45001BA9C4 /* cert */ = {
+			isa = PBXGroup;
+			children = (
+				8BA57AE41D32CB45001BA9C4 /* iosDeveloper.p12.enc */,
+				8BA57AE51D32CB45001BA9C4 /* iosDistribution.p12.enc */,
+			);
+			path = cert;
 			sourceTree = "<group>";
 		};
 		8BB0D5F01C7E262200D098C8 /* fonts */ = {
@@ -662,6 +665,7 @@
 				8BB0D6021C7E262200D098C8 /* ChalkboardSE-Bold.ttf in Resources */,
 				8B0AA6281C75641D003F66DF /* MoPub.bundle in Resources */,
 				8B62A7B91C4EB76F00D57878 /* Assets.xcassets in Resources */,
+				8BA57AE71D32CB45001BA9C4 /* iosDistribution.p12.enc in Resources */,
 				8BB0D60B1C7E262200D098C8 /* Verdana Bold.ttf in Resources */,
 				8B14F04F1C7CF296008A6402 /* report.xml in Resources */,
 				8BFD7F0D1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif in Resources */,
@@ -675,11 +679,11 @@
 				8B14F0451C7CF296008A6402 /* privacy_url.txt in Resources */,
 				8BB0D6071C7E262200D098C8 /* ChalkboardSE.ttc in Resources */,
 				8B14F0411C7CF296008A6402 /* description.txt in Resources */,
+				8BA57AE61D32CB45001BA9C4 /* iosDeveloper.p12.enc in Resources */,
 				8B14F0481C7CF296008A6402 /* primary_category.txt in Resources */,
 				8B14F04A1C7CF296008A6402 /* primary_second_sub_category.txt in Resources */,
 				8B14F0471C7CF296008A6402 /* support_url.txt in Resources */,
 				8B4AC5941D221BA7005EC7A1 /* .travis.yml in Resources */,
-				8B3D2BD31D2787AA00A48A48 /* iosDistribution.p12.enc in Resources */,
 				8B14F0401C7CF296008A6402 /* copyright.txt in Resources */,
 				8B14F0421C7CF296008A6402 /* keywords.txt in Resources */,
 				8B14F0501C7CF296008A6402 /* README.txt in Resources */,

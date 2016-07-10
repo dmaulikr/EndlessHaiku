@@ -1,7 +1,15 @@
 
+require 'securerandom'
+
+
 default_platform :ios
 
 platform :ios do
+
+before_all do
+#ensure_git_status_clean
+#cocoapods
+end
 
 desc "Run tests"
 lane :test do
@@ -27,10 +35,9 @@ end
 desc "Submit a new beta build to App Store"
 lane :beta do
 
-keychain_name = "EndlessHaiku-certs"
 
 create_keychain(
-name: keychain_name,
+name: ENV["KEYCHAIN_NAME"],
 default_keychain: true,
 unlock: true,
 timeout: 3600,
@@ -42,17 +49,28 @@ password: SecureRandom.base64
 import_certificate(
 certificate_path: "fastlane/cert/iosDistribution.p12",
 certificate_password: ENV["KEY_PASSWORD"],
-keychain_name: keychain_name
+keychain_name: ENV["KEYCHAIN_NAME"]
+)
+
+import_certificate(
+certificate_path: "fastlane/cert/iosDeveloper.p12",
+certificate_password: ENV["KEY_PASSWORD"],
+keychain_name: ENV["KEYCHAIN_NAME"]
 )
 
 #Fetch provisioning profile
 sigh(
 adhoc: false,
-username: "guitarslacker@gmail.com",
+username: ENV["ITUNES_CONNECT_USER"],
 cert_id: "38CJ7RTF4Q"
 )
 
-increment_build_number(build_number: number_of_commits)
+#increment_build_number(build_number: number_of_commits)
+set_info_plist_value(
+path: './EndlessHaiku/Info.plist',
+key: 'CFBundleVersion',
+value: number_of_commits
+)
 
 #build
 gym(
@@ -63,10 +81,19 @@ clean: true,
 include_bitcode: false,
 include_symbols: true,
 use_legacy_build_api: true,
-export_method: "enterprise"
+export_method: "app-store"
 )
 
-delete_keychain(name: keychain_name)
+#deploy to Testflight
+pilot(
+username: ENV["ITUNES_CONNECT_USER"],
+wait_processing_interval: 30,
+distribute_external: false,
+skip_submission: true,
+ipa: "EndlessHaiku.ipa"
+)
+
+delete_keychain(name: ENV["KEYCHAIN_NAME"])
 
 end
 
