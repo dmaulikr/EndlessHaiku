@@ -78,6 +78,7 @@
 		8BB0D60E1C7E262200D098C8 /* Framefile.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D6001C7E262200D098C8 /* Framefile.json */; };
 		8BEC81541C6976DB00AEDEF3 /* FloatingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */; };
 		8BEC81561C69788700AEDEF3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC81551C69788700AEDEF3 /* Helpers.swift */; };
+		8BF307431D330EA1004B710E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8BF307421D330EA1004B710E /* LICENSE */; };
 		8BFD7F0C1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */; };
 		8BFD7F0D1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0B1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif */; };
 		8BFD7F0F1CCEAEBE003CD8E7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0E1CCEAEBE003CD8E7 /* README.md */; };
@@ -187,6 +188,7 @@
 		8BB0D6001C7E262200D098C8 /* Framefile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Framefile.json; path = screenshots/Framefile.json; sourceTree = "<group>"; };
 		8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingMenuView.swift; sourceTree = "<group>"; };
 		8BEC81551C69788700AEDEF3 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8BF307421D330EA1004B710E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndlessHaikuTestResults.png; sourceTree = "<group>"; };
 		8BFD7F0B1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = EndlessHaikuDemo.gif; sourceTree = "<group>"; };
 		8BFD7F0E1CCEAEBE003CD8E7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 		8B62A7A51C4EB76F00D57878 = {
 			isa = PBXGroup;
 			children = (
+				8BF307421D330EA1004B710E /* LICENSE */,
 				8B4611391D26036A000880A7 /* travis */,
 				8B4AC5931D221BA7005EC7A1 /* .travis.yml */,
 				8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */,
@@ -654,6 +657,7 @@
 				8BB0D6081C7E262200D098C8 /* fonts.dir in Resources */,
 				8B14F0491C7CF296008A6402 /* primary_first_sub_category.txt in Resources */,
 				8BB0D60A1C7E262200D098C8 /* Verdana Bold Italic.ttf in Resources */,
+				8BF307431D330EA1004B710E /* LICENSE in Resources */,
 				8BB0D6091C7E262200D098C8 /* fonts.scale in Resources */,
 				8B14F04C1C7CF296008A6402 /* secondary_first_sub_category.txt in Resources */,
 				8B14F0461C7CF296008A6402 /* release_notes.txt in Resources */,
