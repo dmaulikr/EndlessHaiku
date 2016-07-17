@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3D1B857E6E58F23258B684 /* Pods_EndlessHaikuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6053C4E72BCA315BF1E6007F /* Pods_EndlessHaikuTests.framework */; };
 		8B0A62271C77D9670004FD6A /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A62261C77D9670004FD6A /* IAPHelper.swift */; };
 		8B0A62291C77D9860004FD6A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A62281C77D9860004FD6A /* Product.swift */; };
 		8B0A622B1C77D9C70004FD6A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0A622A1C77D9C70004FD6A /* StoreKit.framework */; };
@@ -109,7 +110,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		192D12B935CEBF9C72FF4C23 /* Pods-EndlessHaikuTests.ad hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaikuTests.ad hoc.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaikuTests/Pods-EndlessHaikuTests.ad hoc.xcconfig"; sourceTree = "<group>"; };
 		20725AA04DDD3EE4BC92AFF7 /* Pods-EndlessHaiku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaiku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaiku/Pods-EndlessHaiku.debug.xcconfig"; sourceTree = "<group>"; };
+		6053C4E72BCA315BF1E6007F /* Pods_EndlessHaikuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EndlessHaikuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A62261C77D9670004FD6A /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		8B0A62281C77D9860004FD6A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8B0A622A1C77D9C70004FD6A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -193,7 +196,9 @@
 		8BFD7F0B1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = EndlessHaikuDemo.gif; sourceTree = "<group>"; };
 		8BFD7F0E1CCEAEBE003CD8E7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		97B0E8BDE712EBE7FDF0285F /* Pods-EndlessHaiku.ad hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaiku.ad hoc.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaiku/Pods-EndlessHaiku.ad hoc.xcconfig"; sourceTree = "<group>"; };
+		AFBDDD6E800AA467619A91B3 /* Pods-EndlessHaikuTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaikuTests.app store.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaikuTests/Pods-EndlessHaikuTests.app store.xcconfig"; sourceTree = "<group>"; };
 		D57F2FC9549180AC9BCA4DD6 /* Pods-EndlessHaiku.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaiku.app store.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaiku/Pods-EndlessHaiku.app store.xcconfig"; sourceTree = "<group>"; };
+		DA6629B72C521B2DC61E5C71 /* Pods-EndlessHaikuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaikuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaikuTests/Pods-EndlessHaikuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9DB98A436C23E193D6F3427 /* Pods_EndlessHaiku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EndlessHaiku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -221,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3D1B857E6E58F23258B684 /* Pods_EndlessHaikuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,8 +243,13 @@
 		70FDB816E8C6C42FB1446A1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B0AA6251C75641D003F66DF /* MoPub.framework */,
+				8B0AA6261C75641D003F66DF /* MoPub.bundle */,
+				8B4A75821C7549630065A6B9 /* Fabric.framework */,
+				8B4A75831C7549630065A6B9 /* Crashlytics.framework */,
 				8B0A622A1C77D9C70004FD6A /* StoreKit.framework */,
 				E9DB98A436C23E193D6F3427 /* Pods_EndlessHaiku.framework */,
+				6053C4E72BCA315BF1E6007F /* Pods_EndlessHaikuTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -385,10 +396,6 @@
 				8B62A7D01C4EB76F00D57878 /* EndlessHaikuUITests */,
 				8B14F0191C7CF02B008A6402 /* EndlessHaikuUISnapshot */,
 				8B62A7AF1C4EB76F00D57878 /* Products */,
-				8B0AA6251C75641D003F66DF /* MoPub.framework */,
-				8B0AA6261C75641D003F66DF /* MoPub.bundle */,
-				8B4A75821C7549630065A6B9 /* Fabric.framework */,
-				8B4A75831C7549630065A6B9 /* Crashlytics.framework */,
 				70FDB816E8C6C42FB1446A1A /* Frameworks */,
 				8CF5169F90437C108596FF2D /* Pods */,
 			);
@@ -499,6 +506,9 @@
 				20725AA04DDD3EE4BC92AFF7 /* Pods-EndlessHaiku.debug.xcconfig */,
 				D57F2FC9549180AC9BCA4DD6 /* Pods-EndlessHaiku.app store.xcconfig */,
 				97B0E8BDE712EBE7FDF0285F /* Pods-EndlessHaiku.ad hoc.xcconfig */,
+				DA6629B72C521B2DC61E5C71 /* Pods-EndlessHaikuTests.debug.xcconfig */,
+				AFBDDD6E800AA467619A91B3 /* Pods-EndlessHaikuTests.app store.xcconfig */,
+				192D12B935CEBF9C72FF4C23 /* Pods-EndlessHaikuTests.ad hoc.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -549,9 +559,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B62A7D91C4EB76F00D57878 /* Build configuration list for PBXNativeTarget "EndlessHaikuTests" */;
 			buildPhases = (
+				9A7150FDD9E28DCCDA9419C1 /* [CP] Check Pods Manifest.lock */,
 				8B62A7BE1C4EB76F00D57878 /* Sources */,
 				8B62A7BF1C4EB76F00D57878 /* Frameworks */,
 				8B62A7C01C4EB76F00D57878 /* Resources */,
+				13A8422C46E4E6AF24442F92 /* [CP] Embed Pods Frameworks */,
+				BFD8F090BAD1A0821652AEF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -716,6 +729,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		13A8422C46E4E6AF24442F92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndlessHaikuTests/Pods-EndlessHaikuTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1716C11822FC61DD2EA35684 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -758,6 +786,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 8cb3dd65e013b1fa9b83134f0c5dac2cf6eaf270 fe537cfe99b966325cb570f59106232656f314e508584876f0c96f21ceab7b1e";
+		};
+		9A7150FDD9E28DCCDA9419C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BFD8F090BAD1A0821652AEF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndlessHaikuTests/Pods-EndlessHaikuTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		ED555D0776B8819CED83750B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -953,6 +1011,7 @@
 		};
 		8B3D2BCB1D27779C00A48A48 /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 192D12B935CEBF9C72FF4C23 /* Pods-EndlessHaikuTests.ad hoc.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = EndlessHaikuTests/Info.plist;
@@ -1119,6 +1178,7 @@
 		};
 		8B62A7DA1C4EB76F00D57878 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA6629B72C521B2DC61E5C71 /* Pods-EndlessHaikuTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = EndlessHaikuTests/Info.plist;
@@ -1131,6 +1191,7 @@
 		};
 		8B62A7DB1C4EB76F00D57878 /* App Store */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFBDDD6E800AA467619A91B3 /* Pods-EndlessHaikuTests.app store.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = EndlessHaikuTests/Info.plist;
