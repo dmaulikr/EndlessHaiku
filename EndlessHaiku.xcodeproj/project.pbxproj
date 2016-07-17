@@ -37,8 +37,6 @@
 		8B14F0531C7CF2A0008A6402 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14F03C1C7CF296008A6402 /* SnapshotHelper.swift */; };
 		8B19F5041C6EB255001944BC /* Haiku.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B19F5031C6EB255001944BC /* Haiku.csv */; };
 		8B1DB2C01D3C2C3300A3A51C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4A75831C7549630065A6B9 /* Crashlytics.framework */; };
-		8B1DB2C11D3C2CF100A3A51C /* Pods_EndlessHaiku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DB98A436C23E193D6F3427 /* Pods_EndlessHaiku.framework */; };
-		8B1DB2C21D3C2CF100A3A51C /* Pods_EndlessHaiku.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9DB98A436C23E193D6F3427 /* Pods_EndlessHaiku.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34607E1C61514F00B0492B /* HaikuManager.swift */; };
 		8B379C591C6A6ADD008140C1 /* CustomPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */; };
 		8B43D3C81C5005AD00317ED8 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */; };
@@ -83,6 +81,7 @@
 		8BFD7F0C1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */; };
 		8BFD7F0D1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0B1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif */; };
 		8BFD7F0F1CCEAEBE003CD8E7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0E1CCEAEBE003CD8E7 /* README.md */; };
+		EA6F2E0B46B37A250FBD3A15 /* Pods_EndlessHaiku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DB98A436C23E193D6F3427 /* Pods_EndlessHaiku.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,20 +107,6 @@
 			remoteInfo = EndlessHaiku;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		8B1DB2C31D3C2CF100A3A51C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8B1DB2C21D3C2CF100A3A51C /* Pods_EndlessHaiku.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		20725AA04DDD3EE4BC92AFF7 /* Pods-EndlessHaiku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaiku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaiku/Pods-EndlessHaiku.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,7 +141,6 @@
 		8B14F03B1C7CF296008A6402 /* Snapfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
 		8B14F03C1C7CF296008A6402 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		8B19F5031C6EB255001944BC /* Haiku.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Haiku.csv; sourceTree = "<group>"; };
-		8B1DB2BA1D3C2B5F00A3A51C /* Pods_EndlessHaiku.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_EndlessHaiku.framework; path = "../../../Library/Developer/Xcode/DerivedData/EndlessHaiku-fdaxcjymnoddcfcowxuslphcxnxm/Build/Products/Debug-iphonesimulator/Pods_EndlessHaiku.framework"; sourceTree = "<group>"; };
 		8B34607E1C61514F00B0492B /* HaikuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaikuManager.swift; sourceTree = "<group>"; };
 		8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerTableViewCell.swift; sourceTree = "<group>"; };
 		8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
@@ -226,10 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1DB2C01D3C2C3300A3A51C /* Crashlytics.framework in Frameworks */,
-				8B1DB2C11D3C2CF100A3A51C /* Pods_EndlessHaiku.framework in Frameworks */,
 				8B0AA6271C75641D003F66DF /* MoPub.framework in Frameworks */,
 				8B0A622B1C77D9C70004FD6A /* StoreKit.framework in Frameworks */,
 				8B4A75841C7549630065A6B9 /* Fabric.framework in Frameworks */,
+				EA6F2E0B46B37A250FBD3A15 /* Pods_EndlessHaiku.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +237,6 @@
 		70FDB816E8C6C42FB1446A1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8B1DB2BA1D3C2B5F00A3A51C /* Pods_EndlessHaiku.framework */,
 				8B0A622A1C77D9C70004FD6A /* StoreKit.framework */,
 				E9DB98A436C23E193D6F3427 /* Pods_EndlessHaiku.framework */,
 			);
@@ -552,7 +535,6 @@
 				8B4A75811C75492A0065A6B9 /* ShellScript */,
 				1780A1E67200EBCC9CF408DC /* [CP] Embed Pods Frameworks */,
 				1716C11822FC61DD2EA35684 /* [CP] Copy Pods Resources */,
-				8B1DB2C31D3C2CF100A3A51C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -929,6 +911,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1025,6 +1008,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1071,6 +1055,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
