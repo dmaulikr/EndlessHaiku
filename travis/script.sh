@@ -1,6 +1,7 @@
 #!/bin/bash
 
-if [ $TRAVIS_BRANCH == "master" ]; then
+if [ $TRAVIS_BRANCH == "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then
+fastlane ios build
 fastlane ios beta
 else
 open -b com.apple.iphonesimulator

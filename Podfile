@@ -12,13 +12,13 @@ target 'EndlessHaiku' do
     inherit! :search_paths
   end
   
-  target 'EndlessHaikuUITests' do
-    inherit! :search_paths
-  end
+  #  target 'EndlessHaikuUITests' do
+  #  inherit! :search_paths
+  #end
   
-  target 'EndlessHaikuUISnapshot' do
-    inherit! :search_paths
-  end
+  #target 'EndlessHaikuUISnapshot' do
+  #  inherit! :search_paths
+  #end
   
 end
 
