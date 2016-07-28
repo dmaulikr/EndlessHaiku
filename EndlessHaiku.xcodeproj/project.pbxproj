@@ -58,6 +58,7 @@
 		8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B62A7BA1C4EB76F00D57878 /* LaunchScreen.storyboard */; };
 		8B62A7C71C4EB76F00D57878 /* EndlessHaikuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7C61C4EB76F00D57878 /* EndlessHaikuTests.swift */; };
 		8B62A7D21C4EB76F00D57878 /* EndlessHaikuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7D11C4EB76F00D57878 /* EndlessHaikuUITests.swift */; };
+		8B882ED41D49AE1000AB1A0A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8B882ED31D49AE1000AB1A0A /* .gitignore */; };
 		8BA57AE61D32CB45001BA9C4 /* iosDeveloper.p12.enc in Resources */ = {isa = PBXBuildFile; fileRef = 8BA57AE41D32CB45001BA9C4 /* iosDeveloper.p12.enc */; };
 		8BA57AE71D32CB45001BA9C4 /* iosDistribution.p12.enc in Resources */ = {isa = PBXBuildFile; fileRef = 8BA57AE51D32CB45001BA9C4 /* iosDistribution.p12.enc */; };
 		8BB0D5ED1C7E260E00D098C8 /* keyword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5EB1C7E260E00D098C8 /* keyword.strings */; };
@@ -171,6 +172,7 @@
 		8B62A7CD1C4EB76F00D57878 /* EndlessHaikuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EndlessHaikuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B62A7D11C4EB76F00D57878 /* EndlessHaikuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessHaikuUITests.swift; sourceTree = "<group>"; };
 		8B62A7D31C4EB76F00D57878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B882ED31D49AE1000AB1A0A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8BA57AE41D32CB45001BA9C4 /* iosDeveloper.p12.enc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iosDeveloper.p12.enc; sourceTree = "<group>"; };
 		8BA57AE51D32CB45001BA9C4 /* iosDistribution.p12.enc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iosDistribution.p12.enc; sourceTree = "<group>"; };
 		8BB0D5EB1C7E260E00D098C8 /* keyword.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = keyword.strings; path = "en-US/keyword.strings"; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 		8B62A7A51C4EB76F00D57878 = {
 			isa = PBXGroup;
 			children = (
+				8B882ED31D49AE1000AB1A0A /* .gitignore */,
 				8BF307421D330EA1004B710E /* LICENSE */,
 				8B4611391D26036A000880A7 /* travis */,
 				8B4AC5931D221BA7005EC7A1 /* .travis.yml */,
@@ -670,6 +673,7 @@
 				8BB0D6081C7E262200D098C8 /* fonts.dir in Resources */,
 				8B14F0491C7CF296008A6402 /* primary_first_sub_category.txt in Resources */,
 				8BB0D60A1C7E262200D098C8 /* Verdana Bold Italic.ttf in Resources */,
+				8B882ED41D49AE1000AB1A0A /* .gitignore in Resources */,
 				8BF307431D330EA1004B710E /* LICENSE in Resources */,
 				8BB0D6091C7E262200D098C8 /* fonts.scale in Resources */,
 				8B14F04C1C7CF296008A6402 /* secondary_first_sub_category.txt in Resources */,
