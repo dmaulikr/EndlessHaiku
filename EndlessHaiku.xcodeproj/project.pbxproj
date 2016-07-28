@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3D1B857E6E58F23258B684 /* Pods_EndlessHaikuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6053C4E72BCA315BF1E6007F /* Pods_EndlessHaikuTests.framework */; };
 		8B0A62271C77D9670004FD6A /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A62261C77D9670004FD6A /* IAPHelper.swift */; };
 		8B0A62291C77D9860004FD6A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A62281C77D9860004FD6A /* Product.swift */; };
 		8B0A622B1C77D9C70004FD6A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0A622A1C77D9C70004FD6A /* StoreKit.framework */; };
@@ -36,6 +37,7 @@
 		8B14F0511C7CF296008A6402 /* Snapfile in Resources */ = {isa = PBXBuildFile; fileRef = 8B14F03B1C7CF296008A6402 /* Snapfile */; };
 		8B14F0531C7CF2A0008A6402 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14F03C1C7CF296008A6402 /* SnapshotHelper.swift */; };
 		8B19F5041C6EB255001944BC /* Haiku.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B19F5031C6EB255001944BC /* Haiku.csv */; };
+		8B1DB2C01D3C2C3300A3A51C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4A75831C7549630065A6B9 /* Crashlytics.framework */; };
 		8B34607F1C61514F00B0492B /* HaikuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34607E1C61514F00B0492B /* HaikuManager.swift */; };
 		8B379C591C6A6ADD008140C1 /* CustomPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B379C581C6A6ADD008140C1 /* CustomPickerTableViewCell.swift */; };
 		8B43D3C81C5005AD00317ED8 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B43D3C71C5005AD00317ED8 /* ScrollingView.swift */; };
@@ -45,7 +47,6 @@
 		8B4611361D260347000880A7 /* script.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8B4611351D260347000880A7 /* script.sh */; };
 		8B4611381D26035C000880A7 /* after_success_script.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8B4611371D26035C000880A7 /* after_success_script.sh */; };
 		8B4A75841C7549630065A6B9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4A75821C7549630065A6B9 /* Fabric.framework */; };
-		8B4A75851C7549630065A6B9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4A75831C7549630065A6B9 /* Crashlytics.framework */; };
 		8B4AC5941D221BA7005EC7A1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8B4AC5931D221BA7005EC7A1 /* .travis.yml */; };
 		8B5B93531C65AA5C009BABE1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93521C65AA5C009BABE1 /* SettingsViewController.swift */; };
 		8B5B93551C65B7DD009BABE1 /* CustomSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B93541C65B7DD009BABE1 /* CustomSliderTableViewCell.swift */; };
@@ -57,6 +58,8 @@
 		8B62A7BC1C4EB76F00D57878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B62A7BA1C4EB76F00D57878 /* LaunchScreen.storyboard */; };
 		8B62A7C71C4EB76F00D57878 /* EndlessHaikuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7C61C4EB76F00D57878 /* EndlessHaikuTests.swift */; };
 		8B62A7D21C4EB76F00D57878 /* EndlessHaikuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62A7D11C4EB76F00D57878 /* EndlessHaikuUITests.swift */; };
+		8B882ED41D49AE1000AB1A0A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8B882ED31D49AE1000AB1A0A /* .gitignore */; };
+		8B882ED61D49AEF400AB1A0A /* get_certs_from_s3.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8B882ED51D49AEF400AB1A0A /* get_certs_from_s3.rb */; };
 		8BB0D5ED1C7E260E00D098C8 /* keyword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5EB1C7E260E00D098C8 /* keyword.strings */; };
 		8BB0D5EE1C7E260E00D098C8 /* title.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5EC1C7E260E00D098C8 /* title.strings */; };
 		8BB0D6011C7E262200D098C8 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D5EF1C7E262200D098C8 /* background.jpg */; };
@@ -75,10 +78,11 @@
 		8BB0D60E1C7E262200D098C8 /* Framefile.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BB0D6001C7E262200D098C8 /* Framefile.json */; };
 		8BEC81541C6976DB00AEDEF3 /* FloatingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */; };
 		8BEC81561C69788700AEDEF3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC81551C69788700AEDEF3 /* Helpers.swift */; };
+		8BF307431D330EA1004B710E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8BF307421D330EA1004B710E /* LICENSE */; };
 		8BFD7F0C1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */; };
 		8BFD7F0D1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0B1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif */; };
 		8BFD7F0F1CCEAEBE003CD8E7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD7F0E1CCEAEBE003CD8E7 /* README.md */; };
-		A45D525EC00A3E415A882118 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B068297E70910057714EAE /* Pods.framework */; };
+		EA6F2E0B46B37A250FBD3A15 /* Pods_EndlessHaiku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DB98A436C23E193D6F3427 /* Pods_EndlessHaiku.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		192D12B935CEBF9C72FF4C23 /* Pods-EndlessHaikuTests.ad hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaikuTests.ad hoc.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaikuTests/Pods-EndlessHaikuTests.ad hoc.xcconfig"; sourceTree = "<group>"; };
+		20725AA04DDD3EE4BC92AFF7 /* Pods-EndlessHaiku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaiku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaiku/Pods-EndlessHaiku.debug.xcconfig"; sourceTree = "<group>"; };
+		6053C4E72BCA315BF1E6007F /* Pods_EndlessHaikuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EndlessHaikuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A62261C77D9670004FD6A /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		8B0A62281C77D9860004FD6A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8B0A622A1C77D9C70004FD6A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -164,6 +171,8 @@
 		8B62A7CD1C4EB76F00D57878 /* EndlessHaikuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EndlessHaikuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B62A7D11C4EB76F00D57878 /* EndlessHaikuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessHaikuUITests.swift; sourceTree = "<group>"; };
 		8B62A7D31C4EB76F00D57878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B882ED31D49AE1000AB1A0A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8B882ED51D49AEF400AB1A0A /* get_certs_from_s3.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = get_certs_from_s3.rb; path = travis/get_certs_from_s3.rb; sourceTree = "<group>"; };
 		8BB0D5EB1C7E260E00D098C8 /* keyword.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = keyword.strings; path = "en-US/keyword.strings"; sourceTree = "<group>"; };
 		8BB0D5EC1C7E260E00D098C8 /* title.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = title.strings; path = "en-US/title.strings"; sourceTree = "<group>"; };
 		8BB0D5EF1C7E262200D098C8 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = screenshots/background.jpg; sourceTree = "<group>"; };
@@ -182,12 +191,15 @@
 		8BB0D6001C7E262200D098C8 /* Framefile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Framefile.json; path = screenshots/Framefile.json; sourceTree = "<group>"; };
 		8BEC81531C6976DB00AEDEF3 /* FloatingMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingMenuView.swift; sourceTree = "<group>"; };
 		8BEC81551C69788700AEDEF3 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8BF307421D330EA1004B710E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndlessHaikuTestResults.png; sourceTree = "<group>"; };
 		8BFD7F0B1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = EndlessHaikuDemo.gif; sourceTree = "<group>"; };
 		8BFD7F0E1CCEAEBE003CD8E7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BAA3AD7A12B349019F08AC1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E666D139A6BC61C526C6D77C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		F6B068297E70910057714EAE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97B0E8BDE712EBE7FDF0285F /* Pods-EndlessHaiku.ad hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaiku.ad hoc.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaiku/Pods-EndlessHaiku.ad hoc.xcconfig"; sourceTree = "<group>"; };
+		AFBDDD6E800AA467619A91B3 /* Pods-EndlessHaikuTests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaikuTests.app store.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaikuTests/Pods-EndlessHaikuTests.app store.xcconfig"; sourceTree = "<group>"; };
+		D57F2FC9549180AC9BCA4DD6 /* Pods-EndlessHaiku.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaiku.app store.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaiku/Pods-EndlessHaiku.app store.xcconfig"; sourceTree = "<group>"; };
+		DA6629B72C521B2DC61E5C71 /* Pods-EndlessHaikuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndlessHaikuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndlessHaikuTests/Pods-EndlessHaikuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E9DB98A436C23E193D6F3427 /* Pods_EndlessHaiku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EndlessHaiku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,11 +214,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B4A75851C7549630065A6B9 /* Crashlytics.framework in Frameworks */,
+				8B1DB2C01D3C2C3300A3A51C /* Crashlytics.framework in Frameworks */,
 				8B0AA6271C75641D003F66DF /* MoPub.framework in Frameworks */,
 				8B0A622B1C77D9C70004FD6A /* StoreKit.framework in Frameworks */,
 				8B4A75841C7549630065A6B9 /* Fabric.framework in Frameworks */,
-				A45D525EC00A3E415A882118 /* Pods.framework in Frameworks */,
+				EA6F2E0B46B37A250FBD3A15 /* Pods_EndlessHaiku.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3D1B857E6E58F23258B684 /* Pods_EndlessHaikuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,20 +240,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4DAE7F3EBB18272AE557C0D1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E666D139A6BC61C526C6D77C /* Pods.debug.xcconfig */,
-				BAA3AD7A12B349019F08AC1C /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		70FDB816E8C6C42FB1446A1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B0AA6251C75641D003F66DF /* MoPub.framework */,
+				8B0AA6261C75641D003F66DF /* MoPub.bundle */,
+				8B4A75821C7549630065A6B9 /* Fabric.framework */,
+				8B4A75831C7549630065A6B9 /* Crashlytics.framework */,
 				8B0A622A1C77D9C70004FD6A /* StoreKit.framework */,
-				F6B068297E70910057714EAE /* Pods.framework */,
+				E9DB98A436C23E193D6F3427 /* Pods_EndlessHaiku.framework */,
+				6053C4E72BCA315BF1E6007F /* Pods_EndlessHaikuTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -367,6 +376,7 @@
 			children = (
 				8B4611351D260347000880A7 /* script.sh */,
 				8B4611371D26035C000880A7 /* after_success_script.sh */,
+				8B882ED51D49AEF400AB1A0A /* get_certs_from_s3.rb */,
 			);
 			name = travis;
 			sourceTree = "<group>";
@@ -374,6 +384,8 @@
 		8B62A7A51C4EB76F00D57878 = {
 			isa = PBXGroup;
 			children = (
+				8B882ED31D49AE1000AB1A0A /* .gitignore */,
+				8BF307421D330EA1004B710E /* LICENSE */,
 				8B4611391D26036A000880A7 /* travis */,
 				8B4AC5931D221BA7005EC7A1 /* .travis.yml */,
 				8BFD7F0A1CCEAEAE003CD8E7 /* EndlessHaikuTestResults.png */,
@@ -385,12 +397,8 @@
 				8B62A7D01C4EB76F00D57878 /* EndlessHaikuUITests */,
 				8B14F0191C7CF02B008A6402 /* EndlessHaikuUISnapshot */,
 				8B62A7AF1C4EB76F00D57878 /* Products */,
-				8B0AA6251C75641D003F66DF /* MoPub.framework */,
-				8B0AA6261C75641D003F66DF /* MoPub.bundle */,
-				8B4A75821C7549630065A6B9 /* Fabric.framework */,
-				8B4A75831C7549630065A6B9 /* Crashlytics.framework */,
-				4DAE7F3EBB18272AE557C0D1 /* Pods */,
 				70FDB816E8C6C42FB1446A1A /* Frameworks */,
+				8CF5169F90437C108596FF2D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -484,6 +492,19 @@
 			path = Verdana;
 			sourceTree = "<group>";
 		};
+		8CF5169F90437C108596FF2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20725AA04DDD3EE4BC92AFF7 /* Pods-EndlessHaiku.debug.xcconfig */,
+				D57F2FC9549180AC9BCA4DD6 /* Pods-EndlessHaiku.app store.xcconfig */,
+				97B0E8BDE712EBE7FDF0285F /* Pods-EndlessHaiku.ad hoc.xcconfig */,
+				DA6629B72C521B2DC61E5C71 /* Pods-EndlessHaikuTests.debug.xcconfig */,
+				AFBDDD6E800AA467619A91B3 /* Pods-EndlessHaikuTests.app store.xcconfig */,
+				192D12B935CEBF9C72FF4C23 /* Pods-EndlessHaikuTests.ad hoc.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -509,13 +530,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B62A7D61C4EB76F00D57878 /* Build configuration list for PBXNativeTarget "EndlessHaiku" */;
 			buildPhases = (
-				CAD8AAC8ECB7C787991DD842 /* Check Pods Manifest.lock */,
+				ED555D0776B8819CED83750B /* [CP] Check Pods Manifest.lock */,
 				8B62A7AA1C4EB76F00D57878 /* Sources */,
 				8B62A7AB1C4EB76F00D57878 /* Frameworks */,
 				8B62A7AC1C4EB76F00D57878 /* Resources */,
 				8B4A75811C75492A0065A6B9 /* ShellScript */,
-				5C3C41D246ADD315FDA71EF5 /* Embed Pods Frameworks */,
-				3BA853E1AB52E434979D45EB /* Copy Pods Resources */,
+				1780A1E67200EBCC9CF408DC /* [CP] Embed Pods Frameworks */,
+				1716C11822FC61DD2EA35684 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -530,9 +551,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B62A7D91C4EB76F00D57878 /* Build configuration list for PBXNativeTarget "EndlessHaikuTests" */;
 			buildPhases = (
+				9A7150FDD9E28DCCDA9419C1 /* [CP] Check Pods Manifest.lock */,
 				8B62A7BE1C4EB76F00D57878 /* Sources */,
 				8B62A7BF1C4EB76F00D57878 /* Frameworks */,
 				8B62A7C01C4EB76F00D57878 /* Resources */,
+				13A8422C46E4E6AF24442F92 /* [CP] Embed Pods Frameworks */,
+				BFD8F090BAD1A0821652AEF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -638,6 +662,8 @@
 				8BB0D6081C7E262200D098C8 /* fonts.dir in Resources */,
 				8B14F0491C7CF296008A6402 /* primary_first_sub_category.txt in Resources */,
 				8BB0D60A1C7E262200D098C8 /* Verdana Bold Italic.ttf in Resources */,
+				8B882ED41D49AE1000AB1A0A /* .gitignore in Resources */,
+				8BF307431D330EA1004B710E /* LICENSE in Resources */,
 				8BB0D6091C7E262200D098C8 /* fonts.scale in Resources */,
 				8B14F04C1C7CF296008A6402 /* secondary_first_sub_category.txt in Resources */,
 				8B14F0461C7CF296008A6402 /* release_notes.txt in Resources */,
@@ -653,6 +679,7 @@
 				8B62A7B91C4EB76F00D57878 /* Assets.xcassets in Resources */,
 				8BB0D60B1C7E262200D098C8 /* Verdana Bold.ttf in Resources */,
 				8B14F04F1C7CF296008A6402 /* report.xml in Resources */,
+				8B882ED61D49AEF400AB1A0A /* get_certs_from_s3.rb in Resources */,
 				8BFD7F0D1CCEAEAE003CD8E7 /* EndlessHaikuDemo.gif in Resources */,
 				8B62A7B71C4EB76F00D57878 /* Main.storyboard in Resources */,
 				8B14F03F1C7CF296008A6402 /* Fastfile in Resources */,
@@ -694,34 +721,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3BA853E1AB52E434979D45EB /* Copy Pods Resources */ = {
+		13A8422C46E4E6AF24442F92 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndlessHaikuTests/Pods-EndlessHaikuTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C3C41D246ADD315FDA71EF5 /* Embed Pods Frameworks */ = {
+		1716C11822FC61DD2EA35684 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndlessHaiku/Pods-EndlessHaiku-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1780A1E67200EBCC9CF408DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndlessHaiku/Pods-EndlessHaiku-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8B4A75811C75492A0065A6B9 /* ShellScript */ = {
@@ -737,14 +779,44 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 8cb3dd65e013b1fa9b83134f0c5dac2cf6eaf270 fe537cfe99b966325cb570f59106232656f314e508584876f0c96f21ceab7b1e";
 		};
-		CAD8AAC8ECB7C787991DD842 /* Check Pods Manifest.lock */ = {
+		9A7150FDD9E28DCCDA9419C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BFD8F090BAD1A0821652AEF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndlessHaikuTests/Pods-EndlessHaikuTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED555D0776B8819CED83750B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -856,7 +928,7 @@
 			};
 			name = Debug;
 		};
-		8B14F0201C7CF02B008A6402 /* Release */ = {
+		8B14F0201C7CF02B008A6402 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = EndlessHaikuUISnapshot/Info.plist;
@@ -866,7 +938,105 @@
 				TEST_TARGET_NAME = EndlessHaiku;
 				USES_XCTRUNNER = YES;
 			};
-			name = Release;
+			name = "App Store";
+		};
+		8B3D2BC91D27779C00A48A48 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad Hoc";
+		};
+		8B3D2BCA1D27779C00A48A48 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97B0E8BDE712EBE7FDF0285F /* Pods-EndlessHaiku.ad hoc.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = EndlessHaiku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tvluong.EndlessHaiku;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = "Ad Hoc";
+		};
+		8B3D2BCB1D27779C00A48A48 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 192D12B935CEBF9C72FF4C23 /* Pods-EndlessHaikuTests.ad hoc.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EndlessHaikuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tvluong.EndlessHaikuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EndlessHaiku.app/EndlessHaiku";
+			};
+			name = "Ad Hoc";
+		};
+		8B3D2BCC1D27779C00A48A48 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EndlessHaikuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tvluong.EndlessHaikuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EndlessHaiku;
+				USES_XCTRUNNER = YES;
+			};
+			name = "Ad Hoc";
+		};
+		8B3D2BCD1D27779C00A48A48 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EndlessHaikuUISnapshot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tvluong.EndlessHaikuUISnapshot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EndlessHaiku;
+				USES_XCTRUNNER = YES;
+			};
+			name = "Ad Hoc";
 		};
 		8B62A7D41C4EB76F00D57878 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -885,9 +1055,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -913,7 +1085,7 @@
 			};
 			name = Debug;
 		};
-		8B62A7D51C4EB76F00D57878 /* Release */ = {
+		8B62A7D51C4EB76F00D57878 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -930,9 +1102,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -949,11 +1123,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "App Store";
 		};
 		8B62A7D71C4EB76F00D57878 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E666D139A6BC61C526C6D77C /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 20725AA04DDD3EE4BC92AFF7 /* Pods-EndlessHaiku.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -973,13 +1147,13 @@
 			};
 			name = Debug;
 		};
-		8B62A7D81C4EB76F00D57878 /* Release */ = {
+		8B62A7D81C4EB76F00D57878 /* App Store */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAA3AD7A12B349019F08AC1C /* Pods.release.xcconfig */;
+			baseConfigurationReference = D57F2FC9549180AC9BCA4DD6 /* Pods-EndlessHaiku.app store.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -992,10 +1166,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
-			name = Release;
+			name = "App Store";
 		};
 		8B62A7DA1C4EB76F00D57878 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA6629B72C521B2DC61E5C71 /* Pods-EndlessHaikuTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = EndlessHaikuTests/Info.plist;
@@ -1006,8 +1181,9 @@
 			};
 			name = Debug;
 		};
-		8B62A7DB1C4EB76F00D57878 /* Release */ = {
+		8B62A7DB1C4EB76F00D57878 /* App Store */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFBDDD6E800AA467619A91B3 /* Pods-EndlessHaikuTests.app store.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = EndlessHaikuTests/Info.plist;
@@ -1016,7 +1192,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EndlessHaiku.app/EndlessHaiku";
 			};
-			name = Release;
+			name = "App Store";
 		};
 		8B62A7DD1C4EB76F00D57878 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1030,7 +1206,7 @@
 			};
 			name = Debug;
 		};
-		8B62A7DE1C4EB76F00D57878 /* Release */ = {
+		8B62A7DE1C4EB76F00D57878 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = EndlessHaikuUITests/Info.plist;
@@ -1040,7 +1216,7 @@
 				TEST_TARGET_NAME = EndlessHaiku;
 				USES_XCTRUNNER = YES;
 			};
-			name = Release;
+			name = "App Store";
 		};
 /* End XCBuildConfiguration section */
 
@@ -1049,46 +1225,51 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B14F01F1C7CF02B008A6402 /* Debug */,
-				8B14F0201C7CF02B008A6402 /* Release */,
+				8B14F0201C7CF02B008A6402 /* App Store */,
+				8B3D2BCD1D27779C00A48A48 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 		8B62A7A91C4EB76F00D57878 /* Build configuration list for PBXProject "EndlessHaiku" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B62A7D41C4EB76F00D57878 /* Debug */,
-				8B62A7D51C4EB76F00D57878 /* Release */,
+				8B62A7D51C4EB76F00D57878 /* App Store */,
+				8B3D2BC91D27779C00A48A48 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 		8B62A7D61C4EB76F00D57878 /* Build configuration list for PBXNativeTarget "EndlessHaiku" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B62A7D71C4EB76F00D57878 /* Debug */,
-				8B62A7D81C4EB76F00D57878 /* Release */,
+				8B62A7D81C4EB76F00D57878 /* App Store */,
+				8B3D2BCA1D27779C00A48A48 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 		8B62A7D91C4EB76F00D57878 /* Build configuration list for PBXNativeTarget "EndlessHaikuTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B62A7DA1C4EB76F00D57878 /* Debug */,
-				8B62A7DB1C4EB76F00D57878 /* Release */,
+				8B62A7DB1C4EB76F00D57878 /* App Store */,
+				8B3D2BCB1D27779C00A48A48 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 		8B62A7DC1C4EB76F00D57878 /* Build configuration list for PBXNativeTarget "EndlessHaikuUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B62A7DD1C4EB76F00D57878 /* Debug */,
-				8B62A7DE1C4EB76F00D57878 /* Release */,
+				8B62A7DE1C4EB76F00D57878 /* App Store */,
+				8B3D2BCC1D27779C00A48A48 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "App Store";
 		};
 /* End XCConfigurationList section */
 	};

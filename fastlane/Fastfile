@@ -1,28 +1,12 @@
-# Customise this file, documentation can be found here:
-# https://github.com/fastlane/fastlane/tree/master/docs
-# All available actions: https://github.com/fastlane/fastlane/blob/master/docs/Actions.md
-# can also be listed using the `fastlane actions` command
+require 'securerandom'
 
-# Change the syntax highlighting to Ruby
-# All lines starting with a # are ignored when running `fastlane`
-
-# By default, fastlane will send which actions are used
-# No personal data is shared, more information on https://github.com/fastlane/enhancer
-# Uncomment the following line to opt out
-# opt_out_usage
-
-# If you want to automatically update fastlane if a new version is available:
-# update_fastlane
-
-# This is the minimum version number required.
-# Update this, if you use features of a newer version
 default_platform :ios
 
 platform :ios do
-#before_all do
-#cocoapods
-#end
 
+before_all do
+cocoapods
+end
 
 desc "Run tests"
 lane :test do
@@ -45,6 +29,75 @@ output_directory: "xcov_output"
 )
 end
 
+desc "Run build"
+lane :build do
+
+create_keychain(
+name: ENV["KEYCHAIN_NAME"],
+default_keychain: true,
+unlock: true,
+timeout: 3600,
+lock_when_sleeps: true,
+password: SecureRandom.base64
+)
+
+#Import distribution certificate
+import_certificate(
+certificate_path: "iosDistribution.p12",
+certificate_password: ENV["KEY_PASSWORD"],
+keychain_name: ENV["KEYCHAIN_NAME"]
+)
+
+import_certificate(
+certificate_path: "iosDeveloper.p12",
+certificate_password: ENV["KEY_PASSWORD"],
+keychain_name: ENV["KEYCHAIN_NAME"]
+)
+
+#Fetch provisioning profile
+sigh(
+adhoc: false,
+username: ENV["ITUNES_CONNECT_USER"],
+cert_id: ENV["TEAM_ID"]
+)
+
+#increment_build_number(build_number: number_of_commits)
+set_info_plist_value(
+path: './EndlessHaiku/Info.plist',
+key: 'CFBundleVersion',
+value: "#{number_of_commits}"
+)
+
+#build
+gym(
+scheme: "EndlessHaiku",
+configuration: "App Store",
+sdk: "iphoneos9.3",
+clean: true,
+include_bitcode: false,
+include_symbols: true,
+use_legacy_build_api: true,
+export_method: "app-store"
+)
+
+delete_keychain(name: ENV["KEYCHAIN_NAME"])
+
+end
+
+desc "Submit a new beta build to App Store"
+lane :beta do
+
+#deploy to Testflight
+pilot(
+username: ENV["ITUNES_CONNECT_USER"],
+wait_processing_interval: 30,
+distribute_external: false,
+skip_submission: true,
+ipa: "EndlessHaiku.ipa"
+)
+
+end
+
 desc "Creating a code signing certificate and provision profile"
 lane :provision do
 produce(
@@ -57,18 +110,34 @@ cert
 sigh(force: true)
 end
 
-lane :screenshot do
-snapshot
-frameit
-end
-
-lane :deliver do
-deliver
-end
 
 end
 
 
 
-# More information about multiple platforms in fastlane: https://github.com/KrauseFx/fastlane/blob/master/docs/Platforms.md
-# All available actions: https://github.com/KrauseFx/fastlane/blob/master/docs/Actions.md
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
